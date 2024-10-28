@@ -16,7 +16,7 @@
        if ($_GET['vikt'] = 50) {
         echo "Ditt pris är: 15";
        } else {
-        # code...
+        echo "Ange vikt";
        }
        
     ?>
