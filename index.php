@@ -6,8 +6,9 @@
     <title>php</title>
 </head>
 <body>
+    <p>html innan php</p>
     <?php
        echo "Hej PHP"
-    ?>
+    
 </body>
 </html>
