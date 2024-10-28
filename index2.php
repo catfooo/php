@@ -13,7 +13,7 @@
         <input type="submit" value="beräkna pris">
     </form>
     <?php
-       if ($_GET['vikt'] = 50) {
+       if ($_GET['vikt'] == 50) {
         echo "Ditt pris är: 15";
        } else {
         echo "Ange vikt";
