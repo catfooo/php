@@ -1,3 +1,5 @@
+<!--En nyckel (key) och ett valfritt värde (value) kan skickas via URLen t.ex. http://localhost/index.php?name=kiki-->
+
 <!DOCTYPE html>
 <html lang="sv">
 <head>
