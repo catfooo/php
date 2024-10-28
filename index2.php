@@ -17,6 +17,14 @@
         echo "<h2>Ditt pris är: 15</h2>";
        } elseif ($_GET['vikt'] == 100) {
         echo "<h2>Ditt pris är: 30</h2>";
+       } elseif ($_GET['vikt'] == 250) {
+        echo "<h2>Ditt pris är: 45</h2>";
+       } elseif ($_GET['vikt'] == 500) {
+        echo "<h2>Ditt pris är: 60</h2>";
+       } elseif ($_GET['vikt'] == 1000) {
+        echo "<h2>Ditt pris är: 90</h2>";
+       } elseif ($_GET['vikt'] == 2000) {
+        echo "<h2>Ditt pris är: 120</h2>";
        } else {
         echo "Du får ha 50, 100, 250, 500, 1000, 2000 för vikt";
        }
