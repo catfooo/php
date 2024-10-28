@@ -9,7 +9,7 @@
     <h1>Beräkna porto för brev</h1>
     <form method="GET">
         Ange vikt
-        <input name="vikt" type="submit" value="beräkna pris">
+        <input name="vikt" type="number" value="beräkna pris">
     </form>
     <?php
        if ($_GET['vikt'] = 50) {
