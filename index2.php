@@ -14,7 +14,9 @@
     </form>
     <?php
        if ($_GET['vikt'] == 50) {
-        echo "Ditt pris är: 15";
+        echo "<h2>Ditt pris är: 15</h2>";
+       } elseif ($_GET['vikt'] == 100) {
+        echo "<h2>Ditt pris är: 30</h2>";
        } else {
         echo "Du får ha 50, 100, 250, 500, 1000, 2000 för vikt";
        }
