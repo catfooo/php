@@ -10,7 +10,7 @@
     <a href="?id=2">produkt 2</a>
     <hr>
     <?php
-       if (isset($_GET[id])) {
+       if (isset($_GET['id'])) {
         echo "Här kommer info om produkt nr $_GET[id]";
        } else {
         echo "Valj en produkt";
