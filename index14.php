@@ -16,7 +16,7 @@
         array("Väninnorna på Nordiska Kompaniet", "Ruth Kvarnström-Jones", "https://image.bokus.com/images/9789177718482_383x_vaninnorna-pa-nordiska-kompaniet")
     );
 
-    echo "title: " . $books[0][0]
+    echo "title: " . $books[0][0] . "<br> author: " . $books[0][1] . "<br><img src='" . $books[0][2] . "'>";
     ?>
 
 </body>
