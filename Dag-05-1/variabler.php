@@ -64,10 +64,10 @@ echo '<h1>hello $firstName $lastName<h1>';
 // testa om kunden är
 if((date("Y") - $DOB ) > 18){
 // konkatenering med en punkt-operator
-echo "<h2> du är välkommen att handla hos oss"</h2>";
+echo "<h2> du är välkommen att handla hos oss</h2>";
 } 
 else {
-    echo "<h2 class="alert alert-danger">du får dessvärre inte handla hos oss!</h2>";
+    echo "<h2 class='alert alert-danger'>du får dessvärre inte handla hos oss!</h2>";
 }
 }
 $firstName = $_GET['firstName'];
