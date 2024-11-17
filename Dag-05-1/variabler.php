@@ -70,9 +70,9 @@ else {
     echo "<h2 class='alert alert-danger'>du får dessvärre inte handla hos oss!</h2>";
 }
 }
-$firstName = $_GET['firstName'];
-$lastName = $_GET['lastName'];
-$DOB = $_GET['DOB'];
+// $firstName = $_GET['firstName'];
+// $lastName = $_GET['lastName'];
+// $DOB = $_GET['DOB'];
 
 // if(isset($_GET['fname'])){
 //     $fname = $_GET['fname'];
