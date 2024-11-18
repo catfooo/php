@@ -63,11 +63,11 @@ if(isset($firstName)){
         <h2>Ange pris</h2>
 
         <!-- Hidden inputs to keep previous data -->
-        <input type="hidden" name="firstName" value="<?php echo $firstName; ?>">
-            <input type="hidden" name="lastName" value="<?php echo $lastName; ?>">
-            <input type="hidden" name="DOB" value="<?php echo $DOB; ?>">
-            
+        
         <form method="GET">
+            <input type="hidden" name="firstName" value="<?php echo $firstName; ?>">
+                <input type="hidden" name="lastName" value="<?php echo $lastName; ?>">
+                <input type="hidden" name="DOB" value="<?php echo $DOB; ?>">
             <input type="number" name="price" id="">
             <input type="submit" value="Beräkna">
         </form>
