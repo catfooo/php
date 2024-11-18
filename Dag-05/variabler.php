@@ -61,6 +61,10 @@ if(isset($firstName)){
 
         <hr>
         <h2>Ange pris</h2>
+        <?php
+// Debugging: Check if price is passed
+var_dump($_GET);
+?>
         <form action="" method="GET">
             <input type="number" name="price" id="">
             <input type="submit" value="Beräkna">
