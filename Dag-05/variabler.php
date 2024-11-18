@@ -61,7 +61,7 @@ if(isset($firstName)){
 
         <hr>
         <h2>Ange pris</h2>
-        <form action="" mehod="GET">
+        <form action="" method="GET">
             <input type="number" name="price" id="">
             <input type="submit" value="Beräkna">
         </form>
