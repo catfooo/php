@@ -61,10 +61,12 @@ if(isset($firstName)){
 
         <hr>
         <h2>Ange pris</h2>
-        <?php
-// Debugging: Check if price is passed
-var_dump($_GET);
-?>
+        
+    <!-- Hidden inputs to keep previous data -->
+    <input type="hidden" name="firstName" value="<?php echo $firstName; ?>">
+            <input type="hidden" name="lastName" value="<?php echo $lastName; ?>">
+            <input type="hidden" name="DOB" value="<?php echo $DOB; ?>">
+
         <form action="" method="GET">
             <input type="number" name="price" id="">
             <input type="submit" value="Beräkna">
