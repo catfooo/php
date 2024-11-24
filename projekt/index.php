@@ -45,9 +45,10 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Popular Item</h5>
+                                    <h5 class="fw-bolder"><?php echo $item["name"]?></h5>
+                                    <p class="card-text"><?php echo $item["description"]?></p>
                                     <!-- Product price-->
-                                    $40.00
+                                    <?php echo $item["price"]?>maskros
                                 </div>
                             </div>
                             <!-- Product actions-->
