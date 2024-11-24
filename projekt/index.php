@@ -47,13 +47,11 @@
                                     <!-- Product name-->
                                     <h5 class="fw-bolder"><?php echo $item["name"]?></h5>
                                     <p class="card-text"><?php echo $item["description"]?></p>
-                                    <!-- Product price-->
-                                    <?php echo $item["price"]?> <span>maskros</span>
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#"><?php echo $item["price"]?> <span>maskros</span></a></div>
                             </div>
                         </div> <!-- card -->
                     </div> <!-- col -->
