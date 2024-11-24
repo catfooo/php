@@ -1,6 +1,6 @@
 <?php
 
-    echo "ddd";
+    // echo "ddd";
 
     $items = array(
         array("id" => 101, "name" => "bröd", "description" => "äta när hungrig", "price" => 3, "image" => "01.ico",),
