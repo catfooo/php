@@ -48,7 +48,7 @@
                                     <h5 class="fw-bolder"><?php echo $item["name"]?></h5>
                                     <p class="card-text"><?php echo $item["description"]?></p>
                                     <!-- Product price-->
-                                    <?php echo $item["price"]?>maskros
+                                    <?php echo $item["price"]?> <span>maskros</span>
                                 </div>
                             </div>
                             <!-- Product actions-->
