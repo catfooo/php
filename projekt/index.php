@@ -2,6 +2,12 @@
 
     echo "ddd";
 
+    $items = array(
+        array("id" => 01, "name" => "bröd", "description" => "äta när hungrig", "price" => 3, "image" => "01.ico",),
+        array("id" => 02, "name" => "vatten flaska", "description" => "dricka när törstig", "price" => 2, "image" => "02.ico",),
+        array("id" => 03, "name" => "täcke", "description" => "engångstäcke för att sova", "price" => 5, "image" => "03.ico",),
+    );
+
 ?>
 
 <!DOCTYPE html>
