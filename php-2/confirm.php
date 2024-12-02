@@ -11,7 +11,7 @@
         $message = $_POST['message'];
 
         $sql = "INSERT INTO contacts(name, email, message)
-                VALUES('$name', '$email', '`$message')";
+                VALUES('$name', '$email', '$message')";
         
         if ($db->query($sql)) {
             echo "<h1>Tack $name <br>Vi återkommer inom 24 timmar</h1>";
