@@ -15,7 +15,11 @@
     <form action="confirmation.php" method="POST">
         <label for="name">namn </label>
         <input id="name" type="text" name="name" class="form-control mb-3">
-        <label for="address">address </label>
+        <label for="name">telefonnummer </label>
+        <input id="name" type="text" name="telephonenumber" class="form-control mb-3">
+        <label for="name">e-postadress </label>
+        <input id="name" type="text" name="email" class="form-control mb-3">
+        <label for="address">leveransadress </label>
         <input id="address" type="text" name="address" class="form-control mb-3">
         <input type="submit" class="btn btn-primary">
     </form>
