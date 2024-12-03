@@ -4,7 +4,7 @@
         
         print_r($_POST);
 
-        $db = new mysqli("localhost", "root", "");
+        $db = new mysqli("localhost", "root", "", "contacts");
 
         $name = $_POST['name'];
         $email = $_POST['email'];
