@@ -14,4 +14,10 @@
         echo "Error: " . $sql . "<br>" . $db->error;
     }
 
+    $sql = "SELECT * FROM myTable20241203145907";
+    $result = $db->query($sql);
+    while ($row = $result->fetch_assoc()) {
+        echo $row;
+    }
+
 ?>
