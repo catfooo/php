@@ -1,4 +1,8 @@
 <?php
+phpinfo();
+?>
+
+<?php
 
     $db = new mysqli("localhost", "root", "", "myDB20241203135749");
     $sql = "INSERT INTO myTable2024120314590 (firstname, lastname, email) 
