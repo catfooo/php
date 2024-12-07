@@ -1,11 +1,9 @@
 <?php
-ini_set('display_errors', 1); // Show errors in the browser
-?>
-
-<?php
+    
+    // ini_set('display_errors', 1); // Show errors in the browser
 
     $db = new mysqli("localhost", "root", "", "myDB20241203135749");
-    $sql = "INSERT INTO myTable2024120314590 (firstname, lastname, email) 
+    $sql = "INSERT INTO myTable20241203145907 (firstname, lastname, email) 
             VALUES ('rr', 'rr', 'rr@rr')";
     if ($db->query($sql)) {
         $id = $db->insert_id; // Get the ID of the last inserted row
