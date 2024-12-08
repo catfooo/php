@@ -16,6 +16,11 @@ if (isset($_POST['submit'])) {
         echo "<p>vi kommer att ta kontakt med dig på följande e-post: $email</p>";
         echo "<p>här nedan är ditt meddelande: <hr>$message<hr></p>";
 
+        $sql = "INSERT INTO kontakter(firstname, lastname, phone, email, message) 
+                VALUES ('$firstname', '$lastname', '$phone', '$email', '$message')";
+
+        $db->query($sql);
+
 
     }
 
