@@ -24,4 +24,14 @@
         die($db->error);
     }
 
+    // visa filmer
+    // movie is internal variable so not using '' unlike global $_GET?? idk
+    foreach ($movies as $movie) {
+        echo "<h2>$movie[title]</h2>";
+        echo "<img src='images/$movie[image]'>";
+        echo "<h3>pris: $movie[price] kr</h3>";
+        // get
+        echo "<a href='order.php?id=$movie[id]'>köp</a>";
+    }
+
 ?>
