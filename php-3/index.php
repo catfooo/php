@@ -13,13 +13,15 @@
 
     // kör
     // -> : obj accesses query
-    $result = $db->query($sql);
+    // $result = $db->query($sql);
 
     // print
     if ($result) {
         // hämta alla rader som en array
         $movies = $result->fetch_all(MYSQLI_ASSOC);
         print_r($movies);
+    } else {
+        $db->error;
     }
 
 ?>
