@@ -16,10 +16,11 @@
 
     $sql = "SELECT * FROM myTable20241203145907";
     $result = $db->query($sql);
-    while ($row = $result->fetch_assoc()) {
-        echo $row['id'];
-        echo $row['firstname'];
-        echo $row['lastname'];
-    }
+    print_r($result->fetch_all(MYSQLI_ASSOC));
+    // while ($row = $result->fetch_assoc()) {
+    //     echo $row['id'];
+    //     echo $row['firstname'];
+    //     echo $row['lastname'];
+    // }
 
 ?>
