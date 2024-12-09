@@ -13,7 +13,7 @@
 
     // kör
     // -> : obj accesses query
-    // $result = $db->query($sql);
+    $result = $db->query($sql);
 
     // print
     if ($result) {
@@ -21,7 +21,7 @@
         $movies = $result->fetch_all(MYSQLI_ASSOC);
         print_r($movies);
     } else {
-        $db->error;
+        die($db->error);
     }
 
 ?>
