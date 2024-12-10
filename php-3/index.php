@@ -19,7 +19,7 @@
     if ($result) {
         // hämta alla rader som en array
         $movies = $result->fetch_all(MYSQLI_ASSOC);
-        print_r($movies);
+        // print_r($movies);
     } else {
         die($db->error);
     }

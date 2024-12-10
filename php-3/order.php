@@ -11,7 +11,7 @@
 
     $film = $result->fetch_assoc();
 
-    print_r($film);
+    // print_r($film);
 
 ?>
 
@@ -25,3 +25,16 @@
     <input type="submit" name="submit" value="skicka beställningen">
     <input type="hidden" name="film_id" value="<?php echo $id?>">
 </form>
+
+<?php
+
+    if (isset($_POST['submit'])) {
+        $film_id = $_POST['film_id'];
+        $email = $_POST['email'];
+
+        echo "<h1>beställning från Videobutiken</h1>
+        <h2>film id: $film_id</h2>
+        <h2>filmen kommer att levereras till: $email</h2>";
+    }
+
+?>
