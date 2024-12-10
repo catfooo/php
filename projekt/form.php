@@ -13,15 +13,27 @@
     <h3>vart ska vi leverera?</h3>
 
     <form action="confirmation.php" method="POST">
-        <label for="name">namn </label>
-        <input id="name" type="text" name="name" class="form-control mb-3">
-        <label for="name">telefonnummer </label>
-        <input id="name" type="text" name="telephonenumber" class="form-control mb-3">
-        <label for="name">e-postadress </label>
-        <input id="name" type="text" name="email" class="form-control mb-3">
-        <label for="address">leveransadress </label>
-        <input id="address" type="text" name="address" class="form-control mb-3">
-        <input type="submit" class="btn btn-primary">
+        <div class="row">
+            <div class="col-md-12">
+                <label for="name">namn </label>
+                <input id="name" type="text" name="name" class="form-control mb-3">
+            </div>
+            <div class="col-md-6">
+                <label for="telephonenumber">telefonnummer </label>
+                <input id="telephonenumber" type="text" name="telephonenumber" class="form-control mb-3">
+            </div>
+            <div class="col-md-6">
+                <label for="email">e-postadress </label>
+                <input id="email" type="text" name="email" class="form-control mb-3">
+            </div>
+            <div class="col-md-12">
+                <label for="address">leveransadress </label>
+                <input id="address" type="text" name="address" class="form-control mb-3">
+            </div>
+            <div class="col-md-4">
+                <input type="submit" class="btn btn-primary">
+            </div>
+        </div>
     </form>
     
 </body>

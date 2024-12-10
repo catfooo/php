@@ -8,7 +8,7 @@
     <link href="css/styles.css" rel="stylesheet" />
 </head>
 <body class="container">
-    <h1 class="text-primary primary-center border-bottom border-primary">bekräftelse</h1>
+    <h1 class="text-primary text-center border-bottom border-primary">bekräftelse</h1>
 
     <?php
         echo "<h2>tack " . $_POST['name'] . "</h2>";
