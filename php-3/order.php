@@ -35,6 +35,8 @@
         echo "<h1>beställning från Videobutiken</h1>
         <h2>film id: $film_id</h2>
         <h2>filmen kommer att levereras till: $email</h2>";
+
+        // spara i databasen ..
     }
 
 ?>
