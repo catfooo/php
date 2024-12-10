@@ -1,5 +1,6 @@
 <?php
-
-    $db = new mysqli("localhost", "root", "root", "filmdb");
+    
+    /* @ is used to suppress warnings */
+    $db = @new mysqli("localhost", "ro0000ot", "root", "filmdb");
 
 ?>
