@@ -1,5 +1,5 @@
 <?php
 
-    $db = new mysqli("localhost", "ro444ot", "root", "filmdb");
+    $db = new mysqli("localhost", "root", "root", "filmdb");
 
 ?>
