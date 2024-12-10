@@ -37,6 +37,8 @@
         <h2>filmen kommer att levereras till: $email</h2>";
 
         // spara i databasen ..
+        $sql = "INSERT INTO orders (film_id, email) VALUES('$film_id','$email')";
+        $db->query($sql);
     }
 
 ?>
