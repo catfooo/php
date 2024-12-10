@@ -5,7 +5,7 @@
 
     require_once 'db.php';
 
-    if ($db->connect_error) {
+    if ($db->connect_errno) {
         echo "failed";
     } else {
         echo "welcome";
