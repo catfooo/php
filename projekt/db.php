@@ -1,6 +1,6 @@
 <?php
 
-    $db = new mysqli("localhost", "ro00ot", "root", "projekt");
+    $db = new mysqli("localhost", "root", "root", "projekt");
 
     // quit if failed
     if ($db->connect_error) {

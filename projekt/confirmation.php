@@ -17,14 +17,14 @@
 
     if (isset($_POST['submit'])) {
         // databasuppkoppling
-        // require_once 'db.php';
-        $db = new mysqli("localhost", "ro00ot", "root", "projekt");
+        require_once 'db.php';
+        // $db = new mysqli("localhost", "root", "root", "projekt");
 
         // quit if failed
-        if ($db->connect_error) {
-            echo "kunde inte koppla till databas";
-            die();
-        }
+        // if ($db->connect_error) {
+        //     echo "kunde inte koppla till databas";
+        //     die();
+        // }
 
         echo "<h2>tack " . $_POST['name'] . "</h2>";
         echo "<h3>ditt telefonnummer är " . $_POST['telephonenumber'] . "</h3>";
