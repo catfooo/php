@@ -31,7 +31,7 @@
                 <input id="address" type="text" name="address" class="form-control mb-3">
             </div>
             <div class="col-md-4">
-                <input type="submit" class="btn btn-primary w-100">
+                <input type="submit" name="submit" class="btn btn-primary w-100">
             </div>
         </div>
     </form>
