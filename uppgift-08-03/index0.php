@@ -12,7 +12,6 @@
         <input type="text" name="item">
         <input type="submit" name="submit" value="lägg till">
     </form>
-    
     <?php
 
         $db = new mysqli("localhost", "root", "root", "items");
@@ -22,19 +21,13 @@
             $db->query($sql);
         }
 
-        if (isset($_POST['delete'])) {
-            $id = $_POST['id'];
-            $sql = "DELETE FROM items WHERE id = $id";
-            $db->query($sql);
-        }
-
         $result = $db->query("SELECT * FROM items");
         if ($result) {
             $items = $result->fetch_all(MYSQLI_ASSOC);
             // print_r($items);
             echo "<ul>";
             foreach ($items as $item) {
-                echo "<li>" . $item['item'] . "<form action='' method='post' style='display: inline;'><input type='hidden' name='id' value='" . $item['id'] . "'><input type='submit' name='delete' value='x'></form></li>";
+                echo "<li>" . $item['item'] . "<a href='delete.php?id=" . $item['id'] . "'>x</a></li>";
             }
             echo "</ul>";
         }
