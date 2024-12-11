@@ -22,7 +22,12 @@
             $result = $db->query("SELECT * FROM items");
             if ($result) {
                 $items = $result->fetch_all(MYSQLI_ASSOC);
-                print_r($items);
+                // print_r($items);
+                echo "<ul>";
+                foreach ($items as $item) {
+                    echo "<li>" . $item . "</li>";
+                }
+                echo "</ul>";
             }
         }
 
