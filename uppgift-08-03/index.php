@@ -27,7 +27,7 @@
             // print_r($items);
             echo "<ul>";
             foreach ($items as $item) {
-                echo "<li>" . $item['item'] . "<a href='delete.php?id=" . $item['id'] . ">x</a></li>";
+                echo "<li>" . $item['item'] . "<a href='delete.php?id=" . $item['id'] . "'>x</a></li>";
             }
             echo "</ul>";
         }
