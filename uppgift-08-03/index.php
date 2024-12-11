@@ -14,13 +14,13 @@
     </form>
     <?php
 
+        $db = new mysqli("localhost", "root", "root", "items");
         if (isset($_POST['submit'])) {
-            $db = new mysqli("localhost", "root", "root", "items");
             $item = $_POST['item'];
             $sql = "INSERT INTO items (item) VALUES ('$item')";
             $db->query($sql);
         }
-        
+
         $result = $db->query("SELECT * FROM items");
         if ($result) {
             $items = $result->fetch_all(MYSQLI_ASSOC);
