@@ -25,7 +25,7 @@
                 // print_r($items);
                 echo "<ul>";
                 foreach ($items as $item) {
-                    echo "<li>" . $item . "</li>";
+                    echo "<li>" . $item['item'] . "</li>";
                 }
                 echo "</ul>";
             }
