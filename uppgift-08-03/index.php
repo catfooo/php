@@ -19,16 +19,17 @@
             $item = $_POST['item'];
             $sql = "INSERT INTO items (item) VALUES ('$item')";
             $db->query($sql);
-            $result = $db->query("SELECT * FROM items");
-            if ($result) {
-                $items = $result->fetch_all(MYSQLI_ASSOC);
-                // print_r($items);
-                echo "<ul>";
-                foreach ($items as $item) {
-                    echo "<li>" . $item['item'] . "</li>";
-                }
-                echo "</ul>";
+        }
+        
+        $result = $db->query("SELECT * FROM items");
+        if ($result) {
+            $items = $result->fetch_all(MYSQLI_ASSOC);
+            // print_r($items);
+            echo "<ul>";
+            foreach ($items as $item) {
+                echo "<li>" . $item['item'] . "</li>";
             }
+            echo "</ul>";
         }
 
     ?>
