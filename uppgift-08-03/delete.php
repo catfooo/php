@@ -21,6 +21,12 @@
     $sql = "DELETE FROM items WHERE id = $id";
     $db->query($sql);
 
+    if (isset($_POST['submit'])) {
+        $item = $_POST['item'];
+        $sql = "INSERT INTO items (item) VALUES ('$item')";
+        $db->query($sql);
+    }
+
     $result = $db->query("SELECT * FROM items");
     if ($result) {
         $items = $result->fetch_all(MYSQLI_ASSOC);
