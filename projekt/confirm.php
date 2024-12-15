@@ -14,8 +14,10 @@
 
 
 if (isset($_POST['submit'])) {
-    $db = new mysqli("localhost", "root", "root", "projekt");
+
+    // $db = new mysqli("localhost", "root", "root", "projekt");
     // print_r($_POST);
+    require_once "db.php";
     
     $firstname = $_POST['firstname'];
     $lastname = $_POST['lastname'];
