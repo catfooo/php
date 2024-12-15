@@ -23,7 +23,7 @@
         // hämta result som 'en' associativ array
         $item = $result->fetch_assoc();
         echo "<h3>du har beställt " . $item['produktnamn'] . "</h3>"; 
-        echo "<h3>pris: " . $item['pris'] . "maskrosor</h3>";
+        echo "<h3>pris: " . $item['pris'] . " maskrosor</h3>";
     
     ?>
 
