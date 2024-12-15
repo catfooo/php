@@ -43,7 +43,7 @@
             <div class="container px-4 px-lg-5 my-5">
                 <div class="text-center text-white">
                     <h1 class="display-4 fw-bolder">Maskrosaffären</h1>
-                    <p class="lead fw-normal text-white-50 mb-0">vi säljer saker för maskros!</p>
+                    <p class="lead fw-normal text-white-50 mb-0">vi säljer saker för maskrosor!</p>
                 </div>
             </div>
         </header>
@@ -66,7 +66,7 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="form.php?id=<?php echo $item["id"]?>"><?php echo $item["price"]?> <span>maskros</span></a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="form.php?id=<?php echo $item["id"]?>"><?php echo $item["price"]?> <span>maskrosor</span></a></div>
                             </div>
                         </div> <!-- card -->
                     </div> <!-- col -->
