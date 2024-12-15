@@ -15,6 +15,8 @@
         array("id" => 110, "name" => "hus", "description" => "natt i huset(engång)?", "price" => 10, "image" => "10.ico",),
     );
 
+    // koppla till databas. require... 
+
 ?>
 
 <!DOCTYPE html>
