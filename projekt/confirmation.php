@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>bekrï¿½ftelse</title>
+    <title>bekr?ftelse</title>
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
 </head>
 
 <body class="container">
-    <h1 class="text-primary text-center border-bottom border-primary">bekrï¿½ftelse</h1>
+    <h1 class="text-primary text-center border-bottom border-primary">bekr?ftelse</h1>
 
     <?php
     
@@ -19,7 +19,7 @@
         // databasuppkoppling
         require_once 'db.php';
 
-        // hï¿½mta frï¿½n form.php
+        // h?mta fr?n form.php
         $articlenumber = $_POST['id'];
         $name = $_POST['name'];
         $telephonenumber = $_POST['telephonenumber'];
@@ -28,9 +28,9 @@
 
       
         
-        echo "<h2>tack $name, du bestÃ¤llde produkt nr $articlenumber</h2>";
-        echo "<h3>ditt telefonnummer ï¿½r $telephonenumber</h3>";
-        echo "<h3>ditt email ï¿½r $email</h3>";
+        echo "<h2>tack $name, du beställde produkt nr $articlenumber</h2>";
+        echo "<h3>ditt telefonnummer ?r $telephonenumber</h3>";
+        echo "<h3>ditt email ?r $email</h3>";
         echo "<h3>vi kommer att leverera produkten till $address</h3>";
 
         $sql = "INSERT INTO bestallningar (articlenumber, name, telephonenumber, email, address)
