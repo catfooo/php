@@ -27,9 +27,9 @@
 
 ?>
 
-<?php
-echo "Maskrosaffären vi säljer saker för maskrosor!";
-?>
+<!-- <?php
+// echo "Maskrosaffären vi säljer saker för maskrosor!";
+?> -->
 
 
 <!DOCTYPE html>
