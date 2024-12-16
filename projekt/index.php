@@ -27,6 +27,11 @@
 
 ?>
 
+<?php
+echo "Maskrosaffären vi säljer saker för maskrosor!";
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
