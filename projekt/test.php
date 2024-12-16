@@ -1,25 +1,26 @@
+<!-- saved -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="ISO-8859-1">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>MaskrosaffÃ¤ren</title>
+    <title>Maskrosaffären</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 </head>
 <body>
     <header>
-        <h1>MaskrosaffÃ¤ren</h1>
-        <p>Vi sÃ¤ljer saker fÃ¶r maskrosor!</p>
+        <h1>Maskrosaffären</h1>
+        <p>Vi säljer saker för maskrosor!</p>
     </header>
     
     <section>
-        <h2>VÃ¥ra produkter</h2>
+        <h2>Våra produkter</h2>
         <ul>
-            <li>BrÃ¶d</li>
+            <li>Bröd</li>
             <li>Vattenflaska</li>
-            <li>TÃ¤cke</li>
+            <li>Täcke</li>
             <li>Godis</li>
-            <li>DrÃ¶mfÃ¥ngare</li>
+            <li>Drömfångare</li>
         </ul>
     </section>
     
