@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <h1>Maskrosaffären</h1>
+        <h1>Maskrosaff&auml;ren</h1>
         <p>Vi säljer saker för maskrosor!</p>
     </header>
     
