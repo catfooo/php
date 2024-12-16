@@ -1,26 +1,35 @@
+<!-- solution from chatgpt
+
+Ensure Proper Text Handling:
+
+Even with the correct charset in the header and meta tag, your browser might still misinterpret the file. Test by replacing one character, like Ã© or Ã¥, and checking whether itâ€™s displayed correctly.
+If characters are still not showing properly, try manually replacing Ã¥ with &aring;, Ã¤ with &auml;, etc., to ensure proper character rendering. -->
+
+
+
 <!-- saved -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="ISO-8859-1">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Maskrosaffären</title>
+    <title>Maskrosaffï¿½ren</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 </head>
 <body>
     <header>
         <h1>Maskrosaff&auml;ren</h1>
-        <p>Vi säljer saker för maskrosor!</p>
+        <p>Vi sï¿½ljer saker fï¿½r maskrosor!</p>
     </header>
     
     <section>
-        <h2>Våra produkter</h2>
+        <h2>Vï¿½ra produkter</h2>
         <ul>
-            <li>Bröd</li>
+            <li>Brï¿½d</li>
             <li>Vattenflaska</li>
-            <li>Täcke</li>
+            <li>Tï¿½cke</li>
             <li>Godis</li>
-            <li>Drömfångare</li>
+            <li>Drï¿½mfï¿½ngare</li>
         </ul>
     </section>
     
