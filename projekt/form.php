@@ -52,6 +52,7 @@
                 <input type="submit" name="submit" class="btn btn-primary w-100">
             </div>
         </div>
+        <input type="hidden" name="id" value="<?php echo $id; ?>">
     </form>
     
 </body>
