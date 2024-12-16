@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>bekr√§ftelse</title>
+    <title>bekr‰ftelse</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body class="container">
-    <h1 class="text-primary">bekr√§ftelse</h1>
+    <h1 class="text-primary">bekr‰ftelse</h1>
     
     
 <?php
@@ -26,10 +26,10 @@ if (isset($_POST['submit'])) {
     $message = $_POST['message'];
     
     echo "<h2>tack $firstname $lastname!</h2>";
-    echo "<p>ditt telefonnummer √§r $phone</p>";
-    echo "<p>vi kommer att ta kontakt med dig p√• f√∂ljande e-post: 
+    echo "<p>ditt telefonnummer ‰r $phone</p>";
+    echo "<p>vi kommer att ta kontakt med dig pÂ fˆljande e-post: 
          <span class='text-primary'>$email</span></p>";
-    echo "<p>h√§r nedan √§r ditt meddelande: <hr>$message<hr></p>";
+    echo "<p>h‰r nedan ‰r ditt meddelande: <hr>$message<hr></p>";
     
     $sql = "INSERT INTO kontakter(firstname, lastname, phone, email, message) 
                 VALUES ('$firstname', '$lastname', '$phone', '$email', '$message')";
