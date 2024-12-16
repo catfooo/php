@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>best√§llning</title>
+    <title>best‰llning</title>
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
 </head>
 <body class="container">
-    <h1 class="text-primary text-center border-bottom border-primary">best√§llning</h1>
-    <!-- <h2>du har best√§llt produkt nr: <?php /*echo $_GET['id'] */?></h2> -->
+    <h1 class="text-primary text-center border-bottom border-primary">best‰llning</h1>
+    <!-- <h2>du har best‰llt produkt nr: <?php /*echo $_GET['id'] */?></h2> -->
     
     <?php
 
         $id = $_GET['id'];
-        echo "<h2>du har best√§llt produkt nr: $id</h2>";        
+        echo "<h2>du har best‰llt produkt nr: $id</h2>";        
 
         require_once "db.php";
 
         $sql = "SELECT * FROM produkter WHERE id = $id";
         $result = $db->query($sql);
-        // h√§mta result som 'en' associativ array
+        // h‰mta result som 'en' associativ array
         $item = $result->fetch_assoc();
-        echo "<h3>du har best√§llt " . $item['produktnamn'] . "</h3>"; 
+        echo "<h3>du har best‰llt " . $item['produktnamn'] . "</h3>"; 
         echo "<h3>pris: " . $item['pris'] . " maskrosor</h3>";
     
     ?>
