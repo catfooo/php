@@ -1,6 +1,6 @@
 alert("hej");
 
-// let cat = "meow";
+let hund = "meow";
 
 // alert(cat);
 
