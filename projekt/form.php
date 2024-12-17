@@ -5,6 +5,7 @@
         require_once "header.php";
 
         $id = $_GET['id'];
+        echo '<body class="container">';
         echo "<h2>du har best�llt produkt nr: $id</h2>";        
 
         require_once "db.php";
