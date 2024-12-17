@@ -41,7 +41,7 @@
                 <input id="address" type="text" name="address" class="form-control mb-3">
             </div>
             <div class="col-md-4">
-                <input type="submit" name="submit" class="btn btn-primary w-100">
+                <input type="submit" name="submit" class="btn btn-primary w-100 mb-3">
             </div>
         </div>
         <input type="hidden" name="id" value="<?php echo $id; ?>">
