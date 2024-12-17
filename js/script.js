@@ -2,4 +2,6 @@ alert("hej");
 
 let cat = "meow";
 
-alert("cat");
+setTimeout(() => {
+    alert("cat");
+}, 100);
