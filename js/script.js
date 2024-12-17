@@ -47,7 +47,7 @@ function encourage() {
 score = 40;
 repeat()
 
-let numbers = '';
+let numbers;
 
 for (let index = 0; index < 10; index++) {
     numbers += index + ' ';
