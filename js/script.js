@@ -46,3 +46,12 @@ function encourage() {
 // cant redeclare like let score = 40, but reassign like score = 40
 score = 40;
 repeat()
+
+let numbers = '';
+
+for (let index = 0; index < 10; index++) {
+    numbers += index + '';
+    
+}
+
+alert(numbers);
