@@ -1,8 +1,8 @@
 alert("hej");
 
-let cat = "meow";
+// let cat = "meow";
 
-alert(cat);
+// alert(cat);
 
 function cat() {
     alert("cat");
