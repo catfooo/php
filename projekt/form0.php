@@ -1,11 +1,20 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>beställning</title>
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+<body class="container">
+    <h1 class="text-primary text-center border-bottom border-primary">beställning</h1>
+    <!-- <h2>du har best?llt produkt nr: <?php /*echo $_GET['id'] */?></h2> -->
     
     <?php
 
-        require_once "header.php";
-
         $id = $_GET['id'];
-        echo "<h2>du har bestï¿½llt produkt nr: $id</h2>";        
+        echo "<h2>du har beställt produkt nr: $id</h2>";        
 
         require_once "db.php";
 
@@ -13,7 +22,7 @@
         $result = $db->query($sql);
         // h?mta result som 'en' associativ array
         $item = $result->fetch_assoc();
-        echo "<h3>du har bestï¿½llt " . $item['produktnamn'] . "</h3>"; 
+        echo "<h3>du har beställt " . $item['produktnamn'] . "</h3>"; 
         echo "<h3>pris: " . $item['pris'] . " maskrosor</h3>";
     
     ?>
@@ -46,8 +55,5 @@
         <input type="hidden" name="id" value="<?php echo $id; ?>">
     </form>
     
-<?php
-
-    require_once "footer.php";
-
-?>
+</body>
+</html>
