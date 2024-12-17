@@ -19,3 +19,14 @@ function madröm(a, b) {
 }
 let ab = madröm("mörk", "vet");
 alert(ab);
+
+let score = 75;
+
+if (score >= 50) {
+    congratulate();
+}
+
+function congratulate() {
+    let msg = 'grats';
+    alert(msg);
+}
