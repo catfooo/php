@@ -50,7 +50,7 @@ repeat()
 let numbers = '';
 
 for (let index = 0; index < 10; index++) {
-    numbers += index + '';
+    numbers += index + ' ';
     
 }
 
