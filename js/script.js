@@ -9,7 +9,7 @@ function cat() {
 }
 cat()
 
-function dog(cat) {
-    alert(cat)
+function dog(hej) {
+    alert(hej)
 }
-dog()
+dog(hund)
