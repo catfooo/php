@@ -12,3 +12,4 @@ cat()
 function dog(cat) {
     alert(cat)
 }
+dog()
