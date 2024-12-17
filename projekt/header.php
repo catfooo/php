@@ -11,7 +11,7 @@
         <link href="css/styles.css" rel="stylesheet" />
         <link rel="stylesheet" href="css/style.css">
     </head>
-    <body class="container">
+    <body>
         
         <!-- Header-->
         <header class="bg-dark py-5">
