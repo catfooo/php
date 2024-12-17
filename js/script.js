@@ -56,10 +56,10 @@ for (let index = 0; index < 10; index++) {
 
 alert(numbers);
 
-let lön = 1;
+let år = 0;
 for (let år = 0; lön < 10000000; år++) {
     lön += lön * 2 ** år
     
 }
-let length = Math.sqrt(lön) + 1;
-alert(length);
+// let length = Math.sqrt(lön) + 1;
+alert(år + 1);
