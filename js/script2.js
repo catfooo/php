@@ -12,6 +12,8 @@ const cat = {
     }
 }
 
+cat.lunch = 'yogurt'
+
 const { firstName, lastName, memories: { old } } = cat;
-console.log(old);
+console.log(cat);
 
