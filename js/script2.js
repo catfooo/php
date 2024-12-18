@@ -1,3 +1,3 @@
-const s = 'din mamma';
+const s = 'Din Mamma';
 
 console.log(s.toLowerCase());
