@@ -60,6 +60,7 @@ alert(numbers);
 //let lön = 1;
 for (let år = 0, lön = 1; lön < 10000000; år++) {
     lön += lön * 2 ** år
+    år = år ++
     
 }
 // let length = Math.sqrt(lön) + 1;
