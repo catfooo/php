@@ -56,9 +56,9 @@ for (let index = 0; index < 10; index++) {
 
 alert(numbers);
 
-//let år = 0;
-//let lön = 1;
-for (let år = 0, lön = 1; lön < 10000000; år++) {
+let år = 0;
+let lön = 1;
+for (/*let år = 0, lön = 1*/; lön < 10000000; år++) {
     // lön += lön * 2 ** år
     lön *= 2;
     år = år ++
