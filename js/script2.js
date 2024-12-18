@@ -1,8 +1,4 @@
-console.log('katt')
-console.error('mjau')
-console.warn('voff')
+let godis
+godis = 'grön'
 
-// let kaka = 'hallon';
-const kaka = 'hallon';
-kaka = 'choklad';
-console.log(kaka);
+console.log(godis)
