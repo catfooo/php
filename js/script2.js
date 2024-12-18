@@ -23,6 +23,8 @@ const memories = [
 
 const memoryDisliked = memories.filter(function(memory) {
     return memory.isLiked === false;
-});
+}).map(function(memory) {
+    return memory.text;
+})
 
 console.log(memoryDisliked);
