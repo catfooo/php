@@ -24,3 +24,5 @@ const memories = [
 const memoryText = memories.map(function(memory) {
     return memory.text;
 });
+
+console.log(memoryText);
