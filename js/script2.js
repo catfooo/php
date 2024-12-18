@@ -1,4 +1,4 @@
-let godis
-godis = 'grön'
+const godis = 'röd'
+
 
 console.log(godis)
