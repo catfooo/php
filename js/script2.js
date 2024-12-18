@@ -18,4 +18,5 @@ const memories = [
 
 
 
-console.log(memories[1].text);
+const memoriesJSON = JSON.stringify(memories);
+console.log(memoriesJSON);
