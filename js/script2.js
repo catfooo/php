@@ -12,4 +12,4 @@ const cat = {
     }
 }
 
-alert(cat.firstName, cat.lastName);
+console.log(cat.firstName, cat.lastName);
