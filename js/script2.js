@@ -21,8 +21,8 @@ const memories = [
 // high order array methods
 // forEach, map, filter
 
-const memoryLiked = memories.filter(function(memory) {
-    return memory.isLiked === true;
+const memoryDisliked = memories.filter(function(memory) {
+    return memory.isLiked === false;
 });
 
-console.log(memoryLiked);
+console.log(memoryDisliked);
