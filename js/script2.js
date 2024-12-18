@@ -1,4 +1,3 @@
-const godis = 'röd'
+// string, numbers, boolean, null, undefined
 
-
-console.log(godis)
+const name = 'katt'
