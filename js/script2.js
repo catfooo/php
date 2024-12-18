@@ -1,16 +1,15 @@
-// arrays - variable that hold multiple values
+// object literal
 
-const cats = ['kitti', 'catti', 'kotti'];
+const cat = {
+    firstName: 'kitty',
+    lastName: 'katty',
+    age: 8,
+    favorites: ['food', 'play', 'sleep'],
+    memories: {
+        young: 'lost mamma',
+        adult: 'had 3 kids',
+        old: 'lost left eye'
+    }
+}
 
-
-cats[3] = 'molly';
-
-cats.push('poppy');
-cats.unshift('willy');
-cats.pop();
-
-console.log(Array.isArray('cats'))
-
-console.log(cats.indexOf('catti'))
-
-console.log(cats);
+console.log(cat);
