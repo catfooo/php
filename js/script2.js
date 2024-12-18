@@ -21,8 +21,8 @@ const memories = [
 // high order array methods
 // forEach, map, filter
 
-const memoryText = memories.map(function(memory) {
-    return memory.text;
+const memoryText = memories.filter(function(memory) {
+    return memory.isLiked === true;
 });
 
 console.log(memoryText);
