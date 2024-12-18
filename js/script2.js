@@ -2,4 +2,4 @@
 
 const cats = ['kitti', 'catti', 'kotti', 8, false];
 
-console.log(cats);
+console.log(cats[2]);
