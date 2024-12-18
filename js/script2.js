@@ -8,4 +8,4 @@ const x = null;
 const y = undefined;
 let z;
 
-console.log(typeof weight);
+console.log(typeof isGullig);
