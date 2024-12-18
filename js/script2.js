@@ -11,4 +11,6 @@ cats.pop();
 
 console.log(Array.isArray('cats'))
 
+console.log(cats.indexOf('catti'))
+
 console.log(cats);
