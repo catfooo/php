@@ -12,4 +12,4 @@ const cat = {
     }
 }
 
-console.log(cat.firstName, cat.lastName);
+console.log(cat.favorites[1]);
