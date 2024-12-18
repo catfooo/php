@@ -1,19 +1,19 @@
-// object literal
-
-const cat = {
-    firstName: 'kitty',
-    lastName: 'katty',
-    age: 8,
-    favorites: ['food', 'play', 'sleep'],
-    memories: {
-        young: 'lost mamma',
-        adult: 'had 3 kids',
-        old: 'lost left eye'
+const memories = [
+    {
+        id: 1, 
+        text: 'lost left eye',
+        isLiked: false
+    },
+    {
+        id: 2, 
+        text: 'had 3 kids',
+        isLiked: true
+    },
+    {
+        id: 3, 
+        text: 'lost mamma',
+        isLiked: false
     }
-}
+]
 
-cat.lunch = 'yogurt'
-
-const { firstName, lastName, memories: { old } } = cat;
-console.log(cat);
-
+console.log(memories);
