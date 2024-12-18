@@ -18,13 +18,9 @@ const memories = [
 
 
 
-for (let memory of memories) {
-    console.log(memory.id);
-}
-
 // high order array methods
 // forEach, map, filter
 
-memories.forEach(function(memory) {
-    console.log(memory.text)
+const memoryText = memories.map(function(memory) {
+    return memory.text;
 });
