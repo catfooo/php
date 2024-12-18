@@ -14,6 +14,8 @@ const memories = [
         text: 'lost mamma',
         isLiked: false
     }
-]
+];
 
-console.log(memories.text[1]);
+
+
+console.log(memories[1].text);
