@@ -12,4 +12,4 @@ const cat = {
     }
 }
 
-console.log(cat.favorites[1]);
+console.log(cat.memories[adult]);
