@@ -16,4 +16,4 @@ const memories = [
     }
 ]
 
-console.log(memories);
+console.log(memories.text[1]);
