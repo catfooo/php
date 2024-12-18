@@ -12,4 +12,4 @@ const cat = {
     }
 }
 
-console.log(cat.memories[adult]);
+console.log(cat.memories.adult);
