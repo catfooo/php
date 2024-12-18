@@ -9,4 +9,6 @@ cats.push('poppy');
 cats.unshift('willy');
 cats.pop();
 
+console.log(Array.isArray(cats))
+
 console.log(cats);
