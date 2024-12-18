@@ -1,5 +1,5 @@
 // arrays - variable that hold multiple values
 
-const cats = new Array(1, 2, 3, 4, 5);
+const cats = ['kitti', 'catti', 'kotti'];
 
 console.log(cats);
