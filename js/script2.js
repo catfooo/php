@@ -7,5 +7,6 @@ cats[3] = 'molly';
 
 cats.push('poppy');
 cats.unshift('willy');
+cats.pop();
 
 console.log(cats);
