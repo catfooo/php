@@ -1,3 +1,5 @@
-const s = 'kaka, godis, chip, läsk';
+// arrays - variable that hold multiple values
 
-console.log(s.split(', '));
+const cats = new Array(1, 2, 3, 4, 5);
+
+console.log(cats);
