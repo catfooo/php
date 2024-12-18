@@ -19,5 +19,5 @@ const memories = [
 
 
 for(let i = 0; i < memories.length; i++) {
-    console.log(memories[i]);
+    console.log(memories[i].text);
 }
