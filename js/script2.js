@@ -1,3 +1,3 @@
-const s = 'Din Mamma';
+const s = 'din mamma';
 
-console.log(s.toLowerCase());
+console.log(s.substring(0,4));
