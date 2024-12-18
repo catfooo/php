@@ -65,4 +65,18 @@ for (/*let år = 0, lön = 1*/; lön < 10000000; år++) {
     
 }
 // let length = Math.sqrt(lön) + 1;
-alert(år + 1);
+alert(år);
+
+
+
+// using while(gpt)
+
+let år2 = 0;
+let lön2 = 1;
+
+while (lön2 < 10000000) {
+    lön2 *= 2; // Double the salary each year
+    år2++;     // Increment the year
+}
+
+alert(`Det tog ${år2} år att nå en lön på 10,000,000 eller mer.`);
