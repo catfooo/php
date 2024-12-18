@@ -1,3 +1,3 @@
 const s = 'din mamma';
 
-console.log(s.toUpperCase());
+console.log(s.toLowerCase());
