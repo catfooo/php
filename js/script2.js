@@ -18,5 +18,7 @@ const memories = [
 
 
 
-const memoriesJSON = JSON.stringify(memories);
-console.log(memoriesJSON);
+// for
+for(let i = 0; i < 10; i++) {
+    console.log(i);
+}
