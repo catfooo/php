@@ -12,6 +12,6 @@ const cat = {
     }
 }
 
-const { firstName, lastName } = cat;
-console.log(firstName);
+const { firstName, lastName, memories: { old } } = cat;
+console.log(old);
 
