@@ -12,4 +12,6 @@ const cat = {
     }
 }
 
-console.log(cat.memories.adult);
+const { firstName, lastName } = cat;
+console.log(firstName);
+
