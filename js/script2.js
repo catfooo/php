@@ -18,6 +18,6 @@ const memories = [
 
 
 
-for(let i = 0; i < memories.length; i++) {
-    console.log(memories[i].text);
+for (let memory of memories) {
+    console.log(memory);
 }
