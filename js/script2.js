@@ -1,5 +1,7 @@
 // arrays - variable that hold multiple values
 
-const cats = ['kitti', 'catti', 'kotti', 8, false];
+const cats = ['kitti', 'catti', 'kotti'];
 
-console.log(cats[2]);
+cats[3] = 'molly'
+
+console.log(cats);
