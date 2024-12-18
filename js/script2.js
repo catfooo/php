@@ -1,3 +1,3 @@
-const s = 'din mamma';
+const s = 'kaka, godis, chip, läsk';
 
-console.log(s.split(''));
+console.log(s.split(', '));
