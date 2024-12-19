@@ -1,6 +1,13 @@
-// arrow function
+// oop
 
-const addNums = num1 => num1 + 5; 
+// constructor function
+function Person(firstName, lastName, dob) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.dob = dob;
+}
 
- 
-console.log(addNums(5));
+// instantiate object
+const person1 = new Person('kitty', 'katty', '1-2-2005');
+
+console.log(person1);
