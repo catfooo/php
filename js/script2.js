@@ -1,6 +1,6 @@
 // switch
 
-const x = 11;
+const x = 9;
 
 const color = x > 10 ? 'red' : 'blue';
 
