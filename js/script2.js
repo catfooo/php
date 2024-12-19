@@ -1,6 +1,6 @@
 // ternary operator
 
-const x = 10;
+const x = 11;
 
 const color = x > 10 ? 'red' : 'blue';
 
