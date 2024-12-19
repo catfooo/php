@@ -1,4 +1,4 @@
-const x = 4;
+const x = 6;
 const y = 11;
 
 if(x > 5 && y > 10) {
