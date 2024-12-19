@@ -1,30 +1,5 @@
-const memories = [
-    {
-        id: 1, 
-        text: 'lost left eye',
-        isLiked: false
-    },
-    {
-        id: 2, 
-        text: 'had 3 kids',
-        isLiked: true
-    },
-    {
-        id: 3, 
-        text: 'lost mamma',
-        isLiked: false
-    }
-];
+const x = 10;
 
-
-
-// high order array methods
-// forEach, map, filter
-
-const memoryDisliked = memories.filter(function(memory) {
-    return memory.isLiked === false;
-}).map(function(memory) {
-    return memory.text;
-})
-
-console.log(memoryDisliked);
+if(x == 10) {
+    console.log('x is 10')
+}
