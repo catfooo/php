@@ -8,7 +8,7 @@ function Person(firstName, lastName, dob) {
 }
 
 // instantiate object
-const person1 = new Person('kitty', 'katty', '2005-2-1');
-const person2 = new Person('kotty', 'kutty', '2006-8-1');
+const person1 = new Person('kitty', 'katty', '2005-02-01');
+const person2 = new Person('kotty', 'kutty', '2006-08-01');
 
 console.log(person2.dob);
