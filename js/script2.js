@@ -1,1 +1,1 @@
-// dom
+window.open()
