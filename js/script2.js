@@ -1,2 +1,1 @@
-// window.open()
-console.log(window.location.href);
+prompt('say');
