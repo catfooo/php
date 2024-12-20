@@ -7,4 +7,4 @@ ul.children[1].innerText = 'katty';
 ul.lastElementChild.innerHTML = '<h1>hej</h1>';
 
 const btn = document.querySelector('.btn');
-btn.getElementsByClassName.background = 'red';
+btn.style.background = 'red';
