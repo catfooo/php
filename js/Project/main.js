@@ -1,9 +1,4 @@
-// dom
-
-console.log(window);
-window.alert(9);
-
-// selector
 // single element 
+document.getElementById('my-form');
 
 // multiple element
