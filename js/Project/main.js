@@ -1,4 +1,4 @@
 // single element 
-document.getElementById('my-form');
+console.log(document.getElementById('my-form'));
 
 // multiple element
