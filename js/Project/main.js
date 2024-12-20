@@ -6,3 +6,4 @@
 // multiple element
 console.log(document.querySelectorAll('.item'));
 console.log(document.getElementsByClassName('item'));
+console.log(document.getElementsByTagName('li'));
