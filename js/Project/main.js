@@ -1,7 +1,7 @@
 // dom
 
 console.log(window);
-alert(cat);
+alert(9);
 // selector
 // single element 
 
