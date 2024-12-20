@@ -13,5 +13,7 @@ function onSubmit(e) {
   
   if(nameInput.value === '' || emailInput.value === '') {
     alert('enter fields');
+  } else {
+    console.log('success');
   }
 }
