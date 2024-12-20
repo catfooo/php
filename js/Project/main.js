@@ -1,10 +1,14 @@
-// events
+// functional app add grab outputs user
 
-const btn = document.querySelector('.btn');
+const myForm = document.querySelector('#my-form');
+const nameInput = document.querySelector('#name');
+const emailInput = document.querySelector('#email');
+const msg = document.querySelector('.msg');
+const userList = document.querySelector('#users');
 
-btn.addEventListener('mouseout', (e) => {
+myForm.addEventListener('submit', onSubmit);
+
+function onSubmit(e) {
   e.preventDefault();
-  document.querySelector('#my-form').style.background = '#ccc';
-  document.querySelector('body').classList.add('bg-dark');
-  document.querySelector('.items').lastElementChild.innerHTML = '<h1>hej</h1>';
-});
+  console.log(nameInput);
+}
