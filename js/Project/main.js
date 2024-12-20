@@ -1,7 +1,8 @@
 // dom
 
 console.log(window);
-alert(9);
+window.alert(9);
+
 // selector
 // single element 
 
