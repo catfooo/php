@@ -1,3 +1,2 @@
-const items = document.querySelectorAll('.item');
-
-items.forEach((item) => console.log(item));
+const ul = document.querySelector('.items');
+console.log(ul);
