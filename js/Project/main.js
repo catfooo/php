@@ -10,5 +10,8 @@ myForm.addEventListener('submit', onSubmit);
 
 function onSubmit(e) {
   e.preventDefault();
-  console.log(nameInput.value);
+  
+  if(nameInput.value === '' || emailInput.value === '') {
+    alert('enter fields');
+  }
 }
