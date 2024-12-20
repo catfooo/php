@@ -8,4 +8,4 @@ ul.lastElementChild.innerHTML = '<h1>hej</h1>';
 
 // const btn = document.querySelector('.btn');
 // btn.style.background = 'red';
-document.getElementsByClassName('btn')[0].style.background = 'red';
+document.querySelector('.btn').style.background = 'red';
