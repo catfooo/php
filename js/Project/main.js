@@ -1,11 +1,7 @@
-const ul = document.querySelector('.items');
+// events
 
-// ul.remove();
-// ul.lastElementChild.remove();
-ul.firstElementChild.textContent = 'hello';
-ul.children[1].innerText = 'katty';
-ul.lastElementChild.innerHTML = '<h1>hej</h1>';
+const btn = document.querySelector('.btn');
 
-// const btn = document.querySelector('.btn');
-// btn.style.background = 'red';
-document.querySelector('.btn').style.background = 'red';
+btn.addEventListener('click', (e) => {
+  console.log('click');
+});
