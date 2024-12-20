@@ -1,4 +1,5 @@
 // single element 
-console.log(document.getElementById('my-form'));
+const form = document.getElementById('my-form');
+console.log(form);
 
 // multiple element
