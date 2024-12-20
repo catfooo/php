@@ -1,1 +1,1 @@
-prompt('say');
+confirm(lilli är lilla);
