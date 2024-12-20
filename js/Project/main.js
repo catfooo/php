@@ -14,6 +14,8 @@ function onSubmit(e) {
   if(nameInput.value === '' || emailInput.value === '') {
     msg.classList.add('error');
     msg.innerHTML = 'enter all fields';
+
+    setTimeout(() => msg.remove(), 3000);
   } else {
     console.log('success');
   }
