@@ -1,1 +1,1 @@
-confirm(lilli är lilla);
+confirm('lilli är lilla');
