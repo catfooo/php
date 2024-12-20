@@ -1,4 +1,4 @@
 const ul = document.querySelector('.items');
 
 // ul.remove();
-ul.remove(ul[2]);
+ul.lastElementChild.remove()
