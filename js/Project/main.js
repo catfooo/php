@@ -21,5 +21,9 @@ function onSubmit(e) {
     li.appendChild(document.createTextNode(`${nameInput.value} : ${emailInput.value}`));
 
     userList.appendChild(li);
+
+    // clear fields
+    nameInput.value = '';
+    emailInput.value = '';
   }
 }
