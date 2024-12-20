@@ -10,5 +10,5 @@ myForm.addEventListener('submit', onSubmit);
 
 function onSubmit(e) {
   e.preventDefault();
-  console.log(nameInput);
+  console.log(nameInput.value);
 }
