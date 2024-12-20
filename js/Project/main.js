@@ -4,3 +4,4 @@ console.log(document.querySelector('h1'));
 
 
 // multiple element
+console.log(document.querySelectorAll('.item'));
