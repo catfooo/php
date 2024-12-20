@@ -12,7 +12,7 @@ function onSubmit(e) {
   e.preventDefault();
   
   if(nameInput.value === '' || emailInput.value === '') {
-    alert('enter fields');
+    msg.innerHTML = 'enter all fields';
   } else {
     console.log('success');
   }
