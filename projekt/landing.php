@@ -31,6 +31,7 @@ DirectoryIndex welcome.php -->
 </head>
 <body>
     <script>
+        // redirect (id integration to be done in future)
         window.onload = function() {
             setTimeout(() => {
                 location.href = "http://212.18.224.194/~okt2404/projekt/index.php";
