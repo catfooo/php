@@ -12,10 +12,10 @@
     <script>
         function funktion() {
             let password = document.getElementById("password");
-            if (password.type === "password") {
-                password.type = "text"
+            if (password.type === "password") { // before check the condition, (this with =) part executes so assigns, if condition is password.type = "password". so every time function provoked, only assign happens(which makes checkbox seems to not work), never get to else block, so we need to match the exact(===) type
+                password.type = "text";
             } else {
-                password.type = "password"
+                password.type = "password";
             }
         }
     </script>
