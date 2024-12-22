@@ -6,7 +6,7 @@ let img = document.getElementById('img');
 let imgContent = document.getElementById('img-content');
 let captionText = document.getElementById('caption');
 
-img.onClick = function() {
+img.onclick = function() {
     modal.style.display = "block";
     imgContent.src = this.src;
     captionText.innerHTML = this.alt;
@@ -14,6 +14,6 @@ img.onClick = function() {
 
 // span closes the modal
 let span = document.getElementsByClassName('close')[0];
-span.onClick = function() {
+span.onclick = function() {
     modal.style.display = "none";
 }
