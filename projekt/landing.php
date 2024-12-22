@@ -19,3 +19,23 @@ DirectoryIndex welcome.php -->
     }
 
 ?>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vandrar</title>
+</head>
+<body>
+    <script>
+        window.onload() = function() {
+            setTimeout(() => {
+                location.href = "http://212.18.224.194/~okt2404/projekt/index.php";
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
