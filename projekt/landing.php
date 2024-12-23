@@ -30,13 +30,14 @@ DirectoryIndex welcome.php -->
     <title>vandrar</title>
 </head>
 <body>
-    <script>
+    <!-- <script>
         // redirect (id integration to be done in future)
         window.onload = function() {
             setTimeout(() => {
                 location.href = "http://212.18.224.194/~okt2404/projekt/index.php";
             }, 5000);
         }
-    </script>
+    </script> -->
+    <script src="js/scripts.js"></script>
 </body>
 </html>
