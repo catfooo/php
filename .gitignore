@@ -1,2 +1,5 @@
 **/libs/
 **/vendor/
+**/.env
+**/config.ini
+**/config.php

@@ -1,12 +1,17 @@
 <?php
 
-    require 'vendor/autoload.php';
+//use Dotenv\Dotenv;
+
+    require "vendor/autoload.php";
 
     $client = new Google\Client;
 
-    $client->setClientId();
-    $client->setClientSecret();
-    $client->setRedirectUri();
+    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+    $dotenv->load();
+
+    $client->setClientId(getenv($_ENV["OAUTH_CLIENTID"]));
+    $client->setClientSecret(getenv($_ENV["OAUTH_CLIENTSECRET"]));
+    $client->setRedirectUri("http://localhost/php-google-login-2/redirect.php");
 
 ?>
 
