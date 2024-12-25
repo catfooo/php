@@ -9,7 +9,7 @@
 
     $client->setClientId($_ENV["OAUTH_CLIENTID"]);
     $client->setClientSecret($_ENV["OAUTH_CLIENTSECRET"]);
-    $client->setRedirectUri("http://localhost/php-google-login-2/redirect.php");
+    $client->setRedirectUri("http://localhost:8888/php-google-login-2/redirect.php");
 
     $client->addScope("email");
     $client->addScope("profile");

@@ -1,5 +1,5 @@
 <?php
-    //
+    
     require "vendor/autoload.php";
 
     $client = new Google\Client;
@@ -9,7 +9,7 @@
 
     $client->setClientId($_ENV["OAUTH_CLIENTID"]);
     $client->setClientSecret($_ENV["OAUTH_CLIENTSECRET"]);
-    $client->setRedirectUri("http://localhost/php-google-login-2/redirect.php");
+    $client->setRedirectUri("http://localhost:8888/php-google-login-2/redirect.php");
 
     // (from gpt)Authorization Code
     // After successful authentication, Google redirects the user back to your specified redirect_uri with the code parameter in the URL:
