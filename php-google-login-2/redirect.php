@@ -42,4 +42,6 @@
         $userinfo->name
     );
 
+    // to do next : save the value to the database, (use session to log on???)
+
 ?>
