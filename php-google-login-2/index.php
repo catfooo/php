@@ -7,8 +7,8 @@
     $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
     $dotenv->load();
 
-    $client->setClientId(getenv($_ENV["OAUTH_CLIENTID"]));
-    $client->setClientSecret(getenv($_ENV["OAUTH_CLIENTSECRET"]));
+    $client->setClientId($_ENV["OAUTH_CLIENTID"]);
+    $client->setClientSecret($_ENV["OAUTH_CLIENTSECRET"]);
     $client->setRedirectUri("http://localhost/php-google-login-2/redirect.php");
 
     $client->addScope("email");
