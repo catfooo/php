@@ -1,8 +1,5 @@
 <?php
 
-//
-//use Dotenv\Dotenv;
-
     require "vendor/autoload.php";
 
     $client = new Google\Client;
@@ -14,6 +11,11 @@
     $client->setClientSecret(getenv($_ENV["OAUTH_CLIENTSECRET"]));
     $client->setRedirectUri("http://localhost/php-google-login-2/redirect.php");
 
+    $client->addScope("email");
+    $client->addScope("profile");
+
+    $url = $client->createAuthUrl();
+
 ?>
 
 <!DOCTYPE html>
@@ -24,6 +26,7 @@
     <title>google login example</title>
 </head>
 <body>
-    <a href="">sign in with google</a>
+    <!-- <?//= $url ?> is equivalent to <?//php echo $url ?> -->
+    <a href="<?= $url ?>">sign in with google</a>
 </body>
 </html>
