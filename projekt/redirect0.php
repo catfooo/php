@@ -1,7 +1,5 @@
 <?php
     
-    session_start();
-
     require "vendor/autoload.php";
 
     $client = new Google\Client;
@@ -59,18 +57,9 @@
     $name = $userinfo->name;
     $email = $userinfo->email;
 
-    // (gpt:session.md) Retrieve the User ID: Using LAST_INSERT_ID(id) ensures that you can reliably get the id of the user, whether they were just inserted or already existed in the table.
-    $sql = "INSERT INTO kunder (name, email) 
-            VALUES ('$name', '$email')
-            ON DUPLICATE KEY UPDATE id=LAST_INSERT_ID(id)";
+    $sql = "INSERT INTO kunder (name, email) VALUES ('$name', '$email')";
 
     $db->query($sql);
-
-    // get the inserted user id
-    $user_id = $db->insert_id;
-
-    // save the user id in the session
-    $_SESSION['user_id'] = $user_id;
 
     echo "<script>
                 alert('du fick 10 maskrosor');
