@@ -1,5 +1,14 @@
 <?php
 
+$path = realpath('/Applications/MAMP/htdocs/projekt/.env');
+
+if ($path === false) {
+    echo "The file does not exist or the path is incorrect.";
+} else {
+    echo "The absolute path is: " . $path;
+}
+
+
     require "vendor/autoload.php";
 
     $client = new Google\Client;
