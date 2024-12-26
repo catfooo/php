@@ -44,4 +44,21 @@
 
     // to do next : save the value to the database, (use session to log on???)
 
+    mysqli_report(MYSQLI_REPORT_OFF);
+    /* @ is used to suppress warnings */
+    $db = @new mysqli("localhost", "root", "root", "projekt");
+
+    // quit if failed
+    if ($db->connect_error) {
+        echo "kunde inte koppla till databas";
+        die();
+    }
+
+    $name = $userinfo->name;
+    $email = $userinfo->email;
+
+    $sql = "INSERT INTO kunder (name, email) VALUES ('$name', '$email')";
+
+    $db->query($sql);
+
 ?>
