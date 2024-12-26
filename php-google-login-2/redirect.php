@@ -61,4 +61,6 @@
 
     $db->query($sql);
 
+    echo "<script>alert('du fick 10 maskrosor');</script>";
+
 ?>
