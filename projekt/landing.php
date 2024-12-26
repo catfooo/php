@@ -1,8 +1,5 @@
 <?php
 
-echo realpath('/Applications/MAMP/htdocs/projekt/.env');  // Prints the absolute path
-
-
     require "vendor/autoload.php";
 
     $client = new Google\Client;
