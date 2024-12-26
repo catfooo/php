@@ -4,7 +4,7 @@
 
     $client = new Google\Client;
 
-    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+    $dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));
     $dotenv->load();
 
     $client->setClientId($_ENV["OAUTH_CLIENTID"]);
