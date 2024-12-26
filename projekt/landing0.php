@@ -1,34 +1,35 @@
+<!-- Step 2: Update Your Site's Entry Point
+Set welcome.php as the initial page your users see when visiting the site. You can achieve this by ensuring welcome.php is set as the default in your web server configuration. For example:
+
+For Apache:
+
+Modify your .htaccess file:
+
+DirectoryIndex welcome.php -->
+
+
 <?php
 
-    require "vendor/autoload.php";
+    require_once 'db.php';
 
-    $client = new Google\Client;
-
-    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-    $dotenv->load();
-
-    $client->setClientId($_ENV["OAUTH_CLIENTID"]);
-    $client->setClientSecret($_ENV["OAUTH_CLIENTSECRET"]);
-    $client->setRedirectUri("http://localhost:8888/projekt/redirect.php");
-
-    $client->addScope("email");
-    $client->addScope("profile");
-
-    $url = $client->createAuthUrl();
+    // kopplande msg
+    if (!$db->connect_error) {
+        echo "hej";
+        
+    }
 
 ?>
 
 
 
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>vandrar</title>
 </head>
 <body>
-    <a href="<?= $url ?>">logga in med google</a>
     <!-- <script>
         // redirect (id integration to be done in future)
         window.onload = function() {
