@@ -19,3 +19,7 @@ header, footer {
 .player {
     height: 20px;
 }
+
+.number {
+    color: transparent;
+}

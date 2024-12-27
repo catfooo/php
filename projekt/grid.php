@@ -62,7 +62,7 @@
             } elseif ($i == 19) {
                 echo "<div class='tile'>c3</div>";
             } else {
-                echo "<div class='tile'>$i</div>"; // Display the number echo "<div class='tile'>$i</div>";
+                echo "<div class='tile number'>$i</div>"; // Display the number echo "<div class='tile'>$i</div>";
             }
         }
         echo '</div>';
