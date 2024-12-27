@@ -37,38 +37,44 @@
             $user_id = $_SESSION['user_id'];
             $result = $db->query("SELECT * FROM kunder WHERE id = $user_id");
             $user = $result->fetch_assoc();
-            echo "du har " . $user['dandelions'] . " maskrosor";        
+            echo "du har " . $user['dandelions'] . " maskrosor";
+            if ($item['pris'] > $user['dandelions']) {
+                echo "du har inte tillräckligt med maskrosor";
+                $style = 'style="display:none;"';
+            }        
         }
     
     ?>
 
-    <h3>vart ska vi leverera?</h3>
-
-    <!-- hidden? artikelnummer(php?id=)? -->
-    <form action="confirmation.php" method="POST">
-        <div class="row">
-            <div class="col-md-12">
-                <label for="name">namn </label>
-                <input id="name" type="text" name="name" class="form-control mb-3">
-            </div>
-            <div class="col-md-6">
-                <label for="telephonenumber">telefonnummer </label>
-                <input id="telephonenumber" type="text" name="telephonenumber" class="form-control mb-3">
-            </div>
-            <div class="col-md-6">
-                <label for="email">e-postadress </label>
-                <input id="email" type="text" name="email" class="form-control mb-3">
-            </div>
-            <div class="col-md-12">
-                <label for="address">leveransadress </label>
-                <input id="address" type="text" name="address" class="form-control mb-3">
-            </div>
-            <div class="col-md-4">
-                <input type="submit" name="submit" class="btn btn-primary w-100 mb-3">
-            </div>
-        </div>
-        <input type="hidden" name="id" value="<?php echo $id; ?>">
-    </form>
+    <div class="form" <?php echo $style; ?>>
+            <h3>vart ska vi leverera?</h3>
+        
+            <!-- hidden? artikelnummer(php?id=)? -->
+            <form action="confirmation.php" method="POST">
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="name">namn </label>
+                        <input id="name" type="text" name="name" class="form-control mb-3">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="telephonenumber">telefonnummer </label>
+                        <input id="telephonenumber" type="text" name="telephonenumber" class="form-control mb-3">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="email">e-postadress </label>
+                        <input id="email" type="text" name="email" class="form-control mb-3">
+                    </div>
+                    <div class="col-md-12">
+                        <label for="address">leveransadress </label>
+                        <input id="address" type="text" name="address" class="form-control mb-3">
+                    </div>
+                    <div class="col-md-4">
+                        <input type="submit" name="submit" class="btn btn-primary w-100 mb-3">
+                    </div>
+                </div>
+                <input type="hidden" name="id" value="<?php echo $id; ?>">
+            </form>
+    </div>
 
     </section>
     
