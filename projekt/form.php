@@ -9,6 +9,7 @@
         $id = $_GET['id'];
         echo '<section class="container">';
 
+        require_once "db.php";
         // retrive the user info
         if (!isset($_SESSION['user_id'])) {
             echo "om du vill köpa, logga in";        
@@ -21,7 +22,6 @@
 
         echo "<h2>du har best?llt produkt nr: $id</h2>";        
 
-        require_once "db.php";
 
         $sql = "SELECT * FROM produkter WHERE id = $id";
         $result = $db->query($sql);
