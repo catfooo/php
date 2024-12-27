@@ -17,5 +17,5 @@ header, footer {
 }
 
 .player {
-    font-size: 3px;
+    font-size: inherit;
 }
