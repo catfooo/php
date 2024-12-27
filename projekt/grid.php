@@ -23,11 +23,11 @@
         $result = $db->query("SELECT * FROM kunder WHERE id = $user_id");
         $user = $result->fetch_assoc();
         echo "<div style = 'display:none;'>";
-        echo "välkommen " . $user['name'];  
-        echo '<a href="http://localhost:8888/projekt/index.php">Maskrosaffären</a>';  
+        echo "vï¿½lkommen " . $user['name'];  
+        echo '<a href="http://localhost:8888/projekt/index.php">Maskrosaffï¿½ren</a>';  
         echo "</div>";
         
-        // (gpt) Display a 5×5 grid
+        // (gpt) Display a 5ï¿½5 grid
         // echo '<div class="tileset" style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; width: 300px; margin: 20px auto;">';
         // for ($i = 1; $i <= 25; $i++) {
         //     echo "<div class='tile' style='border: 1px solid #ccc; padding: 20px; text-align: center;'>$i</div>";
@@ -45,6 +45,22 @@
                     /|\\<br>
                     /\\  
                     </div>";
+            } elseif ($i == 7) {
+                echo "<div class='tile'>a1</div>";
+            } elseif ($i == 8) {
+                echo "<div class='tile'>a2</div>";
+            } elseif ($i == 9) {
+                echo "<div class='tile'>a3</div>";
+            } elseif ($i == 12) {
+                echo "<div class='tile'>b1</div>";
+            } elseif ($i == 14) {
+                echo "<div class='tile'>b3</div>";
+            } elseif ($i == 17) {
+                echo "<div class='tile'>c1</div>";
+            } elseif ($i == 18) {
+                echo "<div class='tile'>c2</div>";
+            } elseif ($i == 19) {
+                echo "<div class='tile'>c3</div>";
             } else {
                 echo "<div class='tile'>$i</div>"; // Display the number
             }
