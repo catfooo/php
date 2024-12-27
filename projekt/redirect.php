@@ -68,7 +68,7 @@
                 alert('du fick 10 maskrosor');
                 window.onload = function() {
                     setTimeout(() => {
-                        location.href = 'http://212.18.224.194/~okt2404/projekt/index.php';
+                        location.href = 'http://localhost:8888/projekt/index.php';
                     }, 5000);
                 }
           </script>";
