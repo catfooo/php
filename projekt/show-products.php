@@ -1,5 +1,7 @@
 <?php
 
+    session_start();
+    
     // Set the content type to ISO-8859-1 //
     header('Content-Type: text/html; charset=ISO-8859-1');
 
@@ -20,6 +22,14 @@
 
     
     require_once "db.php";
+
+    // retrive the user info
+    if (isset($_SESSION['user_id'])) {
+        $user_id = $_SESSION['user_id'];
+        $result = $db->query("SELECT * FROM kunder WHERE id = $user_id");
+        $user = $result->fetch_assoc();
+        echo "welcome " . $user['name'];
+    }
 
     $sql = "SELECT * FROM produkter";
     $result = $db->query($sql);
