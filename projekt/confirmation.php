@@ -25,6 +25,8 @@
 
         // hämta från sessionen
         $user_id = $_SESSION['user_id'];
+        $price = $_SESSION['price'];
+        
         
 
       
@@ -37,6 +39,10 @@
         $sql = "INSERT INTO bestallningar (articlenumber, user_id, name, telephonenumber, email, address)
                 VALUES ('$articlenumber', '$user_id', '$name', '$telephonenumber', '$email', '$address')";
 
+        $db->query($sql);
+
+        // subtract used maskrosor
+        $sql = "UPDATE kunder SET dandelions = dandelions - $price WHERE id = $user_id";
         $db->query($sql);
 
         echo "</section>";

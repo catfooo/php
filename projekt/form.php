@@ -30,6 +30,9 @@
         echo "<h3>du har best?llt " . $item['produktnamn'] . "</h3>"; 
         echo "<h3>pris: " . $item['pris'] . " maskrosor</h3>";
 
+        // save the price in the session
+        $_SESSION['price'] = $item['pris'];
+
         // retrive the user info
         if (!isset($_SESSION['user_id'])) {
             echo "om du vill köpa, logga in";        
