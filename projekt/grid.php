@@ -39,6 +39,12 @@
             // Check if the tile is 3
             if ($i == 3) {
                 echo "<div class='tile shop'><a href='http://localhost:8888/projekt/index.php'>&#8962;</a></div>"; // Display the house symbol ?
+            } elseif ($i == 13) {
+                echo "<div class='tile'>
+                     O<br>
+                    /|\\<br>
+                    /\\  
+                    </div>";
             } else {
                 echo "<div class='tile'>$i</div>"; // Display the number
             }
