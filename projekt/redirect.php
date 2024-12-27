@@ -52,7 +52,7 @@
     $name = $userinfo->name;
     $email = $userinfo->email;
 
-    // (gpt:session.md) Retrieve the User ID: Using LAST_INSERT_ID(id) ensures that you can reliably get the id of the user, whether they were just inserted or already existed in the table.
+    /// (gpt:session.md) Retrieve the User ID: Using LAST_INSERT_ID(id) ensures that you can reliably get the id of the user, whether they were just inserted or already existed in the table.
     $sql = "INSERT INTO kunder (name, email) 
             VALUES ('$name', '$email')
             -- ON DUPLICATE KEY UPDATE id=LAST_INSERT_ID(id)
