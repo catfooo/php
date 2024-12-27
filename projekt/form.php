@@ -29,6 +29,16 @@
         $item = $result->fetch_assoc();
         echo "<h3>du har best?llt " . $item['produktnamn'] . "</h3>"; 
         echo "<h3>pris: " . $item['pris'] . " maskrosor</h3>";
+
+        // retrive the user info
+        if (!isset($_SESSION['user_id'])) {
+            echo "om du vill köpa, logga in";        
+        } else {
+            $user_id = $_SESSION['user_id'];
+            $result = $db->query("SELECT * FROM kunder WHERE id = $user_id");
+            $user = $result->fetch_assoc();
+            echo "du har " . $user['dandelions'] . "maskrosor";        
+        }
     
     ?>
 
