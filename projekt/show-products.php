@@ -24,13 +24,13 @@
     require_once "db.php";
 
     // retrive the user info
-    if (isset($_SESSION['user_id'])) {
+    if (!isset($_SESSION['user_id'])) {
+        echo "om du vill ha maskrosor, logga in";        
+    } else {
         $user_id = $_SESSION['user_id'];
         $result = $db->query("SELECT * FROM kunder WHERE id = $user_id");
         $user = $result->fetch_assoc();
-        echo "välkommen " . $user['name'];
-    } else {
-        echo "om du vill ha maskrosor, logga in";
+        echo "välkommen " . $user['name'];        
     }
 
     $sql = "SELECT * FROM produkter";
