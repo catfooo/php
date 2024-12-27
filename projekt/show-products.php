@@ -28,7 +28,9 @@
         $user_id = $_SESSION['user_id'];
         $result = $db->query("SELECT * FROM kunder WHERE id = $user_id");
         $user = $result->fetch_assoc();
-        echo "welcome " . $user['name'];
+        echo "välkommen " . $user['name'];
+    } else {
+        echo "om du vill ha maskrosor, logga in";
     }
 
     $sql = "SELECT * FROM produkter";
