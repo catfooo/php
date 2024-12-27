@@ -38,7 +38,7 @@
         for ($i = 1; $i <= 25; $i++) {
             // Check if the tile is 3
             if ($i == 3) {
-                echo "<div class='tile'>&#8962;</div>"; // Display the house symbol ?
+                echo "<div class='tile'><a href='http://localhost:8888/projekt/index.php'>&#8962;</a></div>"; // Display the house symbol ?
             } else {
                 echo "<div class='tile'>$i</div>"; // Display the number
             }
