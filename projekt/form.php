@@ -37,7 +37,7 @@
             $user_id = $_SESSION['user_id'];
             $result = $db->query("SELECT * FROM kunder WHERE id = $user_id");
             $user = $result->fetch_assoc();
-            echo "du har " . $user['dandelions'] . "maskrosor";        
+            echo "du har " . $user['dandelions'] . " maskrosor";        
         }
     
     ?>
