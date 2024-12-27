@@ -17,5 +17,6 @@ header, footer {
 }
 
 .player {
-    font-size: inherit;
+    font-size: inherit; line-height: 20px;
+
 }
