@@ -11,7 +11,8 @@
 
     $client->setClientId($_ENV["OAUTH_CLIENTID"]);
     $client->setClientSecret($_ENV["OAUTH_CLIENTSECRET"]);
-    $client->setRedirectUri("http://redirectmeto.com/http://212.18.224.194/~okt2404/projekt/redirect.php");
+    //$client->setRedirectUri("http://redirectmeto.com/http://212.18.224.194/~okt2404/projekt/redirect.php");
+    $client->setRedirectUri("http://localhost:8888/projekt/index.php");
 
     // (from gpt)Authorization Code
     // After successful authentication, Google redirects the user back to your specified redirect_uri with the code parameter in the URL:
