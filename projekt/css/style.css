@@ -11,3 +11,7 @@ header, footer {
 .tile {
     border: 1px solid #ccc; padding: 20px; text-align: center; color:#aaa5a5; line-height: 20px;
 }
+
+.shop {
+    text-decoration: none;
+}
