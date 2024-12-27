@@ -15,3 +15,7 @@ header, footer {
 .shop a {
     text-decoration: none;
 }
+
+.player {
+    font-size: small;
+}
