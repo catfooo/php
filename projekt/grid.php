@@ -11,8 +11,10 @@
         $user_id = $_SESSION['user_id'];
         $result = $db->query("SELECT * FROM kunder WHERE id = $user_id");
         $user = $result->fetch_assoc();
+        echo "<div style = 'display:none;'>";
         echo "välkommen " . $user['name'];  
-        echo '<a href="http://localhost:8888/projekt/index.php">Maskrosaffären</a>';      
+        echo '<a href="http://localhost:8888/projekt/index.php">Maskrosaffären</a>';  
+        echo "</div>";    
     }
 
 ?>
