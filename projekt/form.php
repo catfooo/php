@@ -41,7 +41,9 @@
             if ($item['pris'] > $user['dandelions']) {
                 echo "du har inte tillräckligt med maskrosor";
                 $style = 'style="display:none;"';
-            }        
+            } else {
+                $style = '';
+            }     
         }
     
     ?>
