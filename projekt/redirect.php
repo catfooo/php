@@ -67,10 +67,10 @@
     $_SESSION['user_id'] = $user_id;
 
     echo "<script>
-                alert('du fick 10 maskrosor');
+                // alert('du fick 10 maskrosor');
                 window.onload = function() {
                     setTimeout(() => {
-                        location.href = 'http://localhost:8888/projekt/index.php';
+                        location.href = 'http://localhost:8888/projekt/grid.php';
                     }, 5000);
                 }
           </script>";
