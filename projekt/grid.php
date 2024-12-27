@@ -46,21 +46,21 @@
                     /\\  
                     </div>";
             } elseif ($i == 7) {
-                echo "<div class='tile'>a1</div>";
+                echo "<div class='tile'>1</div>";
             } elseif ($i == 8) {
-                echo "<div class='tile'>a2</div>";
+                echo "<div class='tile'>2</div>";
             } elseif ($i == 9) {
-                echo "<div class='tile'>a3</div>";
+                echo "<div class='tile'>3</div>";
             } elseif ($i == 12) {
-                echo "<div class='tile'>b1</div>";
+                echo "<div class='tile'>4</div>";
             } elseif ($i == 14) {
-                echo "<div class='tile'>b3</div>";
+                echo "<div class='tile'>6</div>";
             } elseif ($i == 17) {
-                echo "<div class='tile'>c1</div>";
+                echo "<div class='tile'>7</div>";
             } elseif ($i == 18) {
-                echo "<div class='tile'>c2</div>";
+                echo "<div class='tile'>8</div>";
             } elseif ($i == 19) {
-                echo "<div class='tile'>c3</div>";
+                echo "<div class='tile'>9</div>";
             } else {
                 echo "<div class='tile number'>$i</div>"; // Display the number echo "<div class='tile'>$i</div>";
             }
