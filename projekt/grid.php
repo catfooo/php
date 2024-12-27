@@ -2,6 +2,8 @@
     
     session_start();
 
+    require_once "db.php";
+
     // retrive the user info
     if (!isset($_SESSION['user_id'])) {
         echo '<a href="http://localhost:8888/projekt/landing.php">logga in</a>';        
