@@ -17,6 +17,10 @@
 
     $url = $client->createAuthUrl();
 
+    $url = $client->createAuthUrl();
+    echo $url; // Output the URL to check for mismatches
+
+
 ?>
 
 
