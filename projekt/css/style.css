@@ -25,7 +25,7 @@ header, footer {
 }
 
 .typewriter {
-    display: inline-block; /* Makes the div take the width of its content */
+    display: inline-block; /* Makes the div take the width of its content *//**/
 }
 
 .typewriter p{
