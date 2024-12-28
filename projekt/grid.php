@@ -76,6 +76,7 @@
                     // ajax, form, or fetch to send data to server so php can recognize
                     // or websocket (only if you can xD...)
                     // but oh no, form submitting navigates, which fetch doesnt. but this can be actually good way. you can show user that they are moved, and then, redirect to the main, with updates
+                    // but fetch is interesting, bcs this makes seperate php made for move, executing at background. good to try if any energy is left xD
                 });
             </script>";
         
