@@ -32,7 +32,7 @@
 <body>
     <!-- this is fully css. to see js alternative, see typewriter.md -->
     <div class="typewriter">
-        <p>en dag, kunde du inte somna .........</p>
+        <p>en dag, kunde inte somna .........</p>
     </div>
     <br>
     <a href="<?= $url ?>">logga in med google</a>
