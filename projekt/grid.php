@@ -67,7 +67,14 @@
         }
         echo '</div>';
 
-        // listening keyboard might be interesting
+        // listening keyboard might be interesting!
+
+        // js to listen keyboard events
+        echo "<script>
+                document.addEventListener('keydown', function(event)) {
+                    console.log('key pressed: ' + event.key);
+                }
+            </script>";
         
     }
     
