@@ -58,7 +58,7 @@
                     /\\  
                     </div>";
                     // to do next: update location at db, redirect with location
-                    // 'arrow up' har skillnaden med den andra, tredje... vill inte koda alla xD
+                    // 'arrow up' har skillnaden med det andra, tredje försök... vill inte koda alla xD
                 } else {
                     echo "<div class='tile'>2</div>";
                 }                
