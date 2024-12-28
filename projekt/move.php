@@ -39,15 +39,28 @@
             if ($i == 3) {
                 echo "<div class='tile shop'><a href='http://localhost:8888/projekt/index.php'>&#8962;</a></div>"; // Display the house symbol ?
             } elseif ($i == 13) {
-                echo "<div class='tile player'>
+                if(!isset($move)) {
+                    echo "<div class='tile player'>
                      O<br>
                     /|\\<br>
                     /\\  
                     </div>";
+                } else {
+                    echo "<div class='tile'>5</div>";
+                }               
             } elseif ($i == 7) {
                 echo "<div class='tile'>1</div>";
             } elseif ($i == 8) {
-                echo "<div class='tile'>2</div>";
+                if ($move == 'ArrowUp') {
+                    echo "<div class='tile player'>
+                     O<br>
+                    /|\\<br>
+                    /\\  
+                    </div>";
+                    // to do next: update location at db, redirect with location
+                } else {
+                    echo "<div class='tile'>2</div>";
+                }                
             } elseif ($i == 9) {
                 echo "<div class='tile'>3</div>";
             } elseif ($i == 12) {
