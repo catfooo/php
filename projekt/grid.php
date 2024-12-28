@@ -71,9 +71,9 @@
 
         // js to listen keyboard events
         echo "<script>
-                document.addEventListener('keydown', function(event)) {
+                document.addEventListener('keydown', function(event) {
                     console.log('key pressed: ' + event.key);
-                }
+                });
             </script>";
         
     }
