@@ -75,6 +75,7 @@
                     console.log('key pressed: ' + event.key);
                     // ajax, form, or fetch to send data to server so php can recognize
                     // or websocket (only if you can xD...)
+                    // but oh no, form submitting navigates, which fetch doesnt. but this can be actually good way. you can show user that they are moved, and then, redirect to the main, with updates
                 });
             </script>";
         
