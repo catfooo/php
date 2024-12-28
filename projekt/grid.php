@@ -70,17 +70,21 @@
         // listening keyboard might be interesting!
 
         // js to listen keyboard events
-        echo "<script>
-                document.addEventListener('keydown', (event) => {
-                    console.log('key pressed: ' + event.key);
+        echo '<script>
+                document.addEventListener("keydown", (event) => {
+                    console.log("key pressed: " + event.key);
                     // ajax, form, or fetch to send data to server so php can recognize
                     // or websocket (only if you can xD...)
                     // but oh no, form submitting navigates, which fetch doesnt. but this can be actually good way. you can show user that they are moved, and then, redirect to the main, with updates
                     // but fetch is interesting, bcs this makes seperate php made for move, executing at background. good to try if any energy is left xD
                     // you can use window.location to get via url instead of form. since i tried form(post) a lot time in this course, might good to start with classic get first?
 
+                    // construct the url with the "move(pressed key)" as a query parameter
+                    const move = event.key;
+                    window.location.href = `move.php?move=${move}`;
+
                 });
-            </script>";
+            </script>';
         
     }
     
