@@ -74,6 +74,7 @@
                 document.addEventListener('keydown', function(event) {
                     console.log('key pressed: ' + event.key);
                     // ajax, form, or fetch to send data to server so php can recognize
+                    // or websocket (only if you can xD...)
                 });
             </script>";
         
