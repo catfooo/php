@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- this is fully css. to see js alternative, see typewriter.md -->
     <div class="typewriter">
         <p>en dag, kunde du inte somna .........</p>
     </div>
