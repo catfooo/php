@@ -27,8 +27,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>vandrar</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="typewriter">
+        <p>en dag, kunde du inte sova ...</p>
+    </div>
     <a href="<?= $url ?>">logga in med google</a>
     <!-- <script>
         // redirect (id integration to be done in future)
@@ -38,6 +42,6 @@
             }, 5000);
         }
     </script> -->
-    <script src="js/scripts.js"></script>
+    <!-- <script src="js/scripts.js"></script> -->
 </body>
 </html>
