@@ -33,6 +33,7 @@
     <div class="typewriter">
         <p>en dag, kunde du inte sova ...</p>
     </div>
+    <br>
     <a href="<?= $url ?>">logga in med google</a>
     <!-- <script>
         // redirect (id integration to be done in future)
