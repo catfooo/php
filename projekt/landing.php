@@ -31,7 +31,7 @@
 </head>
 <body>
     <div class="typewriter">
-        <p>en dag, kunde du inte sova .........</p>
+        <p>en dag, kunde du inte somna .........</p>
     </div>
     <br>
     <a href="<?= $url ?>">logga in med google</a>
