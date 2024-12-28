@@ -25,6 +25,7 @@ header, footer {
 }
 
 .typewriter p {
+    display: inline-block; /* Makes the div take the width of its content */
     overflow: hidden; /* hide the text initially */
     white-space: nowrap; /* Prevent text wrapping */
     border-right: 2px solid black; /* Cursor effect */
