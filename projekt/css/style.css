@@ -29,7 +29,7 @@ header, footer {
     white-space: nowrap; /* Prevent text wrapping */
     border-right: 2px solid black; /* Cursor effect */
     font-size: 1.5rem;
-    animation: typing 14s steps(130, end)/*  Makes the typing effect last 14 seconds, revealing the text in "steps" (character-by-character). 14s: The total duration of the animation. number(130) represents number of steps (or "frames") the animation will take to complete. end: animation will complete each step at the end of the interval, so each character will appear one after another, with no overlap. */, blink 0.75s step-end infinite; 
+    animation: typing 14s steps(130, end) forwards/*  Makes the typing effect last 14 seconds, revealing the text in "steps" (character-by-character). 14s: The total duration of the animation. number(130) represents number of steps (or "frames") the animation will take to complete. end: animation will complete each step at the end of the interval, so each character will appear one after another, with no overlap. */, blink 0.75s step-end infinite; 
 }
 
 /* Simulates the text being typed by progressively revealing more of it. */
