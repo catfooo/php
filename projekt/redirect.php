@@ -71,7 +71,7 @@
                 window.onload = function() {
                     setTimeout(() => {
                         location.href = 'http://localhost:8888/projekt/grid.php';
-                    }, 5000);
+                    }, 2000);
                 }
           </script>";
 
