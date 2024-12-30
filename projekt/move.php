@@ -76,10 +76,10 @@
                     // $db->query($sql);
 
                     if($db->query($sql2)) {
-                        $maskros = "du fick en maskros!";
                         echo "<script>
-                            if ('$maskros') {
-                                document.getElementById('msg').innerText = '$maskros';
+                        let maskros = 'fick en maskros!';
+                        if ('$maskros') {
+                                document.getElementById('msg').innerText = 'maskros';
                             }
                         </script>";
                     }
