@@ -61,6 +61,13 @@
                     $sql = "UPDATE kunder SET `row` = `row` + 1 WHERE id = $user_id";
                     $db->query($sql);
 
+                    // if col*row is multiple of 3
+                    $sql = "UPDATE kunder SET dandelions = dandelions + 1 
+                        WHERE id = $user_id 
+                        AND (`col` * `row`) % 3 = 0";
+                    $db->query($sql);
+
+
                     echo "<script>
                             setTimeout(function() {
                                 window.location.href = 'http://localhost:8888/projekt/grid.php';
