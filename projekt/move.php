@@ -73,9 +73,11 @@
                     $sql = "UPDATE kunder SET dandelions = dandelions + 1 
                         WHERE id = $user_id 
                         AND (`col` * `row`) % 3 = 0";
-                    // $db->query($sql);
+                    $db->query($sql);
 
-                    if($db->query($sql)) {
+                    // if we put $db->query($sql); to the condition, 
+                    // The $db->query($sql) will return true if the SQL query executes successfully (even if no rows are affected). It will return false only if there is an actual error in executing the query (e.g., syntax error, connection problem, etc.).
+                    if($db->affected_rows) {
 
                         
                         echo "<script>
