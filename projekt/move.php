@@ -79,7 +79,7 @@
                     // The $db->query($sql) will return true bcs the SQL query executes successfully (even if no rows are affected). It will return false only if there is an actual error in executing the query (e.g., syntax error, connection problem, etc.).
                     if($db->affected_rows) {                        
                         echo "<script>                            
-                                document.getElementById('msg').innerText = 'fick en maskros';                            
+                                document.getElementById('msg').innerText = 'plockade en maskros';                            
                         </script>";
                     } else {
                         echo "<script>                           
@@ -117,7 +117,7 @@
 
                     if($db->affected_rows) {                        
                         echo "<script>                            
-                                document.getElementById('msg').innerText = 'fick en maskros';                            
+                                document.getElementById('msg').innerText = 'plockade en maskros';                            
                         </script>";
                     } else {
                         echo "<script>                           
@@ -153,7 +153,7 @@
 
                     if($db->affected_rows) {                        
                         echo "<script>                            
-                                document.getElementById('msg').innerText = 'fick en maskros';                            
+                                document.getElementById('msg').innerText = 'plockade en maskros';                            
                         </script>";
                     } else {
                         echo "<script>                           
