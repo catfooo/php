@@ -19,6 +19,9 @@
     
     require_once "db.php";
     
+    // define maskros for get related msg
+    $maskros = '';
+
     // retrive the user info
     if (!isset($_SESSION['user_id'])) {
         echo '<a href="http://localhost:8888/projekt/landing.php">logga in</a>';        
