@@ -30,7 +30,7 @@
         // echo "v�lkommen " . $user['name'];  
         // echo '<a href="http://localhost:8888/projekt/index.php">Maskrosaff�ren</a>';  
         $maskros = '';
-        if ($maskros) {echo $maskros;}
+        if ($maskros) {echo $maskros;} else {echo 'var finns maskrosor?';}
         echo "</div>";
         
        
