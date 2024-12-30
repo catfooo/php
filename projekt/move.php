@@ -75,7 +75,7 @@
                         AND (`col` * `row`) % 3 = 0";
                     $db->query($sql);
                     
-                    // $maskros = "du fick en maskros!";
+                    $maskros = "du fick en maskros!";
                     echo "<script>
                         if ('$maskros') {
                             document.getElementById('msg').innerText = '$maskros';
