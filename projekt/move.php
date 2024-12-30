@@ -69,7 +69,7 @@
 
                     // 2 sec delay before redirect
                     // sleep(2);
-                    // header('Location: http://localhost:8888/projekt/grid.php');
+                    // header('Location: http://localhost:8888/projekt/grid.php');//
 
                     echo "<script>
                             setTimeout(function() {
