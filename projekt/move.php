@@ -36,7 +36,7 @@
         // $maskros = '';
         // if ($maskros) {echo $maskros;} else {echo 'var finns maskrosor?';}
 
-        echo $maskros ? $maskros : "...";
+        echo $maskros;
         echo "</div>";
         
        
@@ -76,26 +76,17 @@
                     $db->query($sql);
 
                     // if we put $db->query($sql); to the condition, 
-                    // The $db->query($sql) will return true if the SQL query executes successfully (even if no rows are affected). It will return false only if there is an actual error in executing the query (e.g., syntax error, connection problem, etc.).
-                    if($db->affected_rows) {
-
-                        
-                        echo "<script>
-                            
-                                document.getElementById('msg').innerText = 'fick en maskros';
-                            
+                    // The $db->query($sql) will return true bcs the SQL query executes successfully (even if no rows are affected). It will return false only if there is an actual error in executing the query (e.g., syntax error, connection problem, etc.).
+                    if($db->affected_rows) {                        
+                        echo "<script>                            
+                                document.getElementById('msg').innerText = 'fick en maskros';                            
                         </script>";
                     } else {
-                        echo "<script>
-                            
-                                document.getElementById('msg').innerText = '';
-                            
+                        echo "<script>                           
+                                document.getElementById('msg').innerText = '';                            
                         </script>";
-
                     }
                     
-
-
                     echo "<script>
                             setTimeout(function() {
                                 window.location.href = 'http://localhost:8888/projekt/grid.php';
