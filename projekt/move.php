@@ -59,6 +59,8 @@
                     </div>";
                     // to do next: update location at db, redirect with location
                     // 'arrow up' har skillnaden med det andra, tredje försök... vill inte koda alla xD
+                    $sql = "UPDATE kunder (row) VALUES (row + 1) WHERE id = $user_id";
+                    $db->query($sql);
                 } else {
                     echo "<div class='tile'>2</div>";
                 }                
