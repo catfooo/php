@@ -109,6 +109,22 @@
                     $sql = "UPDATE kunder SET `col` = `col` - 1 WHERE id = $user_id";
                     $db->query($sql);
 
+                    // if col*row is multiple of 3
+                    $sql = "UPDATE kunder SET dandelions = dandelions + 1 
+                        WHERE id = $user_id 
+                        AND (`col` * `row`) % 3 = 0";
+                    $db->query($sql);
+
+                    if($db->affected_rows) {                        
+                        echo "<script>                            
+                                document.getElementById('msg').innerText = 'fick en maskros';                            
+                        </script>";
+                    } else {
+                        echo "<script>                           
+                                document.getElementById('msg').innerText = '';                            
+                        </script>";
+                    }
+
                     echo "<script>
                             setTimeout(function() {
                                 window.location.href = 'http://localhost:8888/projekt/grid.php';
@@ -128,6 +144,22 @@
                     
                     $sql = "UPDATE kunder SET `col` = `col` + 1 WHERE id = $user_id";
                     $db->query($sql);
+
+                    // if col*row is multiple of 3
+                    $sql = "UPDATE kunder SET dandelions = dandelions + 1 
+                        WHERE id = $user_id 
+                        AND (`col` * `row`) % 3 = 0";
+                    $db->query($sql);
+
+                    if($db->affected_rows) {                        
+                        echo "<script>                            
+                                document.getElementById('msg').innerText = 'fick en maskros';                            
+                        </script>";
+                    } else {
+                        echo "<script>                           
+                                document.getElementById('msg').innerText = '';                            
+                        </script>";
+                    }
 
                     echo "<script>
                             setTimeout(function() {
@@ -150,6 +182,22 @@
                     
                     $sql = "UPDATE kunder SET `row` = `row` - 1 WHERE id = $user_id";
                     $db->query($sql);
+
+                    // if col*row is multiple of 3
+                    $sql = "UPDATE kunder SET dandelions = dandelions + 1 
+                        WHERE id = $user_id 
+                        AND (`col` * `row`) % 3 = 0";
+                    $db->query($sql);
+
+                    if($db->affected_rows) {                        
+                        echo "<script>                            
+                                document.getElementById('msg').innerText = 'fick en maskros';                            
+                        </script>";
+                    } else {
+                        echo "<script>                           
+                                document.getElementById('msg').innerText = '';                            
+                        </script>";
+                    }
 
                     echo "<script>
                             setTimeout(function() {
