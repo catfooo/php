@@ -50,4 +50,6 @@ header, footer {
 
 .bg {
     background-image: url(https://cdn.pixabay.com/photo/2018/05/08/10/17/dandelion-3382663_1280.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
