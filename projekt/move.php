@@ -69,7 +69,7 @@
 
                     // 2 sec delay before redirect
                     sleep(2);
-                    header('http://localhost:8888/projekt/grid.php');
+                    header('Location: http://localhost:8888/projekt/grid.php');
                     
                 } else {
                     echo "<div class='tile'>2</div>";
