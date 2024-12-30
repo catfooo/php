@@ -29,6 +29,8 @@
         echo "<div style = 'display:block;'>";
         // echo "v�lkommen " . $user['name'];  
         // echo '<a href="http://localhost:8888/projekt/index.php">Maskrosaff�ren</a>';  
+        $maskros = '';
+        if ($maskros) {echo $maskros;}
         echo "</div>";
         
        
@@ -66,6 +68,7 @@
                         WHERE id = $user_id 
                         AND (`col` * `row`) % 3 = 0";
                     $db->query($sql);
+                    $maskros = "du fick en maskros!";
 
 
                     echo "<script>
