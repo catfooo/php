@@ -33,7 +33,7 @@
         // $maskros = '';
         // if ($maskros) {echo $maskros;} else {echo 'var finns maskrosor?';}
 
-        echo $maskros ? $maskros : "";
+        echo $maskros ? $maskros : "...";
         echo "</div>";
         
        
