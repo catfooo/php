@@ -77,10 +77,7 @@
 
                     if($db->query($sql2)) {
                         echo "<script>
-                            var maskros = '$maskros'; // PHP variable passed to JS
-                            if (maskros) {
-                                maskros = 'fick en maskros!'; // Update maskros value
-                            }
+                            var maskros = 'fick en maskros!'; // Set the message directly in JS
                             document.getElementById('msg').innerText = maskros;
                         </script>";
                     }
