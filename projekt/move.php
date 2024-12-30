@@ -59,7 +59,7 @@
                     </div>";
                     // to do next: update location at db, redirect with location
                     // 'arrow up' har skillnaden med det andra, tredje försök... vill inte koda alla xD
-                    $sql = "UPDATE kunder SET row = row + 1 WHERE id = $user_id";
+                    $sql = "UPDATE kunder SET `row` = `row` + 1 WHERE id = $user_id";
                     $db->query($sql);
                     if ($db->query($sql) === TRUE) {
                         echo "Row updated successfully.";
