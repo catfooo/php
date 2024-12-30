@@ -67,21 +67,9 @@
                     //     echo "Error updating row: " . $db->error;
                     // }
 
-                    // Check if the update was successful
-    if ($db->affected_rows > 0) {
-        
-        
-        // 2 sec delay before redirect
-        sleep(2);
-
-        // Redirect after 2 seconds
-        header('Location: http://localhost:8888/projekt/grid.php');
-        
-    }
-
                     // 2 sec delay before redirect
-                    // sleep(5);
-                    // header('Location: http://localhost:8888/projekt/grid.php');
+                    sleep(2);
+                    header('Location: http://localhost:8888/projekt/grid.php');
                     
                 } else {
                     echo "<div class='tile'>2</div>";
