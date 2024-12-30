@@ -67,14 +67,9 @@
                     //     echo "Error updating row: " . $db->error;
                     // }
 
-                    $ismoved = true;
-
-                    if ($ismoved) {
-                        // 2 sec delay before redirect
-                        sleep(2);
-                        header('Location: http://localhost:8888/projekt/grid.php');
-                    }
-
+                    // 2 sec delay before redirect
+                    // sleep(5);
+                    header('Location: http://localhost:8888/projekt/grid.php');
                     
                 } else {
                     echo "<div class='tile'>2</div>";
