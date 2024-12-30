@@ -27,7 +27,7 @@
         $result = $db->query("SELECT * FROM kunder WHERE id = $user_id");
         $user = $result->fetch_assoc();
         echo "<div style = 'display:block;'>";
-        echo "v�lkommen " . $user['name'];  
+        // echo "v�lkommen " . $user['name'];  
         // echo '<a href="http://localhost:8888/projekt/index.php">Maskrosaff�ren</a>';  
         echo "</div>";
         
