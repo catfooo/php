@@ -61,11 +61,11 @@
                     // 'arrow up' har skillnaden med det andra, tredje försök... vill inte koda alla xD
                     $sql = "UPDATE kunder SET `row` = `row` + 1 WHERE id = $user_id";
                     $db->query($sql);
-                    if ($db->query($sql) === TRUE) {
-                        echo "Row updated successfully.";
-                    } else {
-                        echo "Error updating row: " . $db->error;
-                    }
+                    // if ($db->query($sql) === TRUE) {
+                    //     echo "Row updated successfully.";
+                    // } else {
+                    //     echo "Error updating row: " . $db->error;
+                    // }
                     
                 } else {
                     echo "<div class='tile'>2</div>";
