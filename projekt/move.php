@@ -191,7 +191,7 @@
 
                     if($db->affected_rows) {                        
                         echo "<script>                            
-                                document.getElementById('msg').innerText = 'fick en maskros';                            
+                                document.getElementById('msg').innerText = 'plockade en maskros';                            
                         </script>";
                     } else {
                         echo "<script>                           
