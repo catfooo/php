@@ -93,11 +93,47 @@
                     echo "<div class='tile'>4</div>";
                 }
             } elseif ($i == 14) {
-                echo "<div class='tile'>6</div>";
+                if ($move == 'ArrowRight') {
+                    echo "<div class='tile player'>
+                     O<br>
+                    /|\\<br>
+                    /\\  
+                    </div>";
+                    
+                    $sql = "UPDATE kunder SET `col` = `col` + 1 WHERE id = $user_id";
+                    $db->query($sql);
+
+                    echo "<script>
+                            setTimeout(function() {
+                                window.location.href = 'http://localhost:8888/projekt/grid.php';
+                            }, 2000);  // Redirect after 2 seconds
+                    </script>";
+                    
+                } else {
+                    echo "<div class='tile'>6</div>";
+                }
             } elseif ($i == 17) {
                 echo "<div class='tile'>7</div>";
             } elseif ($i == 18) {
-                echo "<div class='tile'>8</div>";
+                if ($move == 'ArrowDown') {
+                    echo "<div class='tile player'>
+                     O<br>
+                    /|\\<br>
+                    /\\  
+                    </div>";
+                    
+                    $sql = "UPDATE kunder SET `row` = `row` - 1 WHERE id = $user_id";
+                    $db->query($sql);
+
+                    echo "<script>
+                            setTimeout(function() {
+                                window.location.href = 'http://localhost:8888/projekt/grid.php';
+                            }, 2000);  // Redirect after 2 seconds
+                    </script>";
+                    
+                } else {
+                    echo "<div class='tile'>8</div>";
+                }
             } elseif ($i == 19) {
                 echo "<div class='tile'>9</div>";
             } else {
