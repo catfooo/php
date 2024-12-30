@@ -68,7 +68,7 @@
                     // }
 
                     // 2 sec delay before redirect
-                    sleep(2);
+                    sleep(5);
                     header('Location: http://localhost:8888/projekt/grid.php');
                     
                 } else {
