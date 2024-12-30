@@ -68,8 +68,14 @@
                     // }
 
                     // 2 sec delay before redirect
-                    sleep(2);
-                    header('Location: http://localhost:8888/projekt/grid.php');
+                    // sleep(2);
+                    // header('Location: http://localhost:8888/projekt/grid.php');
+
+                    echo "<script>
+                            setTimeout(function() {
+                                window.location.href = 'http://localhost:8888/projekt/grid.php';
+                            }, 2000);  // Redirect after 2 seconds
+                    </script>";
                     
                 } else {
                     echo "<div class='tile'>2</div>";
