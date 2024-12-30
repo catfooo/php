@@ -70,12 +70,12 @@
                     $db->query($sql);
 
                     // if col*row is multiple of 3
-                    $sql = "UPDATE kunder SET dandelions = dandelions + 1 
+                    $sql2 = "UPDATE kunder SET dandelions = dandelions + 1 
                         WHERE id = $user_id 
                         AND (`col` * `row`) % 3 = 0";
                     // $db->query($sql);
 
-                    if($db->query($sql)) {
+                    if($db->query($sql2)) {
                         $maskros = "du fick en maskros!";
                         echo "<script>
                             if ('$maskros') {
