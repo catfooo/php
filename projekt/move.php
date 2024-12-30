@@ -73,14 +73,17 @@
                     $sql = "UPDATE kunder SET dandelions = dandelions + 1 
                         WHERE id = $user_id 
                         AND (`col` * `row`) % 3 = 0";
-                    $db->query($sql);
+                    // $db->query($sql);
+
+                    if($db->query($sql)) {
+                        $maskros = "du fick en maskros!";
+                        echo "<script>
+                            if ('$maskros') {
+                                document.getElementById('msg').innerText = '$maskros';
+                            }
+                        </script>";
+                    }
                     
-                    $maskros = "du fick en maskros!";
-                    echo "<script>
-                        if ('$maskros') {
-                            document.getElementById('msg').innerText = '$maskros';
-                        }
-                    </script>";
 
 
                     echo "<script>
