@@ -57,19 +57,9 @@
                     /|\\<br>
                     /\\  
                     </div>";
-                    // to do next: update location at db, redirect with location
                     // 'arrow up' har skillnaden med det andra, tredje försök... vill inte koda alla xD
                     $sql = "UPDATE kunder SET `row` = `row` + 1 WHERE id = $user_id";
                     $db->query($sql);
-                    // if ($db->query($sql) === TRUE) {
-                    //     echo "Row updated successfully.";
-                    // } else {
-                    //     echo "Error updating row: " . $db->error;
-                    // }
-
-                    // 2 sec delay before redirect
-                    // sleep(2);
-                    // header('Location: http://localhost:8888/projekt/grid.php');//
 
                     echo "<script>
                             setTimeout(function() {
@@ -83,7 +73,25 @@
             } elseif ($i == 9) {
                 echo "<div class='tile'>3</div>";
             } elseif ($i == 12) {
-                echo "<div class='tile'>4</div>";
+                if ($move == 'ArrowLeft') {
+                    echo "<div class='tile player'>
+                     O<br>
+                    /|\\<br>
+                    /\\  
+                    </div>";
+                    
+                    $sql = "UPDATE kunder SET `col` = `col` - 1 WHERE id = $user_id";
+                    $db->query($sql);
+
+                    echo "<script>
+                            setTimeout(function() {
+                                window.location.href = 'http://localhost:8888/projekt/grid.php';
+                            }, 2000);  // Redirect after 2 seconds
+                    </script>";
+                    
+                } else {
+                    echo "<div class='tile'>4</div>";
+                }
             } elseif ($i == 14) {
                 echo "<div class='tile'>6</div>";
             } elseif ($i == 17) {
