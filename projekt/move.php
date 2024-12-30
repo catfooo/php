@@ -28,7 +28,7 @@
         $user = $result->fetch_assoc();
         echo "<div style = 'display:block;'>";
         echo "v�lkommen " . $user['name'];  
-        echo '<a href="http://localhost:8888/projekt/index.php">Maskrosaff�ren</a>';  
+        // echo '<a href="http://localhost:8888/projekt/index.php">Maskrosaff�ren</a>';  
         echo "</div>";
         
        
