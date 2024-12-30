@@ -77,12 +77,14 @@
 
                     if($db->query($sql)) {
 
-                        // $maskros = "du fick en maskros!";
+                        
+                    } else {
                         echo "<script>
-                            //if ('$maskros') {
-                                document.getElementById('msg').innerText = 'fick en maskros!';
-                            //}
+                            
+                                document.getElementById('msg').innerText = '';
+                            
                         </script>";
+
                     }
                     
 
