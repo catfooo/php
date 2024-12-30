@@ -26,11 +26,14 @@
         $user_id = $_SESSION['user_id'];
         $result = $db->query("SELECT * FROM kunder WHERE id = $user_id");
         $user = $result->fetch_assoc();
-        echo "<div style = 'display:block;'>";
+        echo "<div id='msg' style = 'display:block;'>";
         // echo "v�lkommen " . $user['name'];  
         // echo '<a href="http://localhost:8888/projekt/index.php">Maskrosaff�ren</a>';  
-        $maskros = '';
-        if ($maskros) {echo $maskros;} else {echo 'var finns maskrosor?';}
+
+        // $maskros = '';
+        // if ($maskros) {echo $maskros;} else {echo 'var finns maskrosor?';}
+
+        echo $maskros ? $maskros : "";
         echo "</div>";
         
        
@@ -68,7 +71,13 @@
                         WHERE id = $user_id 
                         AND (`col` * `row`) % 3 = 0";
                     $db->query($sql);
-                    $maskros = "du fick en maskros!";
+                    
+                    // $maskros = "du fick en maskros!";
+                    echo "<script>
+                        if ('$maskros') {
+                            document.getElementById('msg').innerText = '$maskros';
+                        }
+                    </script>";
 
 
                     echo "<script>
