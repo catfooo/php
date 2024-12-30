@@ -78,6 +78,11 @@
                     if($db->query($sql)) {
 
                         
+                        echo "<script>
+                            
+                                document.getElementById('msg').innerText = 'fick en maskros';
+                            
+                        </script>";
                     } else {
                         echo "<script>
                             
