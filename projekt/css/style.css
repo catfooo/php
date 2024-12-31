@@ -13,7 +13,8 @@ header, footer {
 }
 
 .nav {
-    color: #aaa5a5;
+    /* color: #aaa5a5; */
+    text-decoration: none;
 }
 
 .shop a {
