@@ -81,7 +81,7 @@
         ☺☻
     </div>
 </div>
-"
+";
             } elseif ($i == 1) {
                 echo "<div class=''><</div>";
                 if($move == 'Backspace') {
