@@ -12,6 +12,10 @@ header, footer {
     border: /*1px solid #ccc*/ none; padding: 20px; text-align: center; color:/*#aaa5a5*/ transparent; line-height: 20px;
 }
 
+.nav {
+    color: #aaa5a5;
+}
+
 .shop a {
     text-decoration: none;
 }
