@@ -14,11 +14,18 @@
 
     if(isset($_GET['move'])) {
         $move = $_GET['move'];
-        $times = 0;
-        $times++;
-        echo $move, $times;
-        $_SESSION['times'] = $times;
-        echo $_SESSION['times'];
+        echo $move;
+        if(!isset($_SESSION['times'])) {
+            $times = 0;
+            $times++;
+            echo $times;
+            $_SESSION['times'] = $times;
+            // echo $_SESSION['times'];
+        } else {
+            $times = $_SESSION['times'];
+            $times++;
+            echo $times;
+        }
     }
 
     require_once "db.php";
