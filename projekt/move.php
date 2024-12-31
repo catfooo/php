@@ -75,7 +75,7 @@
             if ($i == 3) {
                 echo "<div class='tile shop'><a href='http://localhost:8888/projekt/index.php'>&#8962;</a></div>"; // Display the house symbol ?
             } elseif($i == 2) {
-                echo "<div class='tile nav'>☺☻</div>";
+                echo "<div class='tile'><div class='nav'>☺☻</div></div>";
             } elseif ($i == 1) {
                 echo "<div class=''><</div>";
                 if($move == 'Backspace') {
