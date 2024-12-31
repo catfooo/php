@@ -12,9 +12,10 @@ header, footer {
     border: /*1px solid #ccc*/ none; padding: 20px; text-align: center; color:#aaa5a5 /*transparent*/; line-height: 20px;
 }
 
+.inline {display: inline-block;}
+
 .nav {
     font-size: xx-small;
-    display: inline;
 }
 
 .shop a {
