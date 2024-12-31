@@ -25,6 +25,7 @@
         $_SESSION['bg'] = "bg";
         $times = 0; // just to reset this value, will commented out afterwards
         $_SESSION['times'] = $times;
+        $_SESSION['bg'] = "";
     }
 ?>
 
