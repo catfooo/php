@@ -20,7 +20,10 @@
         }
     }
 
-    if($times > 4) {$bg = "bg";}
+    if($times > 4) {
+        // $bg = "bg";
+        $_SESSION['bg'] = "bg";
+    }
 ?>
 
 
@@ -32,7 +35,7 @@
     <title>marken</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="<?php echo $bg; ?>">
+<body class="<?php echo $_SESSION['bg']; ?>">
 
 <?php
     

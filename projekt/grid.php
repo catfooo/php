@@ -1,3 +1,13 @@
+
+<?php
+    
+    session_start();
+    // if($_SESSION['bg']) {
+    //     $bg = "bg";
+    // }
+
+?>
+
 <!DOCTYPE html>
 <html lang="sv">
 <head>
@@ -6,7 +16,7 @@
     <title>marken</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="">
+<body class="<?php echo $_SESSION['bg']; ?>">
     
     
     <?php
