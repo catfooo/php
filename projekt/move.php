@@ -95,7 +95,7 @@
                     echo "<div class='tile'>5</div>";
                 }               
             } elseif ($i == 7) {
-                echo "<div class='tile'>1</div>";
+                echo "<div class='tile number'>1</div>";
             } elseif ($i == 8) {
                 if ($move == 'ArrowUp') {
                     echo "<div class='tile player'>
@@ -132,10 +132,10 @@
                     </script>";
                     
                 } else {
-                    echo "<div class='tile'>2</div>";
+                    echo "<div class='tile number'>2</div>";
                 }                
             } elseif ($i == 9) {
-                echo "<div class='tile'>3</div>";
+                echo "<div class='tile number'>3</div>";
             } elseif ($i == 12) {
                 if ($move == 'ArrowLeft') {
                     echo "<div class='tile player'>
@@ -170,7 +170,7 @@
                     </script>";
                     
                 } else {
-                    echo "<div class='tile'>4</div>";
+                    echo "<div class='tile number'>4</div>";
                 }
             } elseif ($i == 14) {
                 if ($move == 'ArrowRight') {
@@ -206,10 +206,10 @@
                     </script>";
                     
                 } else {
-                    echo "<div class='tile'>6</div>";
+                    echo "<div class='tile number'>6</div>";
                 }
             } elseif ($i == 17) {
-                echo "<div class='tile'>7</div>";
+                echo "<div class='tile number'>7</div>";
             } elseif ($i == 18) {
                 if ($move == 'ArrowDown') {
                     echo "<div class='tile player'>
@@ -244,10 +244,10 @@
                     </script>";
                     
                 } else {
-                    echo "<div class='tile'>8</div>";
+                    echo "<div class='tile number'>8</div>";
                 }
             } elseif ($i == 19) {
-                echo "<div class='tile'>9</div>";
+                echo "<div class='tile number'>9</div>";
             } else {
                 echo "<div class='tile number'>$i</div>"; // Display the number echo "<div class='tile'>$i</div>";
             }
