@@ -92,7 +92,7 @@
                     /\\  
                     </div>";
                 } else {
-                    echo "<div class='tile'>5</div>";
+                    echo "<div class='tile number'>5</div>";
                 }               
             } elseif ($i == 7) {
                 echo "<div class='tile number'>1</div>";
