@@ -76,12 +76,7 @@
                 echo "<div class='tile shop'><a href='http://localhost:8888/projekt/index.php'>&#8962;</a></div>"; // Display the house symbol ?
             } elseif($i == 2) {
                 //echo "<div class='tile'><div class='inline'><span class='nav'>☺☻</span></div></div>";
-                echo "<div style='display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; width: 300px; margin: 20px auto;'>
-    <div style='display: inline-block; padding: 20px; text-align: center; color: #aaa5a5; line-height: 20px; border: none;'>
-        ☺☻
-    </div>
-</div>
-";
+                echo "☺☻";
             } elseif ($i == 1) {
                 echo "<div class=''><</div>";
                 if($move == 'Backspace') {
