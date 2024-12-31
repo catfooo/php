@@ -73,9 +73,9 @@
         for ($i = 1; $i <= 25; $i++) {
             // Check if the tile is 3
             if ($i == 3) {
-                echo "<div class='shop'><a href='http://localhost:8888/projekt/index.php'>&#8962;</a></div>"; // Display the house symbol ?
+                echo "<div class='tile shop'><a href='http://localhost:8888/projekt/index.php'>&#8962;</a></div>"; // Display the house symbol ?
             } elseif($i == 2) {
-                echo "☺☻";
+                echo "<span class='tile'>☺☻<span>";
             } elseif ($i == 1) {
                 echo "<div class=''><</div>";
                 if($move == 'Backspace') {
