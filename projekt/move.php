@@ -10,15 +10,17 @@
 
 <?php
     
+    session_start();
+
     if(isset($_GET['move'])) {
         $move = $_GET['move'];
-        $i = 0;
-        $i++;
-        echo $move, $i;
+        $times = 0;
+        $times++;
+        echo $move, $times;
+        $_SESSION['times'] = $times;
+        echo $_SESSION['times'];
     }
 
-    session_start();
-    
     require_once "db.php";
     
     // define maskros for get related msg
