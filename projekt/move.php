@@ -1,16 +1,8 @@
-<!DOCTYPE html>
-<html lang="sv">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>marken</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body class="bg">
-
 <?php
     
     session_start();
+
+    $bg = ''; // for body class
 
     if(isset($_GET['move'])) {
         $move = $_GET['move'];
@@ -20,7 +12,6 @@
             $times++;
             echo $times;
             $_SESSION['times'] = $times;
-            // echo $_SESSION['times'];
         } else {
             $times = $_SESSION['times'];
             $times++;
@@ -28,6 +19,24 @@
             $_SESSION['times'] = $times;
         }
     }
+
+    if($times > 4) {$bg = "bg";}
+?>
+
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>marken</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="<?php echo $bg; ?>">
+
+<?php
+    
+    
 
     require_once "db.php";
     
