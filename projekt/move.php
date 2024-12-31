@@ -4,6 +4,7 @@
 
     $bg = ''; // for body class
 
+    // get $move + enable bg
     if(isset($_GET['move'])) {
         $move = $_GET['move'];
         echo $move;
