@@ -25,6 +25,7 @@
             $times = $_SESSION['times'];
             $times++;
             echo $times;
+            $_SESSION['times'] = $times;
         }
     }
 
