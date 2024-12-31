@@ -12,7 +12,10 @@
     
     if(isset($_GET['move'])) {
         $move = $_GET['move'];
-        echo $move;
+        $i = 0;
+        $times = 0;
+        $times = $i++;
+        echo $move, $times;
     }
 
     session_start();

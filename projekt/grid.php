@@ -6,7 +6,7 @@
     <title>marken</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg">
+<body class="">
     
     
     <?php
