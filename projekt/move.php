@@ -23,6 +23,7 @@
     if($times > 4) {
         // $bg = "bg";
         $_SESSION['bg'] = "bg";
+        $times = 0; // just to reset this value, will commented out afterwards
     }
 ?>
 
