@@ -9,12 +9,12 @@ header, footer {
 }
 
 .tile {
-    border: /*1px solid #ccc*/ none; padding: 20px; text-align: center; color:/*#aaa5a5*/ transparent; line-height: 20px;
+    border: /*1px solid #ccc*/ none; padding: 20px; text-align: center; color:#aaa5a5 /*transparent*/; line-height: 20px;
 }
 
 .nav {
-    /* color: #aaa5a5; */
-    text-decoration: none;
+    color: inherit;
+    /* text-decoration: none; */
 }
 
 .shop a {
