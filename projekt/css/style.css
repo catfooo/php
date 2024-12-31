@@ -9,12 +9,7 @@ header, footer {
 }
 
 .tile {
-    border: /*1px solid #ccc*/ none; padding: 20px; text-align: center; color:#aaa5a5 /*transparent*/; line-height: 20px;
-}
-
-.nav {
-    color: inherit;
-    /* text-decoration: none; */
+    border: /*1px solid #ccc*/ none; padding: 20px; text-align: center; color:/*#aaa5a5*/ transparent; line-height: 20px;
 }
 
 .shop a {
