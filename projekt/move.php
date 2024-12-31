@@ -76,10 +76,10 @@
                 echo "<div class='tile shop'><a href='http://localhost:8888/projekt/index.php'>&#8962;</a></div>"; // Display the house symbol ?
             } elseif ($i == 1) {
                 echo "<div class=''><</div>";
-                $times = 0; 
-                $_SESSION['times'] = $times;
-                $_SESSION['bg'] = "";
-                header('Location: http://localhost:8888/projekt/grid.php');
+                //$times = 0; 
+                //$_SESSION['times'] = $times;
+                //$_SESSION['bg'] = "";
+                //header('Location: http://localhost:8888/projekt/grid.php');
             } elseif ($i == 13) {
                 if(!isset($move)) {
                     echo "<div class='tile player'>
