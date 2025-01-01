@@ -83,7 +83,8 @@
 
     // Revoke the token
     if ($client->getAccessToken()) {
-        $client->revokeToken($accessToken);  // This revokes the access token
+        $client->revokeToken();  // This revokes the access token
+        // currently, cant access this variable. might work with $token. but anyways, login doesnt persists when user tries to login. so.. ill stop here and see what happens afterwards..?
 
         echo "Token has been revoked successfully.";
     }
