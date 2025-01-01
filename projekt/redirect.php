@@ -77,16 +77,11 @@
                 }
           </script>";
 
-    // to do next: koppla maskros till processen. before confirm the order, check if there is tillägtlikt maskros. after the order, substract the maskros and save to db
-    // things i rly wanted to do: collect maskros(like this undone project.. https://github.com/catfooo/grid) and once done, move to login process
-    // things that i rly rly rly.. dreamed to do: once user gets every single maskros, save to db, and let them move to the store whenever they want to purchase. let the user make use of the item they bought(like eat the food, wear the hat, sleep while using bed etc...)
+    // to do next: let the user make use of the item they bought(like eat the food, wear the hat, sleep while using bed etc...)
 
-    // Revoke the token
+    // Revoke the token to force user manually log in every trial
     if ($client->getAccessToken()) {
-        $client->revokeToken();  // This revokes the access token
-        // currently, cant access this variable. might work with $token. but anyways, login doesnt persists when user tries to login. so.. ill stop here and see what happens afterwards..? // erasing the variable did no harm xD
-
-        // echo "Token has been revoked successfully.";
+        $client->revokeToken(); 
     }
 
 ?>

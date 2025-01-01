@@ -4,11 +4,10 @@
 
     $client = new Google\Client;
 
-    // to exit session first, will make logout oauth afterwards..
+    // to exit session
     session_start();
     if(isset($_GET['exit'])) {
         session_destroy();
-        //$client->revokeToken();
     }
 
     $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
@@ -43,14 +42,6 @@
     </div>
     <br>
     <a href="<?= $url ?>">logga in med google</a>
-    <!-- <script>
-        // redirect (id integration to be done in future)
-        window.onload = function() {
-            setTimeout(() => {
-                location.href = "http://212.18.224.194/~okt2404/projekt/index.php";
-            }, 5000);
-        }
-    </script> -->
     <!-- <script src="js/scripts.js"></script> -->
 </body>
 </html>
