@@ -9,7 +9,7 @@
 <body>
     <div>☺☻</div>
     <?php
-        
+        echo '<div>☺☻</div>';
         echo '<div class="tileset">';
         for ($i=1; $i <=25; $i++) { 
             echo "<div class='tile'>$i ☺☻</div>";
