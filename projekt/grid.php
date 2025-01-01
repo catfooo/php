@@ -49,7 +49,7 @@
             if ($i == 3) {
                 echo "<div class='tile shop'><a href='http://localhost:8888/projekt/index.php'>&#8962;</a></div>"; // Display the house symbol ?
             } elseif($i == 2) {
-                echo "☺☻";
+                echo "<div class='tile'>☺☻</div>";
             } elseif ($i == 1) {
                 echo "<div class=''><</div>";
             } elseif ($i == 13) {
