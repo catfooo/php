@@ -8,7 +8,7 @@
     session_start();
     if(isset($_GET['exit'])) {
         session_destroy();
-        $client->revokeToken();
+        //$client->revokeToken();
     }
 
     $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
