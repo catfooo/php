@@ -1,5 +1,11 @@
 <?php
 //
+    // to exit session first, will make logout oauth afterwards..
+    session_start();
+    if(isset($_GET['exit'])) {
+        session_destroy();
+    }
+
     require "vendor/autoload.php";
 
     $client = new Google\Client;
