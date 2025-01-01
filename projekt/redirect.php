@@ -79,7 +79,7 @@
 
     // to do next: let the user make use of the item they bought(like eat the food, wear the hat, sleep while using bed etc...)
 
-    // Revoke the token to force user manually log in every trial
+    // Revoke the token to force user manually log in every trial to test other player
     if ($client->getAccessToken()) {
         $client->revokeToken(); 
     }
