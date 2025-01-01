@@ -21,7 +21,7 @@
             echo "<div class='tile'>$i ☺☻</div>";
         }
         echo '</div>';
-        echo '<div style="display: grid; grid-template-columns: 1fr 1fr;">';
+        echo '<div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr 1fr;">';
         for ($i=1; $i <=25; $i++) { 
             echo "<div class='tile'>$i ☺☻</div>";
         }
