@@ -39,7 +39,7 @@
     <title>marken</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="<?php echo $_SESSION['bg']; ?>">
+<body class="<?php echo isset($_SESSION['bg']) ?  $_SESSION['bg'] : ''; ?>">
 
 <?php
     
