@@ -8,6 +8,11 @@
 </head>
 <body>
     <div>☺☻</div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr;">
+  <div style="background: lightblue;">Item 1</div>
+  <div style="background: lightcoral;">Item 2</div>
+</div>
+
     <?php
         // echo '<div>☺☻</div>';
         echo "<div class='tile'>$i ☺☻</div>";
