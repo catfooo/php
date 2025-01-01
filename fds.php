@@ -11,9 +11,9 @@
     <?php
         // echo '<div>☺☻</div>';
         echo "<div class='tile'>$i ☺☻</div>";
-        echo '<div class="">';
+        echo '<div class="tileset">';
         for ($i=1; $i <=25; $i++) { 
-            echo "<div class='tile'>$i ☺☻</div>";
+            echo "<span class='tile'>$i ☺☻</span>";
         }
         echo '</div>';
 
