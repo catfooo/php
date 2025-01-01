@@ -13,7 +13,7 @@
         echo "<div class='tile'>$i ☺☻</div>";
         echo '<div class="tileset">';
         for ($i=1; $i <=25; $i++) { 
-            echo "<span class='tile'>$i ☺☻</span>";
+            echo "<div class='tile'>$i ☺☻</div>";
         }
         echo '</div>';
 
