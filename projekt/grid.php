@@ -46,13 +46,15 @@
                 WHERE col = {$user['col']} AND row = {$user['row']} AND id != $user_id";
         $result = $db->query($sql);
         //echo $result;
-        if($result->num_rows > 0) {
+        if(!$result->num_rows > 0) {
+            echo "result is false";            
+        } else {
             while ($squ = $result->fetch_assoc()) {
                 // Echo each matching row(squrrel)'s data
                 echo "ID: " . $squ['id'] . ", Col: " . $squ['col'] . ", Row: " . $squ['row'] . "<br>";
             }
             echo "meow";
-        } else {echo "result is false";}
+        }
             
         
 
