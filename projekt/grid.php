@@ -43,7 +43,7 @@
         //    echo "meow";
         //}
         $sql = "SELECT * FROM kunder 
-                WHERE `col` = {$user['col']} AND `row` = {$user['row']} AND id != $user_id";
+                WHERE col = {$user['col']} AND row = {$user['row']} AND id != $user_id";
         $result = $db->query($sql);
         //echo $result;
         if($result->num_rows > 0) {
