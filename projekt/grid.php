@@ -36,7 +36,16 @@
         echo "v�lkommen " . $user['name'];  
         echo '<a href="http://localhost:8888/projekt/index.php">Maskrosaff�ren</a>';  
         echo "</div>";
+        // echo user location
         echo $user['col'] . ',' . $user['row'];
+        // if users col and row is same with other value from kunder table 
+        //if($user['col'] == `col` && $user['row'] == `row`) {
+        //    echo "meow";
+        //}
+        if($db->query("SELECT * FROM kunder WHERE col = {$user['col']} AND row = {$user['row']} AND id != $user_id")){
+            echo "meow";
+        }
+
         
         // (gpt) Display a 5�5 grid
         // echo '<div class="tileset" style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; width: 300px; margin: 20px auto;">';
