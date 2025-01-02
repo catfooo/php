@@ -36,7 +36,7 @@
         echo "v�lkommen " . $user['name'];  
         echo '<a href="http://localhost:8888/projekt/index.php">Maskrosaff�ren</a>';  
         echo "</div>";
-        echo $user['col'], $user['row'];
+        echo $user['col'] . ',' . $user['row'];
         
         // (gpt) Display a 5�5 grid
         // echo '<div class="tileset" style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; width: 300px; margin: 20px auto;">';
