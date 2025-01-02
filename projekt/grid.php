@@ -52,7 +52,7 @@
                 echo "ID: " . $squ['id'] . ", Col: " . $squ['col'] . ", Row: " . $squ['row'] . "<br>";
             }
             echo "meow";
-        }
+        } else {echo "result is false";}
             
         
 
