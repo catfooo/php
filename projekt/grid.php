@@ -37,12 +37,12 @@
         echo '<a href="http://localhost:8888/projekt/index.php">Maskrosaff�ren</a>';  
         echo "</div>";
         // echo user location
-        echo $user['col'] . ',' . $user['row'];
+        echo $user['col'] . ', ' . $user['row'];
         // if users col and row is same with other value from kunder table 
         //if($user['col'] == `col` && $user['row'] == `row`) {
         //    echo "meow";
         //}
-        if($db->query("SELECT * FROM kunder WHERE col = {$user['col']} AND row = {$user['row']} AND id != $user_id")){
+        if($db->query("SELECT * FROM kunder WHERE `col` = {$user['col']} AND `row` = {$user['row']} AND id != $user_id")){
             echo "meow";
         }
 
