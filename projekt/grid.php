@@ -42,9 +42,12 @@
         //if($user['col'] == `col` && $user['row'] == `row`) {
         //    echo "meow";
         //}
-        if($db->query("SELECT * FROM kunder WHERE `col` = {$user['col']} AND `row` = {$user['row']} AND id != $user_id")){
-            echo "meow";
-        }
+        $sql = "SELECT * FROM kunder 
+                WHERE `col` = {$user['col']} AND `row` = {$user['row']} AND id != $user_id";
+        $result = $db->query($sql);
+        if($result->num_rows > 0) {echo "meow";}
+            
+        
 
         
         // (gpt) Display a 5�5 grid
