@@ -45,8 +45,14 @@
         $sql = "SELECT * FROM kunder 
                 WHERE `col` = {$user['col']} AND `row` = {$user['row']} AND id != $user_id";
         $result = $db->query($sql);
-        echo $result;
-        if($result->num_rows > 0) {echo "meow";}
+        //echo $result;
+        if($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                // Echo each matching row's data
+                echo "ID: " . $row['id'] . ", Name: " . $row['name'] . ", Col: " . $row['col'] . ", Row: " . $row['row'] . "<br>";
+            }
+            echo "meow";
+        }
             
         
 
