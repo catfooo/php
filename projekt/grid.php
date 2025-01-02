@@ -47,9 +47,9 @@
         $result = $db->query($sql);
         //echo $result;
         if($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-                // Echo each matching row's data
-                echo "ID: " . $row['id'] . ", Name: " . $row['name'] . ", Col: " . $row['col'] . ", Row: " . $row['row'] . "<br>";
+            while ($squ = $result->fetch_assoc()) {
+                // Echo each matching row(squrrel)'s data
+                echo "ID: " . $squ['id'] . ", Col: " . $squ['col'] . ", Row: " . $squ['row'] . "<br>";
             }
             echo "meow";
         }
