@@ -51,7 +51,11 @@
             while ($squ = $result->fetch_assoc()) {
                 // Echo each matching row(squrrel)'s data/
                 echo "ID: " . $squ['id'] . ", maskrosor: " . $squ['dandelions'] . "<br>";
+                // delete all dandelions that targeted user has
                 $sql = "UPDATE kunder SET dandelions = dandelions - {$squ['dandelions']} WHERE id = {$squ['id']}";
+                $db->query($sql);
+                // add that dandelion to user, that targeted user had before
+                $sql = "UPDATE kunder SET dandelions = dandelions + {$squ['dandelions']} WHERE id = $user_id";
                 $db->query($sql);
             }
         } else {echo "result is false";}
