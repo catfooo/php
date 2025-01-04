@@ -51,7 +51,8 @@
             while ($squ = $result->fetch_assoc()) {
                 // Echo each matching row(squrrel)'s data/
                 echo "ID: " . $squ['id'] . ", maskrosor: " . $squ['dandelions'] . "<br>";
-                $sql = "UPDATE kunder SET ";
+                $sql = "UPDATE kunder SET dandelions = dandelions - {$squ['dandelions']} WHERE id = {$squ['id']}";
+                $db->query($sql);
             }
         } else {echo "result is false";}
             
