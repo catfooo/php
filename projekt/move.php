@@ -120,8 +120,15 @@
                     // if we put $db->query($sql); to the condition, 
                     // The $db->query($sql) will return true bcs the SQL query executes successfully (even if no rows are affected). It will return false only if there is an actual error in executing the query (e.g., syntax error, connection problem, etc.).
                     if($db->affected_rows) {                        
+                        // fetch dandelion to send msg with 'plockade en maskros, xx totalt'
+                        $user_id = $_SESSION['user_id'];
+                        $result = $db->query("SELECT * FROM kunder WHERE id = $user_id");
+                        $user = $result->fetch_assoc();
+                        // echo "v�lkommen " . $user['name'];  
+                        // not used session?
+                        // $_SESSION['dandelions'] = $user['dandelions'];
                         echo "<script>                            
-                                document.getElementById('msg').innerText = 'plockade en maskros';                            
+                                document.getElementById('msg').innerText = 'plockade en maskros, {$user['dandelions']} totalt';                            
                         </script>";
                     } else {
                         echo "<script>                           
@@ -157,17 +164,14 @@
                         AND (`col` * `row`) % 3 = 0";
                     $db->query($sql);
 
-                    
-
                     if($db->affected_rows) {                        
-                        
-                                            // fetch dandelion to send msg with 'plockade en maskros, xx totalt'
-                                            $user_id = $_SESSION['user_id'];
-                                            $result = $db->query("SELECT * FROM kunder WHERE id = $user_id");
-                                            $user = $result->fetch_assoc();
-                                            // echo "v�lkommen " . $user['name'];  
-                                            // not used session?
-                                            // $_SESSION['dandelions'] = $user['dandelions'];
+                        // fetch dandelion to send msg with 'plockade en maskros, xx totalt'
+                        $user_id = $_SESSION['user_id'];
+                        $result = $db->query("SELECT * FROM kunder WHERE id = $user_id");
+                        $user = $result->fetch_assoc();
+                        // echo "v�lkommen " . $user['name'];  
+                        // not used session?
+                        // $_SESSION['dandelions'] = $user['dandelions'];
                         echo "<script>                            
                                 document.getElementById('msg').innerText = 'plockade en maskros, {$user['dandelions']} totalt';                            
                         </script>";
@@ -206,8 +210,15 @@
                     $db->query($sql);
 
                     if($db->affected_rows) {                        
+                        // fetch dandelion to send msg with 'plockade en maskros, xx totalt'
+                        $user_id = $_SESSION['user_id'];
+                        $result = $db->query("SELECT * FROM kunder WHERE id = $user_id");
+                        $user = $result->fetch_assoc();
+                        // echo "v�lkommen " . $user['name'];  
+                        // not used session?
+                        // $_SESSION['dandelions'] = $user['dandelions'];
                         echo "<script>                            
-                                document.getElementById('msg').innerText = 'plockade en maskros';                            
+                                document.getElementById('msg').innerText = 'plockade en maskros, {$user['dandelions']} totalt';                            
                         </script>";
                     } else {
                         echo "<script>                           
@@ -244,8 +255,15 @@
                     $db->query($sql);
 
                     if($db->affected_rows) {                        
+                        // fetch dandelion to send msg with 'plockade en maskros, xx totalt'
+                        $user_id = $_SESSION['user_id'];
+                        $result = $db->query("SELECT * FROM kunder WHERE id = $user_id");
+                        $user = $result->fetch_assoc();
+                        // echo "v�lkommen " . $user['name'];  
+                        // not used session?
+                        // $_SESSION['dandelions'] = $user['dandelions'];
                         echo "<script>                            
-                                document.getElementById('msg').innerText = 'plockade en maskros';                            
+                                document.getElementById('msg').innerText = 'plockade en maskros, {$user['dandelions']} totalt';                            
                         </script>";
                     } else {
                         echo "<script>                           
