@@ -66,9 +66,9 @@
 
         echo $maskros;
         echo "</div>";
-        if($maskros) {
-            echo ", {$user['dandelions']} totalt";
-        }
+        // if($maskros) {
+        //     echo ", {$user['dandelions']} totalt";
+        // }
         
        
         // display grid
@@ -156,9 +156,17 @@
                         AND (`col` * `row`) % 3 = 0";
                     $db->query($sql);
 
+                    // fetch dandelion to send msg with 'plockade en maskros, xx totalt'
+                    $user_id = $_SESSION['user_id'];
+                    $result = $db->query("SELECT * FROM kunder WHERE id = $user_id");
+                    $user = $result->fetch_assoc();
+                    // echo "v�lkommen " . $user['name'];  
+                    // not used session?
+                    // $_SESSION['dandelions'] = $user['dandelions'];
+
                     if($db->affected_rows) {                        
                         echo "<script>                            
-                                document.getElementById('msg').innerText = 'plockade en maskros';                            
+                                document.getElementById('msg').innerText = 'plockade en maskros, {$user['dandelions']} totalt';                            
                         </script>";
                     } else {
                         echo "<script>                           
