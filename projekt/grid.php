@@ -50,7 +50,8 @@
             echo "meow";
             while ($squ = $result->fetch_assoc()) {
                 // Echo each matching row(squrrel)'s data/
-                echo "ID: " . $squ['id'] . ", Col: " . $squ['col'] . ", Row: " . $squ['row'] . "<br>";
+                echo "ID: " . $squ['id'] . ", maskrosor: " . $squ['dandelions'] . "<br>";
+                $sql = "UPDATE kunder SET ";
             }
         } else {echo "result is false";}
             
