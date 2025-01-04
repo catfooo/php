@@ -62,7 +62,9 @@
         if($result->num_rows > 0) {
             // echo "meow";
             while ($squ = $result->fetch_assoc()) {
-                if($squ['dandelions'] !== 0) {
+                if($squ['dandelions'] == 0) {
+                    echo "du hittade en ekorr men den såg ut som pank..";
+                } else {
                     // Echo each matching row(squrrel)'s data/
                     // echo "ID: " . $squ['id'] . ", maskrosor: " . $squ['dandelions'] . "<br>";
                     echo "du fick " . $squ['dandelions'] . " maskrosor från user nr " . $squ['id'];
@@ -78,7 +80,7 @@
                     $_SESSION[$is_user_robbed] = true;
                     $_SESSION['is_user_dandelions'] = $squ['dandelions'];
                     $_SESSION['is_user_attackedby'] = $user_id;
-                } else {echo "du hittade en ekorr men den såg ut som pank..";}
+                }
             }
         } else {//echo "result is false";
             }
