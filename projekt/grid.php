@@ -59,7 +59,8 @@
                 $sql = "UPDATE kunder SET dandelions = dandelions + {$squ['dandelions']} WHERE id = $user_id";
                 $db->query($sql);
             }
-        } else {//echo "result is false";}
+        } else {//echo "result is false";
+            }
             
         
 
