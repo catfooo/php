@@ -123,8 +123,6 @@
                         $result = $db->query("SELECT * FROM kunder WHERE id = $user_id");
                         $user = $result->fetch_assoc();
                         // echo "v�lkommen " . $user['name'];  
-                        // not used session?
-                        // $_SESSION['dandelions'] = $user['dandelions'];
                         echo "<script>                            
                                 document.getElementById('msg').innerText = 'plockade en maskros, {$user['dandelions']} totalt';                            
                         </script>";
@@ -168,8 +166,6 @@
                         $result = $db->query("SELECT * FROM kunder WHERE id = $user_id");
                         $user = $result->fetch_assoc();
                         // echo "v�lkommen " . $user['name'];  
-                        // not used session?
-                        // $_SESSION['dandelions'] = $user['dandelions'];
                         echo "<script>                            
                                 document.getElementById('msg').innerText = 'plockade en maskros, {$user['dandelions']} totalt';                            
                         </script>";
@@ -213,8 +209,6 @@
                         $result = $db->query("SELECT * FROM kunder WHERE id = $user_id");
                         $user = $result->fetch_assoc();
                         // echo "v�lkommen " . $user['name'];  
-                        // not used session?
-                        // $_SESSION['dandelions'] = $user['dandelions'];
                         echo "<script>                            
                                 document.getElementById('msg').innerText = 'plockade en maskros, {$user['dandelions']} totalt';                            
                         </script>";
@@ -258,8 +252,6 @@
                         $result = $db->query("SELECT * FROM kunder WHERE id = $user_id");
                         $user = $result->fetch_assoc();
                         // echo "v�lkommen " . $user['name'];  
-                        // not used session?
-                        // $_SESSION['dandelions'] = $user['dandelions'];
                         echo "<script>                            
                                 document.getElementById('msg').innerText = 'plockade en maskros, {$user['dandelions']} totalt';                            
                         </script>";
