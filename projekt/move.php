@@ -65,6 +65,7 @@
         // if ($maskros) {echo $maskros;} else {echo 'var finns maskrosor?';}
 
         echo $maskros;
+        echo ", {$user['dandelions']} totalt";
         echo "</div>";
         
        
