@@ -41,13 +41,13 @@
         // echo user location
         echo $user['col'] . ', ' . $user['row'];
 
-        // if robbed,  // where we set defalt value for this to false? -> boolean default is false so might be okay..?
+        // if robbed,  // where we set defalt value for this to false? -> boolean default is false so might be okay..? // case 0? it keeps saying you have lost 0 maskrosor.. -> 'squr tried, but failed'. vice versa, 'there was squr but had no maskrosor to take'
         $is_user_robbed = "is_" . $user_id . "_robbed";
-        if($_SESSION[$is_user_robbed]) {
+        if($_SESSION[$is_user_robbed] && $_SESSION['is_user_dandelions'] !== 0) {
             echo "du har förlorat " . $_SESSION['is_user_dandelions'] . " maskrosor från user nr" . $_SESSION['is_user_attackedby'];
             $is_user_robbed = "is_" . $user_id . "_robbed";
             $_SESSION[$is_user_robbed] = false;
-        }
+        } else {echo "du träffade en hungrig ekorr men kunde inte föda den";}
 
         // if users col and row is same with other value from kunder table 
         //if($user['col'] == `col` && $user['row'] == `row`) {
@@ -60,21 +60,23 @@
         if($result->num_rows > 0) {
             // echo "meow";
             while ($squ = $result->fetch_assoc()) {
-                // Echo each matching row(squrrel)'s data/
-                // echo "ID: " . $squ['id'] . ", maskrosor: " . $squ['dandelions'] . "<br>";
-                echo "du fick " . $squ['dandelions'] . " maskrosor från user nr " . $squ['id'];
-                // delete all dandelions that targeted user has
-                $sql = "UPDATE kunder SET dandelions = dandelions - {$squ['dandelions']} WHERE id = {$squ['id']}";
-                $db->query($sql);
-                // add that dandelion to user, that targeted user had before
-                $sql = "UPDATE kunder SET dandelions = dandelions + {$squ['dandelions']} WHERE id = $user_id";
-                $db->query($sql);
-                // msg for when user förlorat
-                // session isrobbed user nr = true? // du har förlorat xx maskrosor från usr nr xx // and then make isrobbed false  // maskrosor, usrnr to be session
-                $is_user_robbed = "is_" . $squ["id"] . "_robbed";
-                $_SESSION[$is_user_robbed] = true;
-                $_SESSION['is_user_dandelions'] = $squ['dandelions'];
-                $_SESSION['is_user_attackedby'] = $user_id;
+                if($squ['dandelions'] !== 0) {
+                    // Echo each matching row(squrrel)'s data/
+                    // echo "ID: " . $squ['id'] . ", maskrosor: " . $squ['dandelions'] . "<br>";
+                    echo "du fick " . $squ['dandelions'] . " maskrosor från user nr " . $squ['id'];
+                    // delete all dandelions that targeted user has
+                    $sql = "UPDATE kunder SET dandelions = dandelions - {$squ['dandelions']} WHERE id = {$squ['id']}";
+                    $db->query($sql);
+                    // add that dandelion to user, that targeted user had before
+                    $sql = "UPDATE kunder SET dandelions = dandelions + {$squ['dandelions']} WHERE id = $user_id";
+                    $db->query($sql);
+                    // msg for when user förlorat
+                    // session isrobbed user nr = true? // du har förlorat xx maskrosor från usr nr xx // and then make isrobbed false  // maskrosor, usrnr to be session
+                    $is_user_robbed = "is_" . $squ["id"] . "_robbed";
+                    $_SESSION[$is_user_robbed] = true;
+                    $_SESSION['is_user_dandelions'] = $squ['dandelions'];
+                    $_SESSION['is_user_attackedby'] = $user_id;
+                } else {echo "du hittade en ekorr men den såg ut som pank..";}
             }
         } else {//echo "result is false";
             }
