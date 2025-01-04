@@ -66,6 +66,7 @@
 
         echo $maskros;
         echo ", {$user['dandelions']} totalt";
+        echo "test";
         echo "</div>";
         
        
