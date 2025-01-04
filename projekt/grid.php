@@ -49,7 +49,7 @@
         if($result->num_rows > 0) {
             echo "meow";
             while ($squ = $result->fetch_assoc()) {
-                // Echo each matching row(squrrel)'s data
+                // Echo each matching row(squrrel)'s data/
                 echo "ID: " . $squ['id'] . ", Col: " . $squ['col'] . ", Row: " . $squ['row'] . "<br>";
             }
         } else {echo "result is false";}
