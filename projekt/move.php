@@ -65,9 +65,8 @@
         // if ($maskros) {echo $maskros;} else {echo 'var finns maskrosor?';}
 
         echo $maskros;
-        echo ", {$user['dandelions']} totalt";
-        echo "test";
         echo "</div>";
+        echo ", {$user['dandelions']} totalt";
         
        
         // display grid
