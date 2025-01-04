@@ -66,7 +66,9 @@
 
         echo $maskros;
         echo "</div>";
-        echo ", {$user['dandelions']} totalt";
+        if($maskros) {
+            echo ", {$user['dandelions']} totalt";
+        }
         
        
         // display grid
