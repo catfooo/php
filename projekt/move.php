@@ -69,7 +69,7 @@
         // if($maskros) {
         //     echo ", {$user['dandelions']} totalt";
         // }
-        echo "<div id='msg2'></div>";
+        
         
        
         // display grid
@@ -160,8 +160,16 @@
                     
 
                     if($db->affected_rows) {                        
+                        
+                                            // fetch dandelion to send msg with 'plockade en maskros, xx totalt'
+                                            $user_id = $_SESSION['user_id'];
+                                            $result = $db->query("SELECT * FROM kunder WHERE id = $user_id");
+                                            $user = $result->fetch_assoc();
+                                            // echo "v�lkommen " . $user['name'];  
+                                            // not used session?
+                                            // $_SESSION['dandelions'] = $user['dandelions'];
                         echo "<script>                            
-                                document.getElementById('msg').innerText = 'plockade en maskros';                            
+                                document.getElementById('msg').innerText = 'plockade en maskros, {$user['dandelions']} totalt';                            
                         </script>";
                     } else {
                         echo "<script>                           
@@ -169,25 +177,7 @@
                         </script>";
                     }
 
-                    // // fetch dandelion to send msg with 'plockade en maskros, xx totalt'
-                    // $user_id = $_SESSION['user_id'];
-                    // $result = $db->query("SELECT * FROM kunder WHERE id = $user_id");
-                    // $user = $result->fetch_assoc();
-                    // // echo "v�lkommen " . $user['name'];  
-                    // // not used session?
-                    // // $_SESSION['dandelions'] = $user['dandelions'];
-
-                    // if($db->affected_rows) {                        
-                    //     echo "<script>
-                    //             if(document.getElementById('msg').innerText = 'plockade en maskros') {
-                    //                 document.getElementById('msg2').innerText = ', {$user['dandelions']} totalt';                            
-                    //             }                            
-                    //     </script>";
-                    // } else {
-                    //     echo "<script>                           
-                    //             document.getElementById('msg2').innerText = '';                            
-                    //     </script>";
-                    // }
+                    
 
                     echo "<script>
                             setTimeout(function() {
