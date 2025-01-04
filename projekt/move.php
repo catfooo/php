@@ -69,6 +69,7 @@
         // if($maskros) {
         //     echo ", {$user['dandelions']} totalt";
         // }
+        echo "<div id='msg2'></div>";
         
        
         // display grid
@@ -156,6 +157,18 @@
                         AND (`col` * `row`) % 3 = 0";
                     $db->query($sql);
 
+                    
+
+                    if($db->affected_rows) {                        
+                        echo "<script>                            
+                                document.getElementById('msg').innerText = 'plockade en maskros';                            
+                        </script>";
+                    } else {
+                        echo "<script>                           
+                                document.getElementById('msg').innerText = '';                            
+                        </script>";
+                    }
+
                     // fetch dandelion to send msg with 'plockade en maskros, xx totalt'
                     $user_id = $_SESSION['user_id'];
                     $result = $db->query("SELECT * FROM kunder WHERE id = $user_id");
@@ -165,12 +178,14 @@
                     // $_SESSION['dandelions'] = $user['dandelions'];
 
                     if($db->affected_rows) {                        
-                        echo "<script>                            
-                                document.getElementById('msg').innerText = 'plockade en maskros, {$user['dandelions']} totalt';                            
+                        echo "<script>
+                                if(document.getElementById('msg').innerText = 'plockade en maskros') {
+                                    document.getElementById('msg2').innerText = ', {$user['dandelions']} totalt';                            
+                                }                            
                         </script>";
                     } else {
                         echo "<script>                           
-                                document.getElementById('msg').innerText = '';                            
+                                document.getElementById('msg2').innerText = '';                            
                         </script>";
                     }
 
