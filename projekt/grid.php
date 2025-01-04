@@ -42,7 +42,8 @@
         echo $user['col'] . ', ' . $user['row'];
 
         // if robbed,  // where we set defalt value for this to false? -> boolean default is false so might be okay..?
-        if("is_" . $user_id . "_robbed") {
+        $is_user_robbed = "is_" . $user_id . "_robbed";
+        if($_SESSION[$is_user_robbed]) {
             echo "du har förlorat " . $_SESSION['is_user_dandelions'] . " maskrosor från " . $_SESSION['is_user_attackedby'];
             $is_user_robbed = "is_" . $user_id . "_robbed";
             $_SESSION[$is_user_robbed] = false;
