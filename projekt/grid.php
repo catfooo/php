@@ -41,11 +41,11 @@
         // echo user location
         echo $user['col'] . ', ' . $user['row'];
 
-        // if robbed,  // where we set defalt value for this to false? -> boolean default is false so might be okay..? // case 0? it keeps saying you have lost 0 maskrosor.. -> 'squr tried, but failed'. vice versa, 'there was squr but had no maskrosor to take'
+        // if robbed,
         $is_user_robbed = "is_" . $user_id . "_robbed";
         if($_SESSION[$is_user_robbed]) {
             if($_SESSION['is_user_dandelions'] == 0) {
-                echo "du träffade en hungrig ekorr men kunde inte föda den";
+                echo "du träffade en hungrig ekorr men kunde inte födda den";
                 $is_user_robbed = "is_" . $user_id . "_robbed";
                 $_SESSION[$is_user_robbed] = false;
             } else {
@@ -55,10 +55,8 @@
             }
         } 
 
+        // if rob
         // if users col and row is same with other value from kunder table 
-        //if($user['col'] == `col` && $user['row'] == `row`) {
-        //    echo "meow";
-        //}
         $sql = "SELECT * FROM kunder 
                 WHERE `col` = {$user['col']} AND `row` = {$user['row']} AND id != $user_id";
         $result = $db->query($sql);
@@ -73,7 +71,7 @@
                     $_SESSION['is_user_dandelions'] = $squ['dandelions'];
                     $_SESSION['is_user_attackedby'] = $user_id;
                 } else {
-                    // Echo each matching row(squrrel)'s data/
+                    // Echo each matching row(squrrel)'s data
                     // echo "ID: " . $squ['id'] . ", maskrosor: " . $squ['dandelions'] . "<br>";
                     echo "du fick " . $squ['dandelions'] . " maskrosor från user nr " . $squ['id'];
                     // delete all dandelions that targeted user has
@@ -91,17 +89,8 @@
                 }
             }
         } else {//echo "result is false";
-            }
+        }
             
-        
-
-        
-        // (gpt) Display a 5�5 grid
-        // echo '<div class="tileset" style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; width: 300px; margin: 20px auto;">';
-        // for ($i = 1; $i <= 25; $i++) {
-        //     echo "<div class='tile' style='border: 1px solid #ccc; padding: 20px; text-align: center;'>$i</div>";
-        // }
-        // echo '</div>';
 
         echo '<div class="tileset">';
         for ($i = 1; $i <= 25; $i++) {
@@ -146,12 +135,7 @@
         echo '<script>
                 document.addEventListener("keydown", (event) => {
                     console.log("key pressed: " + event.key);
-                    // ajax, form, or fetch to send data to server so php can recognize
-                    // or websocket (only if you can xD...)
-                    // but oh no, form submitting navigates, which fetch doesnt. but this can be actually good way. you can show user that they are moved, and then, redirect to the main, with updates
-                    // but fetch is interesting, bcs this makes seperate php made for move, executing at background. good to try if any energy is left xD
-                    // you can use window.location to get via url instead of form. since i tried form(post) a lot time in this course, might good to start with classic get first?
-
+                    
                     // construct the url with the "move(pressed key)" as a query parameter
                     const move = event.key;
                     window.location.href = `move.php?move=${move}`;
