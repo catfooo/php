@@ -47,10 +47,11 @@
         $result = $db->query($sql);
         //echo $result;
         if($result->num_rows > 0) {
-            echo "meow";
+            // echo "meow";
             while ($squ = $result->fetch_assoc()) {
                 // Echo each matching row(squrrel)'s data/
-                echo "ID: " . $squ['id'] . ", maskrosor: " . $squ['dandelions'] . "<br>";
+                // echo "ID: " . $squ['id'] . ", maskrosor: " . $squ['dandelions'] . "<br>";
+                echo "du fick " . $squ['dandelions'] . "från user nr " . $squ['id'];
                 // delete all dandelions that targeted user has
                 $sql = "UPDATE kunder SET dandelions = dandelions - {$squ['dandelions']} WHERE id = {$squ['id']}";
                 $db->query($sql);
@@ -58,7 +59,7 @@
                 $sql = "UPDATE kunder SET dandelions = dandelions + {$squ['dandelions']} WHERE id = $user_id";
                 $db->query($sql);
             }
-        } else {echo "result is false";}
+        } else {//echo "result is false";}
             
         
 
