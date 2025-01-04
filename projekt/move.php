@@ -66,9 +66,7 @@
 
         echo $maskros;
         echo "</div>";
-        // if($maskros) {
-        //     echo ", {$user['dandelions']} totalt";
-        // }
+       
         
         
        
