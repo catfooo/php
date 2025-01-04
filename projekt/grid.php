@@ -36,8 +36,18 @@
         echo "v�lkommen " . $user['name'];  
         echo '<a href="http://localhost:8888/projekt/index.php">Maskrosaff�ren</a>';  
         echo "</div>";
+
+
         // echo user location
         echo $user['col'] . ', ' . $user['row'];
+
+        // if robbed,  // where we set defalt value for this to false? -> boolean default is false so might be okay..?
+        if("is_" . $user_id . "_robbed") {
+            echo "du har förlorat " . $_SESSION['is_user_dandelions'] . " maskrosor från " . $_SESSION['is_user_attackedby'];
+            $is_user_robbed = "is_" . $user_id . "_robbed";
+            $_SESSION[$is_user_robbed] = false;
+        }
+
         // if users col and row is same with other value from kunder table 
         //if($user['col'] == `col` && $user['row'] == `row`) {
         //    echo "meow";
@@ -58,6 +68,12 @@
                 // add that dandelion to user, that targeted user had before
                 $sql = "UPDATE kunder SET dandelions = dandelions + {$squ['dandelions']} WHERE id = $user_id";
                 $db->query($sql);
+                // msg for when user förlorat
+                // session isrobbed user nr = true? // du har förlorat xx maskrosor från usr nr xx // and then make isrobbed false  // maskrosor, usrnr to be session
+                $is_user_robbed = "is_" . $squ["id"] . "_robbed";
+                $_SESSION[$is_user_robbed] = true;
+                $_SESSION['is_user_dandelions'] = $squ['dandelions'];
+                $_SESSION['is_user_attackedby'] = $user_id;
             }
         } else {//echo "result is false";
             }
