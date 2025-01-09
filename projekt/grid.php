@@ -44,7 +44,7 @@
         // if robbed,
         // echo $user_id;
         $is_user_robbed = "is_" . $user_id . "_robbed";
-        // echo $_SESSION[$is_user_robbed]; // from the beginning, session is not set..
+        echo "session set: " . $_SESSION[$is_user_robbed]; 
         // for web server, it was throwing undefined warning, so used 
         if(isset($_SESSION[$is_user_robbed]) && $_SESSION[$is_user_robbed]) { 
         //     echo "mjau..."; // this block is not executing at all???
