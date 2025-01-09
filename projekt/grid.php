@@ -44,6 +44,7 @@
         // if robbed,
         $is_user_robbed = "is_" . $user_id . "_robbed";
         // for web server, it was throwing undefined warning, so used if(isset($_SESSION[$is_user_robbed]) && $_SESSION[$is_user_robbed]) { instead
+        // might not related to this, but passive robbed check is not working for web server.. why???
         if($_SESSION[$is_user_robbed]) {
             if($_SESSION['is_user_dandelions'] == 0) {
                 echo "du träffade en hungrig ekorr men kunde inte födda den";
