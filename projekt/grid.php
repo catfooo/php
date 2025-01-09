@@ -4,6 +4,7 @@
     // if($_SESSION['bg']) {
     //     $bg = "bg";
     // }
+    var_dump($_SESSION);  // This will show all the session data to help you debug
 
 ?>
 
