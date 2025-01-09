@@ -9,6 +9,10 @@
     if(isset($_GET['exit'])) {
         session_unset(); // Unset all session variables // seems not work? only reopening browser window works?
         session_destroy();
+        // Delete the session cookie by setting its expiration to a past time
+        if (isset($_COOKIE[session_name()])) {
+            setcookie(session_name(), '', time() - 3600, '/');
+        }
     }
 
     $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
