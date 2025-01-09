@@ -42,11 +42,13 @@
         echo $user['col'] . ', ' . $user['row'];
 
         // if robbed,
-        echo $user_id;
+        // echo $user_id;
         $is_user_robbed = "is_" . $user_id . "_robbed";
         // for web server, it was throwing undefined warning, so used 
-        if(isset($_SESSION[$is_user_robbed]) && $_SESSION[$is_user_robbed]) { 
-            echo "mjau..."; // this block is not executing at all???
+        // if(isset($_SESSION[$is_user_robbed]) && $_SESSION[$is_user_robbed]) { 
+        //     echo "mjau..."; // this block is not executing at all???
+        if(isset($_SESSION[$is_user_robbed])) {
+            echo "robbed session set"; 
         // instead
         // might not related to this, but passive robbed check is not working for web server.. why???
         // not web server err. local started to become undefined. it wasnt like this like 1 week ago but nothing changed from then.. xD so whyyyy
