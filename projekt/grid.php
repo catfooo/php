@@ -44,7 +44,7 @@
         // if robbed,
         // echo $user_id;
         $is_user_robbed = "is_" . $user_id . "_robbed";
-        echo $_SESSION[$is_user_robbed];
+        // echo $_SESSION[$is_user_robbed]; // from the beginning, session is not set..
         // for web server, it was throwing undefined warning, so used 
         if(isset($_SESSION[$is_user_robbed]) && $_SESSION[$is_user_robbed]) { 
         //     echo "mjau..."; // this block is not executing at all???
@@ -79,6 +79,7 @@
                     echo "du hittade en ekorr men den såg ut som pank..";
                     $is_user_robbed = "is_" . $squ["id"] . "_robbed";
                     $_SESSION[$is_user_robbed] = true;
+                    echo $_SESSION[$is_user_robbed];
                     $_SESSION['is_user_dandelions'] = $squ['dandelions'];
                     $_SESSION['is_user_attackedby'] = $user_id;
                 } else {
