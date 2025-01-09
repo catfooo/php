@@ -96,7 +96,7 @@
                     // session isrobbed user nr = true? // du har förlorat xx maskrosor från usr nr xx // and then make isrobbed false  // maskrosor, usrnr to be session
                     $is_user_robbed = "is_" . $squ["id"] . "_robbed";
                     $_SESSION[$is_user_robbed] = true;
-                    echo $_SESSION[$is_user_robbed];
+                    // echo $_SESSION[$is_user_robbed];
                     $_SESSION['is_user_dandelions'] = $squ['dandelions'];
                     $_SESSION['is_user_attackedby'] = $user_id;
                 }

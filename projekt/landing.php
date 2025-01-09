@@ -7,6 +7,7 @@
     // to exit session
     session_start();
     if(isset($_GET['exit'])) {
+        session_unset(); // Unset all session variables
         session_destroy();
     }
 
