@@ -75,7 +75,12 @@
                 $sql = "DELETE FROM handelser WHERE userid = $user_id";
                 $db->query($sql);
             } else {
-                echo "du har förlorat " . $handelser['taken'] . " maskrosor från user nr" . $handelser['attackedby'];
+                $created_time = new DateTime($handelser['created']);
+                $current_time = new DateTime();
+                // Calculate the difference between the current time and the created time
+                $interval = $created_time->diff($current_time);
+                $minuter = $interval->d;
+                echo "du har förlorat " . $handelser['taken'] . " maskrosor från user nr" . $handelser['attackedby'] . " för " . $minuter . " minuter sedan.";
                 // $is_user_robbed = "is_" . $user_id . "_robbed";
                 // $_SESSION[$is_user_robbed] = false;
                 // DELETE row
