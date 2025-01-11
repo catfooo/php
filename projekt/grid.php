@@ -79,7 +79,7 @@
                 $current_time = new DateTime();
                 // Calculate the difference between the current time and the created time
                 $interval = $created_time->diff($current_time);
-                $minuter = $interval->d;
+                $minuter = $interval->i;
                 echo "du har förlorat " . $handelser['taken'] . " maskrosor från user nr" . $handelser['attackedby'] . " för " . $minuter . " minuter sedan";
                 // $is_user_robbed = "is_" . $user_id . "_robbed";
                 // $_SESSION[$is_user_robbed] = false;
