@@ -83,12 +83,12 @@
                 $current_time = new DateTime('now', new DateTimeZone('UTC'));
 
                 // Print out both DateTime objects for debugging
-                echo "Created Time: " . $created_time->format('Y-m-d H:i:s') . "<br>";
-                echo "Current Time: " . $current_time->format('Y-m-d H:i:s') . "<br>";
+                //echo "Created Time: " . $created_time->format('Y-m-d H:i:s') . "<br>";
+                //echo "Current Time: " . $current_time->format('Y-m-d H:i:s') . "<br>";
 
                 // Calculate the difference in seconds
                 $diff_seconds = $current_time->getTimestamp() - $created_time->getTimestamp();
-                echo "Time Difference in Seconds: " . $diff_seconds . "<br>";
+                //echo "Time Difference in Seconds: " . $diff_seconds . "<br>";
 
                 // Convert seconds to minutes
                 $minuter = floor($diff_seconds / 60); // Get whole minutes
