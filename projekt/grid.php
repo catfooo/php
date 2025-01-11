@@ -4,7 +4,7 @@
     // if($_SESSION['bg']) {
     //     $bg = "bg";
     // }
-    var_dump($_SESSION);  // This will show all the session data to help you debug
+    // var_dump($_SESSION);  // This will show all the session data to help you debug
     // session variable cant be accessed via internet or 3rd person. only via session id from local can access the variable. so.. is_(user)_attacked, needs to find other storage, such as db, bcs targeted user needs to browse this and info needed to shown based on this variable
 
 ?>
@@ -49,9 +49,9 @@
         // echo "session set: " . $_SESSION[$is_user_robbed]; 
 
         $sql = "SELECT * FROM handelser
-                WHERE userid == $user_id";
+                WHERE userid = $user_id";
         $result = $db->query($sql);
-        echo $result->fetch_assoc();
+        if($result->fetch_assoc()) {print_r($result->fetch_assoc());};
 
         // for web server, it was throwing undefined warning, so used 
         if(isset($_SESSION[$is_user_robbed]) && $_SESSION[$is_user_robbed]) { 
