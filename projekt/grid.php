@@ -66,7 +66,7 @@
         // not web server err. local started to become undefined. it wasnt like this like 1 week ago but nothing changed from then.. xD so whyyyy
         // if($_SESSION[$is_user_robbed]) {
         //     echo "meow meow"; // no here as well..
-        if($result->num_rows() > 0) {
+        if($result->num_rows > 0) {
             if($_SESSION['is_user_dandelions'] == 0) {
                 echo "du träffade en hungrig ekorr men kunde inte födda den";
                 $is_user_robbed = "is_" . $user_id . "_robbed";
