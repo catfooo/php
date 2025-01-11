@@ -67,14 +67,16 @@
         // if($_SESSION[$is_user_robbed]) {
         //     echo "meow meow"; // no here as well..
         if($result->num_rows > 0) {
-            if($_SESSION['is_user_dandelions'] == 0) {
+            if($handelser['taken'] == 0) {
                 echo "du träffade en hungrig ekorr men kunde inte födda den";
-                $is_user_robbed = "is_" . $user_id . "_robbed";
-                $_SESSION[$is_user_robbed] = false;
+                // $is_user_robbed = "is_" . $user_id . "_robbed";
+                // $_SESSION[$is_user_robbed] = false;
+                // DELETE row
             } else {
-                echo "du har förlorat " . $_SESSION['is_user_dandelions'] . " maskrosor från user nr" . $_SESSION['is_user_attackedby'];
-                $is_user_robbed = "is_" . $user_id . "_robbed";
-                $_SESSION[$is_user_robbed] = false;
+                echo "du har förlorat " . $handelser['taken'] . " maskrosor från user nr" . $handelser['attackedby'];
+                // $is_user_robbed = "is_" . $user_id . "_robbed";
+                // $_SESSION[$is_user_robbed] = false;
+                // DELETE row
             }
         } 
 
