@@ -51,8 +51,9 @@
         $sql = "SELECT * FROM handelser
                 WHERE userid = $user_id";
         $result = $db->query($sql);
-        echo "ddd";
-        if($result->fetch_assoc()) {print_r($result->fetch_assoc());} else {echo "nya";};
+        //echo "ddd";
+        $handelser = $result->fetch_assoc();
+        if($handelser) {print_r($handelser);} else {echo "nya";};
 
         // for web server, it was throwing undefined warning, so used 
         if(isset($_SESSION[$is_user_robbed]) && $_SESSION[$is_user_robbed]) { 
