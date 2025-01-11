@@ -76,15 +76,22 @@
                 $db->query($sql);
             } else {
                 // Create DateTime objects with the same time zone
-                $created_time = new DateTime($handelser['created'], new DateTimeZone('UTC'));  // Use the correct time zone for 'created'
-                $current_time = new DateTime('now', new DateTimeZone('UTC'));  // Using the current time in UTC
+$created_time = new DateTime($handelser['created'], new DateTimeZone('UTC'));  // Use the correct time zone for 'created'
+$current_time = new DateTime('now', new DateTimeZone('UTC'));  // Get the current time in UTC
 
-                // Calculate the difference between the current time and the created time
-                // Calculate the difference in seconds
-                $diff_seconds = $current_time->getTimestamp() - $created_time->getTimestamp();
-                // Convert seconds to minutes
-                $minuter = floor($diff_seconds / 60); // Get whole minutes
-                echo "du har förlorat " . $handelser['taken'] . " maskrosor från user nr" . $handelser['attackedby'] . " för " . $minuter . " minuter sedan";
+// Print out both DateTime objects for debugging
+echo "Created Time: " . $created_time->format('Y-m-d H:i:s') . "<br>";
+echo "Current Time: " . $current_time->format('Y-m-d H:i:s') . "<br>";
+
+// Calculate the difference in seconds
+$diff_seconds = $current_time->getTimestamp() - $created_time->getTimestamp();
+echo "Time Difference in Seconds: " . $diff_seconds . "<br>";
+
+// Convert seconds to minutes
+$minuter = floor($diff_seconds / 60); // Get whole minutes
+
+echo "du har förlorat " . $handelser['taken'] . " maskrosor från user nr " . $handelser['attackedby'] . " för " . $minuter . " minuter sedan";
+
                 // $is_user_robbed = "is_" . $user_id . "_robbed";
                 // $_SESSION[$is_user_robbed] = false;
                 // DELETE row
