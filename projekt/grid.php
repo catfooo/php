@@ -76,24 +76,24 @@
                 $db->query($sql);
             } else {
                 // If the 'created' timestamp is stored in a local time zone (e.g., Europe/Stockholm)
-$created_time = new DateTime($handelser['created'], new DateTimeZone('Europe/Stockholm'));  // Assuming local time
-$created_time->setTimezone(new DateTimeZone('UTC'));  // Convert to UTC
+                $created_time = new DateTime($handelser['created'], new DateTimeZone('Europe/Stockholm'));  // Assuming local time
+                $created_time->setTimezone(new DateTimeZone('UTC'));  // Convert to UTC
 
-// Current time in UTC
-$current_time = new DateTime('now', new DateTimeZone('UTC'));
+                // Current time in UTC
+                $current_time = new DateTime('now', new DateTimeZone('UTC'));
 
-// Print out both DateTime objects for debugging
-echo "Created Time: " . $created_time->format('Y-m-d H:i:s') . "<br>";
-echo "Current Time: " . $current_time->format('Y-m-d H:i:s') . "<br>";
+                // Print out both DateTime objects for debugging
+                echo "Created Time: " . $created_time->format('Y-m-d H:i:s') . "<br>";
+                echo "Current Time: " . $current_time->format('Y-m-d H:i:s') . "<br>";
 
-// Calculate the difference in seconds
-$diff_seconds = $current_time->getTimestamp() - $created_time->getTimestamp();
-echo "Time Difference in Seconds: " . $diff_seconds . "<br>";
+                // Calculate the difference in seconds
+                $diff_seconds = $current_time->getTimestamp() - $created_time->getTimestamp();
+                echo "Time Difference in Seconds: " . $diff_seconds . "<br>";
 
-// Convert seconds to minutes
-$minuter = floor($diff_seconds / 60); // Get whole minutes
+                // Convert seconds to minutes
+                $minuter = floor($diff_seconds / 60); // Get whole minutes
 
-echo "du har förlorat " . $handelser['taken'] . " maskrosor från user nr " . $handelser['attackedby'] . " för " . $minuter . " minuter sedan";
+                echo "du har förlorat " . $handelser['taken'] . " maskrosor från user nr " . $handelser['attackedby'] . " för " . $minuter . " minuter sedan";
 
                 // $is_user_robbed = "is_" . $user_id . "_robbed";
                 // $_SESSION[$is_user_robbed] = false;
