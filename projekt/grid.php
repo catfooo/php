@@ -75,8 +75,10 @@
                 $sql = "DELETE FROM handelser WHERE userid = $user_id";
                 $db->query($sql);
             } else {
-                $created_time = new DateTime($handelser['created']);
-                $current_time = new DateTime();
+                // Create DateTime objects with the same time zone
+                $created_time = new DateTime($handelser['created'], new DateTimeZone('UTC'));  // Use the correct time zone for 'created'
+                $current_time = new DateTime('now', new DateTimeZone('UTC'));  // Using the current time in UTC
+
                 // Calculate the difference between the current time and the created time
                 // Calculate the difference in seconds
                 $diff_seconds = $current_time->getTimestamp() - $created_time->getTimestamp();
