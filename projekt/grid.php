@@ -45,14 +45,21 @@
 
         // if robbed,
         // echo $user_id;
-        $is_user_robbed = "is_" . $user_id . "_robbed";
-        echo "session set: " . $_SESSION[$is_user_robbed]; 
+        // $is_user_robbed = "is_" . $user_id . "_robbed";
+        // echo "session set: " . $_SESSION[$is_user_robbed]; 
+
+        $sql = "SELECT * FROM handelser
+                WHERE userid == $user_id";
+        $result = $db->query($sql);
+        echo $result->fetch_assoc();
+
         // for web server, it was throwing undefined warning, so used 
         if(isset($_SESSION[$is_user_robbed]) && $_SESSION[$is_user_robbed]) { 
         //     echo "mjau..."; // this block is not executing at all???
         // if(isset($_SESSION[$is_user_robbed])) {
         //     echo "robbed session set"; // not have been set at all
         // instead
+
         // might not related to this, but passive robbed check is not working for web server.. why???
         // not web server err. local started to become undefined. it wasnt like this like 1 week ago but nothing changed from then.. xD so whyyyy
         // if($_SESSION[$is_user_robbed]) {
@@ -79,11 +86,16 @@
             while ($squ = $result->fetch_assoc()) {
                 if($squ['dandelions'] == 0) {
                     echo "du hittade en ekorr men den såg ut som pank..";
-                    $is_user_robbed = "is_" . $squ["id"] . "_robbed";
-                    $_SESSION[$is_user_robbed] = true;
+                    // $is_user_robbed = "is_" . $squ["id"] . "_robbed";
+                    // $_SESSION[$is_user_robbed] = true;
                     // echo $_SESSION[$is_user_robbed];
-                    $_SESSION['is_user_dandelions'] = $squ['dandelions'];
-                    $_SESSION['is_user_attackedby'] = $user_id;
+                    // instead of session, save to the db
+                    $userid = $squ["id"];
+                    $attackedby = $user_id;
+                    $sql = "INSERT INTO handelser (userid, attackedby) VALUES ('$userid','$attackedby')";
+                    $db->query($sql);
+                    // $_SESSION['is_user_dandelions'] = $squ['dandelions'];
+                    // $_SESSION['is_user_attackedby'] = $user_id;
                 } else {
                     // Echo each matching row(squrrel)'s data
                     // echo "ID: " . $squ['id'] . ", maskrosor: " . $squ['dandelions'] . "<br>";
@@ -96,11 +108,15 @@
                     $db->query($sql);
                     // msg for when user förlorat
                     // session isrobbed user nr = true? // du har förlorat xx maskrosor från usr nr xx // and then make isrobbed false  // maskrosor, usrnr to be session
-                    $is_user_robbed = "is_" . $squ["id"] . "_robbed";
-                    $_SESSION[$is_user_robbed] = true;
+                    // $is_user_robbed = "is_" . $squ["id"] . "_robbed";
+                    // $_SESSION[$is_user_robbed] = true;
                     // echo $_SESSION[$is_user_robbed];
-                    $_SESSION['is_user_dandelions'] = $squ['dandelions'];
-                    $_SESSION['is_user_attackedby'] = $user_id;
+                    $userid = $squ["id"];
+                    $attackedby = $user_id;
+                    $sql = "INSERT INTO handelser (userid, attackedby) VALUES ('$userid','$attackedby')";
+                    $db->query($sql);
+                    // $_SESSION['is_user_dandelions'] = $squ['dandelions'];
+                    // $_SESSION['is_user_attackedby'] = $user_id;
                 }
             }
         } else {//echo "result is false";
