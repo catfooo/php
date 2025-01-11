@@ -53,10 +53,10 @@
         $result = $db->query($sql);
         //echo "ddd";
         $handelser = $result->fetch_assoc();
-        if($handelser) {print_r($handelser);} else {echo "nya";};
+        if($handelser) {print_r($handelser);} //else {echo "nya";};
 
         // for web server, it was throwing undefined warning, so used 
-        if(isset($_SESSION[$is_user_robbed]) && $_SESSION[$is_user_robbed]) { 
+        //if(isset($_SESSION[$is_user_robbed]) && $_SESSION[$is_user_robbed]) { 
         //     echo "mjau..."; // this block is not executing at all???
         // if(isset($_SESSION[$is_user_robbed])) {
         //     echo "robbed session set"; // not have been set at all
@@ -66,6 +66,7 @@
         // not web server err. local started to become undefined. it wasnt like this like 1 week ago but nothing changed from then.. xD so whyyyy
         // if($_SESSION[$is_user_robbed]) {
         //     echo "meow meow"; // no here as well..
+        if($result->num_rows() > 0) {
             if($_SESSION['is_user_dandelions'] == 0) {
                 echo "du träffade en hungrig ekorr men kunde inte födda den";
                 $is_user_robbed = "is_" . $user_id . "_robbed";
@@ -94,7 +95,8 @@
                     // instead of session, save to the db
                     $userid = $squ["id"];
                     $attackedby = $user_id;
-                    $sql = "INSERT INTO handelser (userid, attackedby) VALUES ('$userid','$attackedby')";
+                    $taken = $squ["dandelions"];
+                    $sql = "INSERT INTO handelser (userid, attackedby, taken) VALUES ('$userid','$attackedby', '$taken')";
                     $db->query($sql);
                     // $_SESSION['is_user_dandelions'] = $squ['dandelions'];
                     // $_SESSION['is_user_attackedby'] = $user_id;
