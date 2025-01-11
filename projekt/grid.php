@@ -78,8 +78,10 @@
                 $created_time = new DateTime($handelser['created']);
                 $current_time = new DateTime();
                 // Calculate the difference between the current time and the created time
-                $interval = $created_time->diff($current_time);
-                $minuter = ($interval->y * 365 * 24 * 60) + ($interval->m * 30 * 24 * 60) + ($interval->d * 24 * 60) + ($interval->h * 60) + $interval->i;
+                // Calculate the difference in seconds
+                $diff_seconds = $current_time->getTimestamp() - $created_time->getTimestamp();
+                // Convert seconds to minutes
+                $minuter = floor($diff_seconds / 60); // Get whole minutes
                 echo "du har förlorat " . $handelser['taken'] . " maskrosor från user nr" . $handelser['attackedby'] . " för " . $minuter . " minuter sedan";
                 // $is_user_robbed = "is_" . $user_id . "_robbed";
                 // $_SESSION[$is_user_robbed] = false;
