@@ -75,9 +75,12 @@
                 $sql = "DELETE FROM handelser WHERE userid = $user_id";
                 $db->query($sql);
             } else {
-                // Create DateTime objects with the same time zone
-$created_time = new DateTime($handelser['created'], new DateTimeZone('UTC'));  // Use the correct time zone for 'created'
-$current_time = new DateTime('now', new DateTimeZone('UTC'));  // Get the current time in UTC
+                // If the 'created' timestamp is stored in a local time zone (e.g., Europe/Stockholm)
+$created_time = new DateTime($handelser['created'], new DateTimeZone('Europe/Stockholm'));  // Assuming local time
+$created_time->setTimezone(new DateTimeZone('UTC'));  // Convert to UTC
+
+// Current time in UTC
+$current_time = new DateTime('now', new DateTimeZone('UTC'));
 
 // Print out both DateTime objects for debugging
 echo "Created Time: " . $created_time->format('Y-m-d H:i:s') . "<br>";
