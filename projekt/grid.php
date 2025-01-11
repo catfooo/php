@@ -117,7 +117,8 @@
                     // echo $_SESSION[$is_user_robbed];
                     $userid = $squ["id"];
                     $attackedby = $user_id;
-                    $sql = "INSERT INTO handelser (userid, attackedby) VALUES ('$userid','$attackedby')";
+                    $taken = $squ["dandelions"];
+                    $sql = "INSERT INTO handelser (userid, attackedby, taken) VALUES ('$userid','$attackedby', '$taken')";
                     $db->query($sql);
                     // $_SESSION['is_user_dandelions'] = $squ['dandelions'];
                     // $_SESSION['is_user_attackedby'] = $user_id;
