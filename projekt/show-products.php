@@ -3,7 +3,7 @@
     session_start();
     
     // Set the content type to ISO-8859-1 //
-    header('Content-Type: text/html; charset=ISO-8859-1');
+    //header('Content-Type: text/html; charset=ISO-8859-1');
 
     // echo "ddd";
 
