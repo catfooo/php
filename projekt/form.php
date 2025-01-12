@@ -1,6 +1,13 @@
 
     
     <?php
+    // if not logged in, form is shown which should not be shown. initialize variable empty first, to prevent
+    // no. this just prevents warning... form still shown
+    // form php echo, style none if not isset
+    //6. Visa en bestÃ¤llningsbekrÃ¤ftelse pÃ¥ skÃ¤rmen. 
+//Visa ordernummer och orderdatum.
+//7. Skapa en kontaktsida.
+//Visa kontaktuppgifter och Era bilder.
 
         session_start();
         
@@ -12,7 +19,7 @@
         require_once "db.php";
         // retrive the user info
         if (!isset($_SESSION['user_id'])) {
-            echo "om du vill köpa, logga in";        
+            echo "om du vill kï¿½pa, logga in";        
         } else {
             $user_id = $_SESSION['user_id'];
             $result = $db->query("SELECT * FROM kunder WHERE id = $user_id");
@@ -35,14 +42,16 @@
 
         // retrive the user info
         if (!isset($_SESSION['user_id'])) {
-            echo "om du vill köpa, logga in";        
+            // echo "om du vill kï¿½pa, logga in";  
+            // display none here as well  // hiding bestÃ¤llningform when not logged in
+            $style = 'style="display:none;"';       
         } else {
             $user_id = $_SESSION['user_id'];
             $result = $db->query("SELECT * FROM kunder WHERE id = $user_id");
             $user = $result->fetch_assoc();
             echo "du har " . $user['dandelions'] . " maskrosor";
             if ($item['pris'] > $user['dandelions']) {
-                echo "du har inte tillräckligt med maskrosor";
+                echo "du har inte tillrï¿½ckligt med maskrosor";
                 $style = 'style="display:none;"';
             } else {
                 $style = '';
@@ -51,7 +60,8 @@
     
     ?>
 
-    <div class="form" <?php echo $style; ?>>
+    <!-- to deal with warning that $style not defined(if not logged in) -->
+    <div class="form" <?php echo $style ? $style : ''; ?>> 
             <h3>vart ska vi leverera?</h3>
         
             <!-- hidden? artikelnummer(php?id=)? -->
