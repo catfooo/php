@@ -1,4 +1,4 @@
-let dag = 1
+let dag = 0
 
 for (lön = 1, sum = 0; sum < 10000000; dag++) {
     sum += lön
