@@ -6,5 +6,5 @@ for (lön = 1, sum = 0; sum < 10000000; dag++) {
     console.log(dag, sum, lön)
     
 }
-console.log('det tar ${dag} dagar att tjena ihop 10 miljoner kronor')
+console.log(`det tar ${dag} dagar att tjena ihop 10 miljoner kronor`)
 //alert(dag)
