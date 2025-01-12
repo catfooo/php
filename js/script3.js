@@ -4,3 +4,4 @@ for (let dag = 1, lön = 1, sum = 0; sum < 10000000; dag++) {
     console.log(dag, sum, lön)
     
 }
+console.log('det tar ', dag, ' dagar att tjena ihop 10 miljoner kronor')
