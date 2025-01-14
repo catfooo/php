@@ -47,7 +47,7 @@
         $result = $db->query($sql);
         // h?mta result som 'en' associativ array
         $bestallning = $result->fetch_assoc();
-        echo "orderdatumet är " . $bestallning['created'];
+        echo "ordernumret är " . $bestallning['id'] . " och orderdatumet är " . $bestallning['created'];
 
 
         // subtract used maskrosor
