@@ -1,10 +1,6 @@
 
     
     <?php
-   
-    
-//7. Skapa en kontaktsida.
-//Visa kontaktuppgifter och Era bilder.
 
         session_start();
         
