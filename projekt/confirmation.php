@@ -43,7 +43,7 @@
 
         // select what we just inserted to visa beställningsdatum
         $id = $db->insert_id;
-        $sql = "SELECT created FROM bestallningar WHERE id = $id";
+        $sql = "SELECT id, created FROM bestallningar WHERE id = $id";
         $result = $db->query($sql);
         // h?mta result som 'en' associativ array
         $bestallning = $result->fetch_assoc();
