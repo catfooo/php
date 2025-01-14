@@ -23,7 +23,7 @@
         $email = $_POST['email'];
         $address = $_POST['address'];
 
-        // hämta från sessionen
+        // hï¿½mta frï¿½n sessionen
         $user_id = $_SESSION['user_id'];
         $price = $_SESSION['price'];
         
@@ -40,6 +40,15 @@
                 VALUES ('$articlenumber', '$user_id', '$name', '$telephonenumber', '$email', '$address')";
 
         $db->query($sql);
+
+        // select what we just inserted to visa bestÃ¤llningsdatum
+        $id = $db->insert_id;
+        $sql = "SELECT created FROM bestallningar WHERE id = $id";
+        $result = $db->query($sql);
+        // h?mta result som 'en' associativ array
+        $bestallning = $result->fetch_assoc();
+        echo "orderdatumet Ã¤r " . $bestallning['created'];
+
 
         // subtract used maskrosor
         $sql = "UPDATE kunder SET dandelions = dandelions - $price WHERE id = $user_id";

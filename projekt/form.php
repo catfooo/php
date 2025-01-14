@@ -1,9 +1,7 @@
 
     
     <?php
-    // if not logged in, form is shown which should not be shown. initialize variable empty first, to prevent
-    // no. this just prevents warning... form still shown
-    // form php echo, style none if not isset
+   
     //6. Visa en beställningsbekräftelse på skärmen. 
 //Visa ordernummer och orderdatum.
 //7. Skapa en kontaktsida.
