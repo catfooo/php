@@ -2,8 +2,7 @@
     
     <?php
    
-    //6. Visa en beställningsbekräftelse på skärmen. 
-//Visa ordernummer och orderdatum.
+    
 //7. Skapa en kontaktsida.
 //Visa kontaktuppgifter och Era bilder.
 

@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontaktformulär</title>
+    <title>Kontaktformulï¿½r</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body class="container">
-    <h1 class="text-primary">Kontaktformulär</h1>
+    <h1 class="text-primary">Kontaktformulï¿½r</h1>
+    <img src="assets/70469440.png">
+    <p>vi ska visa vÃ¤rlden till era webblÃ¤sare</p>
     <form action="confirm.php" method="post">
         <div class="row">
             <div class="col-md-6">
-                <label for="firstname">förnamn</label>
-                <input type="text" id="firstname" name="firstname" required placeholder="förnamn" class="form-control">
+                <label for="firstname">fï¿½rnamn</label>
+                <input type="text" id="firstname" name="firstname" required placeholder="fï¿½rnamn" class="form-control">
             </div>
             <div class="col-md-6">
                 <label for="lastname">efternamn</label>
