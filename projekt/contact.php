@@ -9,7 +9,7 @@
 <body class="container">
     <h1 class="text-primary">Kontaktformul�r</h1>
     <img src="assets/70469440.png">
-    <p>vi representera världen genom era webbläsare</p>
+    <p>vi presentera världen genom era webbläsare</p>
     <form action="confirm.php" method="post">
         <div class="row">
             <div class="col-md-6">
