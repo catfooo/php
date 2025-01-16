@@ -20,14 +20,14 @@
             echo "hej " . $user['name'];        
         }
 
-        echo "<h2>du har beställt produkt nr: $id</h2>";        
+        //echo "<h2>du har beställt produkt nr: $id</h2>";        
 
 
         $sql = "SELECT * FROM produkter WHERE id = $id";
         $result = $db->query($sql);
         // h?mta result som 'en' associativ array
         $item = $result->fetch_assoc();
-        echo "<h3>du har beställt " . $item['produktnamn'] . "</h3>"; 
+        echo "<h2>du har beställt produkt nr: $id," . $item['produktnamn'] . "</h2>"; 
         echo "<h3>pris: " . $item['pris'] . " maskrosor</h3>";
 
         // save the price in the session
