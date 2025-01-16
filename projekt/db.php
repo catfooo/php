@@ -5,6 +5,9 @@
     $db = @new mysqli("localhost", "root", "root", "projekt");
     // latin tweak became not needed(server changed?)
     //$db->set_charset('latin1'); // This sets the database charset to ISO-8859-1
+    // hahah issue persists
+    $mysqli->set_charset("utf8mb3");
+
 
     // quit if failed
     if ($db->connect_error) {
