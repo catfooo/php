@@ -39,6 +39,14 @@
     $result = $db->query($sql);
     $items = $result->fetch_all(MYSQLI_ASSOC);
 
+    // Debug encoding for each row
+    echo '<pre>';
+    foreach ($items as $item) {
+        echo "Produktnamn Encoding: " . mb_detect_encoding($item['produktnamn'], mb_detect_order(), true) . PHP_EOL;
+        echo "Beskrivning Encoding: " . mb_detect_encoding($item['beskrivning'], mb_detect_order(), true) . PHP_EOL;
+    }
+    echo '</pre>';
+
 ?>
 <!-- Section-->
 <section class="py-5 bg-light">
