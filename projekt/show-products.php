@@ -39,13 +39,19 @@
     $result = $db->query($sql);
     $items = $result->fetch_all(MYSQLI_ASSOC);
 
-    // Debug encoding for each row
-    echo '<pre>';
-    foreach ($items as $item) {
-        echo "Produktnamn Encoding: " . mb_detect_encoding($item['produktnamn'], mb_detect_order(), true) . PHP_EOL;
-        echo "Beskrivning Encoding: " . mb_detect_encoding($item['beskrivning'], mb_detect_order(), true) . PHP_EOL;
-    }
-    echo '</pre>';
+    // // Debug encoding for each row
+    // echo '<pre>';
+    // foreach ($items as $item) {
+    //     echo "Produktnamn Encoding: " . mb_detect_encoding($item['produktnamn'], mb_detect_order(), true) . PHP_EOL;
+    //     echo "Beskrivning Encoding: " . mb_detect_encoding($item['beskrivning'], mb_detect_order(), true) . PHP_EOL;
+    // }
+    // echo '</pre>';
+
+    // Normalize encoding for all items
+foreach ($items as &$item) {
+    $item['produktnamn'] = mb_convert_encoding($item['produktnamn'], 'UTF-8', 'auto');
+    $item['beskrivning'] = mb_convert_encoding($item['beskrivning'], 'UTF-8', 'auto');
+}
 
 ?>
 <!-- Section-->
