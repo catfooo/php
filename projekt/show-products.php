@@ -47,11 +47,21 @@
     // }
     // echo '</pre>';
 
-    // Normalize encoding for all items//
+ // Normalize encoding for all items
 foreach ($items as &$item) {
-    $item['produktnamn'] = mb_convert_encoding($item['produktnamn'], 'UTF-8', 'auto');
-    $item['beskrivning'] = mb_convert_encoding($item['beskrivning'], 'UTF-8', 'auto');
+    if (isset($item['produktnamn']) && !empty($item['produktnamn'])) {
+        if (!mb_check_encoding($item['produktnamn'], 'UTF-8')) {
+            $item['produktnamn'] = mb_convert_encoding($item['produktnamn'], 'UTF-8', 'ISO-8859-1');
+        }
+    }
+
+    if (isset($item['beskrivning']) && !empty($item['beskrivning'])) {
+        if (!mb_check_encoding($item['beskrivning'], 'UTF-8')) {
+            $item['beskrivning'] = mb_convert_encoding($item['beskrivning'], 'UTF-8', 'ISO-8859-1');
+        }
+    }
 }
+
 
 ?>
 <!-- Section-->
