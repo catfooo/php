@@ -4,7 +4,7 @@
     
     // Set the content type to ISO-8859-1 //
     //header('Content-Type: text/html; charset=ISO-8859-1');
-    header('Content-Type: text/html; charset=UTF-8');
+    //header('Content-Type: text/html; charset=UTF-8');// makes no change
 
 
     // echo "ddd";
