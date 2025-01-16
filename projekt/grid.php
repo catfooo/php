@@ -198,10 +198,15 @@
         echo '<script>
                 document.addEventListener("keydown", (event) => {
                     console.log("key pressed: " + event.key);
+
+                    const keys = ["Backspace", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"];
+
+                    if(keys.includes(event.key)) {
+                        // construct the url with the "move(pressed key)" as a query parameter
+                        const move = event.key;
+                        window.location.href = `move.php?move=${move}`;                    
+                    }
                     
-                    // construct the url with the "move(pressed key)" as a query parameter
-                    const move = event.key;
-                    window.location.href = `move.php?move=${move}`;
 
                 });
             </script>';
