@@ -27,7 +27,7 @@
         $result = $db->query($sql);
         // h?mta result som 'en' associativ array
         $item = $result->fetch_assoc();
-        echo "<h2>du har beställt produkt nr: $id," . $item['produktnamn'] . "</h2>"; 
+        echo "<h2>du har beställt produkt nr $id," . $item['produktnamn'] . "</h2>"; 
         echo "<h3>pris: " . $item['pris'] . " maskrosor</h3>";
 
         // save the price in the session
