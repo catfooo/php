@@ -7,7 +7,7 @@
 ?>
 
 <section class="container">
-    <h1 class="text-primary text-center border-bottom border-primary">bekr?ftelse</h1>
+    <h1 class="text-primary text-center border-bottom border-primary">bekräftelse</h1>
 
     <?php
     
@@ -31,9 +31,9 @@
 
       
         
-        echo "<h2>tack $name, du best?llde produkt nr $articlenumber</h2>";
-        echo "<h3>ditt telefonnummer ?r $telephonenumber</h3>";
-        echo "<h3>ditt email ?r $email</h3>";
+        echo "<h2>tack $name, du beställde produkt nr $articlenumber</h2>";
+        echo "<h3>ditt telefonnummer är $telephonenumber</h3>";
+        echo "<h3>ditt email är $email</h3>";
         echo "<h3>vi kommer att leverera produkten till $address</h3>";
 
         $sql = "INSERT INTO bestallningar (articlenumber, user_id, name, telephonenumber, email, address)

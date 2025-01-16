@@ -12,7 +12,7 @@
         require_once "db.php";
         // retrive the user info
         if (!isset($_SESSION['user_id'])) {
-            echo "om du vill k�pa, logga in";        
+            echo "om du vill köpa, logga in";        
         } else {
             $user_id = $_SESSION['user_id'];
             $result = $db->query("SELECT * FROM kunder WHERE id = $user_id");
@@ -20,14 +20,14 @@
             echo "hej " . $user['name'];        
         }
 
-        echo "<h2>du har best?llt produkt nr: $id</h2>";        
+        echo "<h2>du har beställt produkt nr: $id</h2>";        
 
 
         $sql = "SELECT * FROM produkter WHERE id = $id";
         $result = $db->query($sql);
         // h?mta result som 'en' associativ array
         $item = $result->fetch_assoc();
-        echo "<h3>du har best?llt " . $item['produktnamn'] . "</h3>"; 
+        echo "<h3>du har beställt " . $item['produktnamn'] . "</h3>"; 
         echo "<h3>pris: " . $item['pris'] . " maskrosor</h3>";
 
         // save the price in the session
@@ -44,7 +44,7 @@
             $user = $result->fetch_assoc();
             echo "du har " . $user['dandelions'] . " maskrosor";
             if ($item['pris'] > $user['dandelions']) {
-                echo "du har inte tillr�ckligt med maskrosor";
+                echo "du har inte tillräckligt med maskrosor";
                 $style = 'style="display:none;"';
             } else {
                 $style = '';
