@@ -162,7 +162,7 @@
                 echo "<div class='tile'><a href='http://localhost:8888/projekt/landing.php?exit=true'>☺☻</a></div>";
             } elseif ($i == 1) {
                 // echo "<div class=''><</div>";
-                echo "<div class=''>&lt;&nbsp;&#8592;&nbsp;&#8595;&nbsp;&#8593;&nbsp;&#8594;</div>";
+                echo "<div class=''>&lt;&nbsp;&#8592;&nbsp;&#8593;&nbsp;&#8595;&nbsp;&#8594;</div>";
             } elseif ($i == 13) {
                 echo "<div class='tile player'>
                      O<br>
