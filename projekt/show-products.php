@@ -47,7 +47,7 @@
     // }
     // echo '</pre>';
 
-    // Normalize encoding for all items
+    // Normalize encoding for all items//
 foreach ($items as &$item) {
     $item['produktnamn'] = mb_convert_encoding($item['produktnamn'], 'UTF-8', 'auto');
     $item['beskrivning'] = mb_convert_encoding($item['beskrivning'], 'UTF-8', 'auto');
