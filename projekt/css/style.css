@@ -12,7 +12,7 @@ header, footer {
     border: /*1px solid #ccc*/ none; padding: 20px; text-align: center; color:#aaa5a5 /*transparent*/; line-height: 20px;
 }
 
-.key {font-size: small;}
+.key {font-size: 3px;}
 
 .shop a {
     text-decoration: none;
