@@ -52,14 +52,7 @@
                 WHERE userid = $user_id";
         $result = $db->query($sql);
         //echo "ddd";
-
-        // this part was okay with local... why server spits err here
-        if ($result === false) {
-            echo "";
-            
-        }
         $handelser = $result->fetch_assoc();
-        // if($handelser) {$result->fetch_assoc();}
         //if($handelser) {print_r($handelser);} //else {echo "nya";};
 
         // for web server, it was throwing undefined warning, so used 
