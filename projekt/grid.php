@@ -7,6 +7,19 @@
     // var_dump($_SESSION);  // This will show all the session data to help you debug
     // session variable cant be accessed via internet or 3rd person. only via session id from local can access the variable. so.. is_(user)_attacked, needs to find other storage, such as db, bcs targeted user needs to browse this and info needed to shown based on this variable
 
+    require "vendor/autoload.php";
+
+    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+    $dotenv->load();
+
+    $env = getenv('NODE_ENV');
+
+    // const BASE_URL = process.env.NODE_ENV === 'production' ? 'http://212.18.224.194/~okt2404/projekt/': 'http://localhost:8888/projekt/';
+    $base_url = $env ==='production' ? 'http://212.18.224.194/~okt2404/projekt/' : 'http://localhost:8888/projekt/';
+
+    echo $base_url;
+
+
 ?>
 
 <!DOCTYPE html>
