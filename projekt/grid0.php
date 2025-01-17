@@ -29,9 +29,14 @@
 
     // Output all environment variables to debug
     //var_dump($_ENV);
+
+    // if pro, use global, if not, usegetenv? // this finally works both local and server.. so use variable based on here will do the job.
+    if(isset($_ENV['NODE_ENV'])){
+        $env = $_ENV['NODE_ENV'];
+    }
     
     //$env = getenv('NODE_ENV');
-    $env = $_ENV['NODE_ENV'];
+    //$env = $_ENV['NODE_ENV'];
     
     //echo $env;
 //     $env = $_ENV['NODE_ENV'] ?? 'not set';
