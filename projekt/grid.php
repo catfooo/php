@@ -1,5 +1,7 @@
 <?php
     
+    echo ini_get('variables_order');
+
     session_start();
     // if($_SESSION['bg']) {
     //     $bg = "bg";
@@ -13,7 +15,7 @@
     $dotenv->load();
 
     // $env = getenv('NODE_ENV'); // for some reason, web server seems doesnt allow getenv()
-    $env = $_ENV['NODE_ENV'];
+    $env = $_ENV['NODE_ENV']; // this not works for local development..
 
     $base_url = $env ==='production' ? 'http://212.18.224.194/~okt2404/projekt/' : 'http://localhost:8888/projekt/';
 
