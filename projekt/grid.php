@@ -26,7 +26,7 @@
     //var_dump($_ENV);
 
     // if pro, use global, if not, usegetenv?
-    if(isset($env) && $env ==='production'){
+    if(isset($_ENV['NODE_ENV'])){
         $env = $_ENV['NODE_ENV'];
     }
     
@@ -41,7 +41,7 @@
     // + if isset env and env is pro ,
     $base_url = isset($env) && $env ==='production' ? 'http://212.18.224.194/~okt2404/projekt/' : 'http://localhost:8888/projekt/';
 
-    // echo $base_url; // in middle of this...
+    echo $base_url; // in middle of this...
 
 
 ?>
