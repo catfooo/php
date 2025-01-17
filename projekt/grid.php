@@ -25,6 +25,7 @@
     // Output all environment variables to debug
     //var_dump($_ENV);
 
+    // no need to get env to here at all. this simply solves problem. its avoiding actually..
     //$env = getenv('NODE_ENV'); // for some reason, web server seems doesnt allow getenv()
     // $env = $_ENV['NODE_ENV']; // this not works for local development..
     // related to php.ini s this part and restart, but unlike our web server, using gpcs at local makes env not accessable , so im done with this. just manually change this for now hahah, and find the way afterwards.
@@ -35,7 +36,7 @@
     // + if isset env and env is pro ,
     $base_url = isset($env) && $env ==='production' ? 'http://212.18.224.194/~okt2404/projekt/' : 'http://localhost:8888/projekt/';
 
-    echo $base_url; // in middle of this...
+    // echo $base_url; // in middle of this...
 
 
 ?>
