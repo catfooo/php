@@ -28,7 +28,7 @@
     // no need to get env to here at all. this simply solves problem. its avoiding actually..
     //$env = getenv('NODE_ENV'); // for some reason, web server seems doesnt allow getenv()
     // $env = $_ENV['NODE_ENV']; // this not works for local development..
-    // related to php.ini s this part and restart, but unlike our web server, using gpcs at local makes env not accessable , so im done with this. just manually change this for now hahah, and find the way afterwards.
+    // related to php.ini s this part and restart, but unlike our web server, using gpcs at local makes env not accessable(which made db could not connect via env) , so im done with this. just manually change this for now hahah, and find the way afterwards. // so just not load env here. not used actually. it was just for a word, 'production'
     // ; variables_order
     //;   Default Value: "GPCS"
     //;   Default Value(before comment out): "EGPCS"
