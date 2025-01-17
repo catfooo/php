@@ -1,6 +1,6 @@
 <?php
     
-    echo ini_get('variables_order');
+    //echo ini_get('variables_order');
 
     session_start();
     // if($_SESSION['bg']) {
@@ -11,11 +11,22 @@
 
     require "vendor/autoload.php";
 
-    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-    $dotenv->load();
+    // $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+    // $dotenv->load();
+
+    try {
+        $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+        $dotenv->load();
+        echo "Env file loaded successfully.<br>";
+    } catch (Exception $e) {
+        echo "Error loading .env file: " . $e->getMessage() . "<br>";
+    }
+    
+    // Output all environment variables to debug
+    var_dump($_ENV);
 
     // $env = getenv('NODE_ENV'); // for some reason, web server seems doesnt allow getenv()
-    $env = $_ENV['NODE_ENV']; // this not works for local development..
+    //$env = $_ENV['NODE_ENV']; // this not works for local development..
 
     $base_url = $env ==='production' ? 'http://212.18.224.194/~okt2404/projekt/' : 'http://localhost:8888/projekt/';
 
