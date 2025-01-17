@@ -25,8 +25,12 @@
     // Output all environment variables to debug
     var_dump($_ENV);
 
-    // $env = getenv('NODE_ENV'); // for some reason, web server seems doesnt allow getenv()
-    $env = $_ENV['NODE_ENV']; // this not works for local development..
+    $env = getenv('NODE_ENV'); // for some reason, web server seems doesnt allow getenv()
+    // $env = $_ENV['NODE_ENV']; // this not works for local development..
+    // related to php.ini s this part and restart, but unlike our web server, using gpcs at local makes env not accessable , so im done with this. just manually change this for now hahah, and find the way afterwards.
+    // ; variables_order
+    //;   Default Value: "GPCS"
+    //;   Default Value(before comment out): "EGPCS"
 
     $base_url = $env ==='production' ? 'http://212.18.224.194/~okt2404/projekt/' : 'http://localhost:8888/projekt/';
 
