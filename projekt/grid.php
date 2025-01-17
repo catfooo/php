@@ -12,9 +12,9 @@
     $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
     $dotenv->load();
 
-    $env = getenv('NODE_ENV');
+    // $env = getenv('NODE_ENV'); // for some reason, web server seems doesnt allow getenv()
+    $env = $_ENV['NODE_ENV'];
 
-    // const BASE_URL = process.env.NODE_ENV === 'production' ? 'http://212.18.224.194/~okt2404/projekt/': 'http://localhost:8888/projekt/';
     $base_url = $env ==='production' ? 'http://212.18.224.194/~okt2404/projekt/' : 'http://localhost:8888/projekt/';
 
     echo $base_url;
