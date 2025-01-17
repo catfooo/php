@@ -106,7 +106,8 @@
         // if rob
         // if users col and row is same with other value from kunder table 
         $sql = "SELECT * FROM kunder 
-                WHERE `col` = {$user['col']} AND `row` = {$user['row']} AND id != $user_id";
+                WHERE `col` = {$user['col']} AND `row` = {$user['row']} AND id != $user_id 
+                AND NOT (`col` = 0 AND `row` = 0)";
         $result = $db->query($sql);
         //echo $result;
         if($result->num_rows > 0) {
