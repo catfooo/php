@@ -1,6 +1,6 @@
 <?php
     
-    //echo ini_get('variables_order');
+    echo ini_get('variables_order');
 
     session_start();
     // if($_SESSION['bg']) {
