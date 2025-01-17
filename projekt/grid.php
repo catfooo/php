@@ -25,6 +25,11 @@
     // Output all environment variables to debug
     //var_dump($_ENV);
 
+    // if pro, use global, if not, usegetenv?
+    if(isset($env) && $env ==='production'){
+        $env = $_ENV['NODE_ENV'];
+    }
+    
     // no need to get env to here at all. this simply solves problem. its avoiding actually..
     //$env = getenv('NODE_ENV'); // for some reason, web server seems doesnt allow getenv()
     // $env = $_ENV['NODE_ENV']; // this not works for local development..
