@@ -34,7 +34,7 @@
 
     $base_url = $env ==='production' ? 'http://212.18.224.194/~okt2404/projekt/' : 'http://localhost:8888/projekt/';
 
-    echo $base_url;
+    // echo $base_url; // in middle of this...
 
 
 ?>
