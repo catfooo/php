@@ -33,6 +33,10 @@
 // Om du är utvecklaren av php-google-login-3 läser du felinformationen.
 // Fel 400: invalid_request
 
+// ***************
+// if pro, upper uri, else, downer?
+// *************
+
     // (from gpt)Authorization Code
     // After successful authentication, Google redirects the user back to your specified redirect_uri with the code parameter in the URL:
     // http://localhost/php-google-login-2/redirect.php?code=AUTHORIZATION_CODE
