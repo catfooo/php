@@ -21,7 +21,17 @@
     $client->setClientId($_ENV["OAUTH_CLIENTID"]);
     $client->setClientSecret($_ENV["OAUTH_CLIENTSECRET"]);
     //$client->setRedirectUri("http://redirectmeto.com/http://212.18.224.194/~okt2404/projekt/redirect.php");
-    $client->setRedirectUri($url . "redirect.php");
+    $client->setRedirectUri($url . "redirect.php"); // for google cloud for web server this part not works so we still need upper uri but we will find way, afterwards, not now xD, inget energi kvar
+//     //Blockerad åtkomst: Auktoriseringsfel
+
+// mail@mail.com
+
+// You can't sign in to this app because it doesn't comply with Google's OAuth 2.0 policy for keeping apps secure.
+
+// You can let the app developer know that this app doesn't comply with one or more Google validation rules.
+// Läs mer om det här felet
+// Om du är utvecklaren av php-google-login-3 läser du felinformationen.
+// Fel 400: invalid_request
 
     // (from gpt)Authorization Code
     // After successful authentication, Google redirects the user back to your specified redirect_uri with the code parameter in the URL:
