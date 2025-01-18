@@ -30,7 +30,7 @@
     $client->setClientId($_ENV["OAUTH_CLIENTID"]);
     $client->setClientSecret($_ENV["OAUTH_CLIENTSECRET"]);
     // $client->setRedirectUri("http://redirectmeto.com/http://212.18.224.194/~okt2404/projekt/redirect.php");
-    $client->setRedirectUri($url . "redirect.php");
+    $client->setRedirectUri($url . "redirect.php"); // for web server, upper uri should be used
 
     $client->addScope("email");
     $client->addScope("profile");
