@@ -20,6 +20,7 @@
 
     $client->setClientId($_ENV["OAUTH_CLIENTID"]);
     $client->setClientSecret($_ENV["OAUTH_CLIENTSECRET"]);
+    // $client->setRedirectUri("https://redirectmeto.com/". $url . "redirect.php");
     //$client->setRedirectUri("https://redirectmeto.com/http://212.18.224.194/~okt2404/projekt/redirect.php");
     $client->setRedirectUri($url . "redirect.php"); // for google cloud for web server this part not works so we still need upper uri but we will find way, afterwards, not now xD, inget energi kvar
 //     //Blockerad åtkomst: Auktoriseringsfel
