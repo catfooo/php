@@ -54,7 +54,7 @@
     //     $userinfo->name
     // );
 
-    // to do next : save the value to the database, (use session to log on???)
+    
 
     
 
@@ -81,7 +81,7 @@
                 // alert('du fick 10 maskrosor');
                 window.onload = function() {
                     setTimeout(() => {
-                        location.href = 'http://localhost:8888/projekt/grid.php';
+                        location.href = '" . $url . "grid.php';
                     }, 500);
                 }
           </script>";
