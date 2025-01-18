@@ -39,9 +39,9 @@
     //;   Default Value(before comment out): "EGPCS"
 
     // + if isset env and env is pro ,
-    $base_url = isset($env) && $env ==='production' ? 'http://212.18.224.194/~okt2404/projekt/' : 'http://localhost:8888/projekt/';
+    $url = isset($env) && $env ==='production' ? 'http://212.18.224.194/~okt2404/projekt/' : 'http://localhost:8888/projekt/';
 
-    //echo $base_url; // in middle of this...
+    //echo $url; // in middle of this...
 
 
 ?>
@@ -66,7 +66,7 @@
     
     // retrive the user info
     if (!isset($_SESSION['user_id'])) {
-        echo '<a href="http://localhost:8888/projekt/landing.php">logga in</a>';        
+        echo '<a href="' . $url . 'landing.php">logga in</a>';        
     } else {
         $user_id = $_SESSION['user_id'];
         $result = $db->query("SELECT * FROM kunder WHERE id = $user_id");
