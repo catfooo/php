@@ -194,7 +194,7 @@
 
                     echo "<script>
                             setTimeout(function() {
-                                window.location.href = 'http://localhost:8888/projekt/grid.php';
+                                window.location.href = '" . $url . "grid.php';
                             }, 2000);  // Redirect after 2 seconds
                     </script>";
                     
@@ -235,7 +235,7 @@
 
                     echo "<script>
                             setTimeout(function() {
-                                window.location.href = 'http://localhost:8888/projekt/grid.php';
+                                window.location.href = '" . $url . "grid.php';
                             }, 2000);  // Redirect after 2 seconds
                     </script>";
                     
@@ -278,7 +278,7 @@
 
                     echo "<script>
                             setTimeout(function() {
-                                window.location.href = 'http://localhost:8888/projekt/grid.php';
+                                window.location.href = '" . $url . "grid.php';
                             }, 2000);  // Redirect after 2 seconds
                     </script>";
                     
