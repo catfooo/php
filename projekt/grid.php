@@ -195,7 +195,7 @@
         for ($i = 1; $i <= 25; $i++) {
             // Check if the tile is 3
             if ($i == 3) {
-                echo "<div class='tile shop'><a href='" . $url . "index.php'>&#8962;</a></div>"; // Display the house symbol ?
+                echo "<div class='tile shop'><a href='" . $url . "index.php'>&#8962;</a></div>"; // Display the house symbol ⌂
             } elseif($i == 2) {
                 echo "<div class='tile'><a href='" . $url . "'>☺☻</a></div>";
             } elseif ($i == 1) {
