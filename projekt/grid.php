@@ -197,7 +197,7 @@
             if ($i == 3) {
                 echo "<div class='tile shop'><a href='" . $url . "index.php'>&#8962;</a></div>"; // Display the house symbol ?
             } elseif($i == 2) {
-                echo "<div class='tile'><a href='http://localhost:8888/projekt/landing.php?exit=true'>☺☻</a></div>";
+                echo "<div class='tile'><a href='" . $url . "'>☺☻</a></div>";
             } elseif ($i == 1) {
                 // echo "<div class=''><</div>";
                 echo "<div class='key'>&#9003;&nbsp;&nbsp;&nbsp;&#8592;&nbsp;&#8593;&nbsp;&#8594;&nbsp;&#8595;</div>";
