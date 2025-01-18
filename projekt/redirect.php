@@ -9,10 +9,19 @@
     $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
     $dotenv->load();
 
+    // about setting pro eller dev url
+    // if pro, use global, if not, usegetenv?
+    if(isset($_ENV['NODE_ENV'])){
+        $env = $_ENV['NODE_ENV'];
+    }
+    // + if isset env and env is pro ,
+    $url = isset($env) && $env ==='production' ? 'http://212.18.224.194/~okt2404/projekt/' : 'http://localhost:8888/projekt/';
+    //echo $url; 
+
     $client->setClientId($_ENV["OAUTH_CLIENTID"]);
     $client->setClientSecret($_ENV["OAUTH_CLIENTSECRET"]);
     //$client->setRedirectUri("http://redirectmeto.com/http://212.18.224.194/~okt2404/projekt/redirect.php");
-    $client->setRedirectUri("http://localhost:8888/projekt/redirect.php");
+    $client->setRedirectUri($url . "redirect.php");
 
     // (from gpt)Authorization Code
     // After successful authentication, Google redirects the user back to your specified redirect_uri with the code parameter in the URL:
