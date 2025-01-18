@@ -25,24 +25,9 @@
     if(isset($_ENV['NODE_ENV'])){
         $client->setRedirectUri("https://redirectmeto.com/". $url . "redirect.php");
     } else {$client->setRedirectUri($url . "redirect.php");}
-    // so still redirect uri is spiled with redirectmeto. i think simple if set solves problem, but head stopped to work, so maybe tomorrow..? 
     // $client->setRedirectUri("https://redirectmeto.com/". $url . "redirect.php");
     //$client->setRedirectUri("https://redirectmeto.com/http://212.18.224.194/~okt2404/projekt/redirect.php");
-    //$client->setRedirectUri($url . "redirect.php"); // for google cloud for web server this part not works so we still need upper uri but we will find way, afterwards, not now xD, inget energi kvar
-//     //Blockerad åtkomst: Auktoriseringsfel
-
-// mail@mail.com
-
-// You can't sign in to this app because it doesn't comply with Google's OAuth 2.0 policy for keeping apps secure.
-
-// You can let the app developer know that this app doesn't comply with one or more Google validation rules.
-// Läs mer om det här felet
-// Om du är utvecklaren av php-google-login-3 läser du felinformationen.
-// Fel 400: invalid_request
-
-// ***************
-// if pro, upper uri, else, downer?
-// *************
+    //$client->setRedirectUri($url . "redirect.php"); 
 
     // (from gpt)Authorization Code
     // After successful authentication, Google redirects the user back to your specified redirect_uri with the code parameter in the URL:
