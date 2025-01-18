@@ -29,9 +29,14 @@
 
     $client->setClientId($_ENV["OAUTH_CLIENTID"]);
     $client->setClientSecret($_ENV["OAUTH_CLIENTSECRET"]);
+
+    // if production level(=web server has ini_get('variables_order'); setting, which spits out GPCS, which means $_ENV is enabled and getenv() is disabled), use uri that starts with redirectmeto.com
+    if(isset($_ENV['NODE_ENV'])){
+        $client->setRedirectUri("https://redirectmeto.com/". $url . "redirect.php");
+    } else {$client->setRedirectUri($url . "redirect.php");}
     // $client->setRedirectUri("https://redirectmeto.com/". $url . "redirect.php");
     // $client->setRedirectUri("https://redirectmeto.com/http://212.18.224.194/~okt2404/projekt/redirect.php");
-    $client->setRedirectUri($url . "redirect.php"); // for web server, upper uri should be used
+    //$client->setRedirectUri($url . "redirect.php"); // for web server, upper uri should be used
 
     $client->addScope("email");
     $client->addScope("profile");
