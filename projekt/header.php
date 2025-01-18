@@ -18,7 +18,7 @@
             <div class="container px-4 px-lg-5 my-5">
                 <div class="text-center text-white">
                     <!-- <h1 class="display-4 fw-bolder"><a href="http://localhost:8888/projekt/index.php">Maskrosaffären</a></h1> -->
-                    <!-- relative url? -->
+                    <!-- relative url?// -->
                     <h1 class="display-4 fw-bolder"><a href="index.php">Maskrosaffären</a></h1>
                     <p class="lead fw-normal text-white-50 mb-0">vi säljer saker för maskrosor!</p>
                 </div>
