@@ -10,6 +10,7 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/carousel.css">
     </head>
     <body>
         
